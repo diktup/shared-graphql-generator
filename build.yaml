@@ -68,3 +68,9 @@ targets:
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/quotation.graphql
               output: lib/dart/quotation.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/message.graphql
+              output: lib/dart/message.graphql.dart            
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/message-group.graphql
+              output: lib/dart/message-group.graphql.dart
