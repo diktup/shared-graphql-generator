@@ -80,3 +80,6 @@ targets:
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/job-application.graphql
               output: lib/dart/job-application.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/department.graphql
+              output: lib/dart/department.graphql.dart
