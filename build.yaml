@@ -74,3 +74,9 @@ targets:
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/message-group.graphql
               output: lib/dart/message-group.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/job-definition.graphql
+              output: lib/dart/job-definition.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/job-application.graphql
+              output: lib/dart/job-application.graphql.dart
