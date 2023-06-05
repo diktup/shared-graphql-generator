@@ -89,3 +89,6 @@ targets:
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/task-section.graphql
               output: lib/dart/task-section.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/payment.graphql
+              output: lib/dart/payment.graphql.dart
