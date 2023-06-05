@@ -618,7 +618,7 @@ mutation updateCurrentUserLogins(
   }
 }
 query loginForApp($input: LoginInput!) {
-  loginForApp(input: $input) @namedClient(name: "auth") {
+  loginForApp(input: $input)  {
     accessToken
     expiresIn
   }
@@ -630,19 +630,19 @@ query login($input: LoginInput!) {
   }
 }
 query loginWithFacebook($token: String!) {
-  loginWithFacebook(token: $token) @namedClient(name: "auth") {
+  loginWithFacebook(token: $token)  {
     accessToken
     expiresIn
   }
 }
 query loginWithGoogle($token: String!) {
-  loginWithGoogle(token: $token) @namedClient(name: "auth") {
+  loginWithGoogle(token: $token)  {
     accessToken
     expiresIn
   }
 }
 query loginWithApple($authorizationData: AuthorizationDataInput!) {
-  loginWithApple(authorizationData: $authorizationData) @namedClient(name: "auth") {
+  loginWithApple(authorizationData: $authorizationData)  {
     accessToken
     expiresIn
   }
@@ -655,7 +655,7 @@ mutation register($subject: String!, $input: UserInput!, $brand: EmailTempVariab
   }
 }
 mutation registerForApp($subject: String!, $input: UserInput!, $brand: EmailTempVariablesBrandInput!) {
-  registerForApp(subject: $subject, brand: $brand, input: $input) @namedClient(name: "auth") {
+  registerForApp(subject: $subject, brand: $brand, input: $input)  {
     accessToken
     expiresIn
   }
