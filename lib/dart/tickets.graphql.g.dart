@@ -1037,7 +1037,7 @@ GetTickets$Query$TicketType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -1131,7 +1131,7 @@ Map<String, dynamic> _$GetTickets$Query$TicketType$UserTypeToJson(
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -3532,7 +3532,7 @@ GetTickets$Query$TicketType$ProjectType$ProjectMemberType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -3628,7 +3628,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -4820,7 +4820,7 @@ GetTickets$Query$TicketType$ProjectType$DocumentType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -4916,7 +4916,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -6215,7 +6215,7 @@ GetTickets$Query$TicketType$DocumentType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -6309,7 +6309,7 @@ Map<String, dynamic> _$GetTickets$Query$TicketType$DocumentType$UserTypeToJson(
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -14821,7 +14821,7 @@ Ticket$Query$TicketType$UserType _$Ticket$Query$TicketType$UserTypeFromJson(
       ..lastName = json['lastName'] as String?
       ..username = json['username'] as String?
       ..firstName = json['firstName'] as String?
-      ..isPlugged = json['isPlugged'] as bool?
+      ..plugged = json['plugged'] as bool?
       ..createdAt = DateTime.parse(json['createdAt'] as String)
       ..updatedAt = DateTime.parse(json['updatedAt'] as String)
       ..isMailValid = json['isMailValid'] as bool?
@@ -14913,7 +14913,7 @@ Map<String, dynamic> _$Ticket$Query$TicketType$UserTypeToJson(
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -17208,7 +17208,7 @@ Ticket$Query$TicketType$ProjectType$ProjectMemberType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -17304,7 +17304,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -18490,7 +18490,7 @@ Ticket$Query$TicketType$ProjectType$DocumentType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -18585,7 +18585,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -19856,7 +19856,7 @@ Ticket$Query$TicketType$DocumentType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -19950,7 +19950,7 @@ Map<String, dynamic> _$Ticket$Query$TicketType$DocumentType$UserTypeToJson(
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -28413,7 +28413,7 @@ GetTicketsByTarget$Query$TicketType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -28507,7 +28507,7 @@ Map<String, dynamic> _$GetTicketsByTarget$Query$TicketType$UserTypeToJson(
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -30813,7 +30813,7 @@ GetTicketsByTarget$Query$TicketType$ProjectType$ProjectMemberType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -30909,7 +30909,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -32096,7 +32096,7 @@ GetTicketsByTarget$Query$TicketType$ProjectType$DocumentType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -32192,7 +32192,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -33471,7 +33471,7 @@ GetTicketsByTarget$Query$TicketType$DocumentType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -33566,7 +33566,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -42079,7 +42079,7 @@ GetTicketsByTargetWithFilter$Query$TicketsPaginateType$TicketType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -42175,7 +42175,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -44486,7 +44486,7 @@ GetTicketsByTargetWithFilter$Query$TicketsPaginateType$TicketType$ProjectType$Pr
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -44582,7 +44582,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -45769,7 +45769,7 @@ GetTicketsByTargetWithFilter$Query$TicketsPaginateType$TicketType$ProjectType$Do
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -45865,7 +45865,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -47147,7 +47147,7 @@ GetTicketsByTargetWithFilter$Query$TicketsPaginateType$TicketType$DocumentType$U
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -47243,7 +47243,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -54729,10 +54729,6 @@ Map<String, dynamic> _$GetTicketsByTargetWithFilter$QueryToJson(
 
 TicketsFilterInput _$TicketsFilterInputFromJson(Map<String, dynamic> json) =>
     TicketsFilterInput(
-      status: (json['status'] as List<dynamic>?)
-          ?.map((e) => $enumDecode(_$TicketStatusEnumEnumMap, e,
-              unknownValue: TicketStatusEnum.artemisUnknown))
-          .toList(),
       priority: (json['priority'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$TicketPriorityEnumEnumMap, e,
               unknownValue: TicketPriorityEnum.artemisUnknown))
@@ -54745,6 +54741,10 @@ TicketsFilterInput _$TicketsFilterInputFromJson(Map<String, dynamic> json) =>
       from:
           json['from'] == null ? null : DateTime.parse(json['from'] as String),
       to: json['to'] == null ? null : DateTime.parse(json['to'] as String),
+      status: (json['status'] as List<dynamic>?)
+          ?.map((e) => $enumDecode(_$TicketStatusEnumEnumMap, e,
+              unknownValue: TicketStatusEnum.artemisUnknown))
+          .toList(),
     );
 
 Map<String, dynamic> _$TicketsFilterInputToJson(TicketsFilterInput instance) {
@@ -54756,14 +54756,14 @@ Map<String, dynamic> _$TicketsFilterInputToJson(TicketsFilterInput instance) {
     }
   }
 
-  writeNotNull('status',
-      instance.status?.map((e) => _$TicketStatusEnumEnumMap[e]!).toList());
   writeNotNull('priority',
       instance.priority?.map((e) => _$TicketPriorityEnumEnumMap[e]!).toList());
   writeNotNull('members', instance.members);
   writeNotNull('attachments', instance.attachments);
   writeNotNull('from', instance.from?.toIso8601String());
   writeNotNull('to', instance.to?.toIso8601String());
+  writeNotNull('status',
+      instance.status?.map((e) => _$TicketStatusEnumEnumMap[e]!).toList());
   return val;
 }
 
@@ -55818,7 +55818,7 @@ CreateTicket$Mutation$TicketType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -55911,7 +55911,7 @@ Map<String, dynamic> _$CreateTicket$Mutation$TicketType$UserTypeToJson(
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -58215,7 +58215,7 @@ CreateTicket$Mutation$TicketType$ProjectType$ProjectMemberType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -58311,7 +58311,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -59498,7 +59498,7 @@ CreateTicket$Mutation$TicketType$ProjectType$DocumentType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -59594,7 +59594,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -60873,7 +60873,7 @@ CreateTicket$Mutation$TicketType$DocumentType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -60968,7 +60968,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -69546,7 +69546,7 @@ UpdateTicket$Mutation$TicketType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -69639,7 +69639,7 @@ Map<String, dynamic> _$UpdateTicket$Mutation$TicketType$UserTypeToJson(
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -71943,7 +71943,7 @@ UpdateTicket$Mutation$TicketType$ProjectType$ProjectMemberType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -72039,7 +72039,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -73226,7 +73226,7 @@ UpdateTicket$Mutation$TicketType$ProjectType$DocumentType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -73322,7 +73322,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -74601,7 +74601,7 @@ UpdateTicket$Mutation$TicketType$DocumentType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -74696,7 +74696,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);

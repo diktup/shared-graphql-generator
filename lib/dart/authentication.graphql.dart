@@ -933,7 +933,7 @@ class UpdateCurrentUserLogins$Mutation$LoginType$UserType
 
   String? firstName;
 
-  bool? isPlugged;
+  bool? plugged;
 
   late DateTime createdAt;
 
@@ -1002,7 +1002,7 @@ class UpdateCurrentUserLogins$Mutation$LoginType$UserType
         lastName,
         username,
         firstName,
-        isPlugged,
+        plugged,
         createdAt,
         updatedAt,
         isMailValid,
@@ -1120,6 +1120,61 @@ class LoginForApp$Query extends JsonSerializable with EquatableMixin {
   List<Object?> get props => [loginForApp];
   @override
   Map<String, dynamic> toJson() => _$LoginForApp$QueryToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class LoginInput extends JsonSerializable with EquatableMixin {
+  LoginInput({
+    this.login,
+    this.phone,
+    required this.password,
+  });
+
+  factory LoginInput.fromJson(Map<String, dynamic> json) =>
+      _$LoginInputFromJson(json);
+
+  String? login;
+
+  IPhoneInput? phone;
+
+  late String password;
+
+  @override
+  List<Object?> get props => [login, phone, password];
+  @override
+  Map<String, dynamic> toJson() => _$LoginInputToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class Login$Query$LoginType extends JsonSerializable with EquatableMixin {
+  Login$Query$LoginType();
+
+  factory Login$Query$LoginType.fromJson(Map<String, dynamic> json) =>
+      _$Login$Query$LoginTypeFromJson(json);
+
+  late String accessToken;
+
+  late double expiresIn;
+
+  @override
+  List<Object?> get props => [accessToken, expiresIn];
+  @override
+  Map<String, dynamic> toJson() => _$Login$Query$LoginTypeToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class Login$Query extends JsonSerializable with EquatableMixin {
+  Login$Query();
+
+  factory Login$Query.fromJson(Map<String, dynamic> json) =>
+      _$Login$QueryFromJson(json);
+
+  late Login$Query$LoginType login;
+
+  @override
+  List<Object?> get props => [login];
+  @override
+  Map<String, dynamic> toJson() => _$Login$QueryToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
@@ -1268,13 +1323,11 @@ class AuthorizationDataInput extends JsonSerializable with EquatableMixin {
 }
 
 @JsonSerializable(explicitToJson: true)
-class RegisterForApp$Mutation$LoginType extends JsonSerializable
-    with EquatableMixin {
-  RegisterForApp$Mutation$LoginType();
+class Register$Mutation$LoginType extends JsonSerializable with EquatableMixin {
+  Register$Mutation$LoginType();
 
-  factory RegisterForApp$Mutation$LoginType.fromJson(
-          Map<String, dynamic> json) =>
-      _$RegisterForApp$Mutation$LoginTypeFromJson(json);
+  factory Register$Mutation$LoginType.fromJson(Map<String, dynamic> json) =>
+      _$Register$Mutation$LoginTypeFromJson(json);
 
   late String accessToken;
 
@@ -1283,23 +1336,172 @@ class RegisterForApp$Mutation$LoginType extends JsonSerializable
   @override
   List<Object?> get props => [accessToken, expiresIn];
   @override
-  Map<String, dynamic> toJson() =>
-      _$RegisterForApp$Mutation$LoginTypeToJson(this);
+  Map<String, dynamic> toJson() => _$Register$Mutation$LoginTypeToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
-class RegisterForApp$Mutation extends JsonSerializable with EquatableMixin {
-  RegisterForApp$Mutation();
+class Register$Mutation extends JsonSerializable with EquatableMixin {
+  Register$Mutation();
 
-  factory RegisterForApp$Mutation.fromJson(Map<String, dynamic> json) =>
-      _$RegisterForApp$MutationFromJson(json);
+  factory Register$Mutation.fromJson(Map<String, dynamic> json) =>
+      _$Register$MutationFromJson(json);
 
-  late RegisterForApp$Mutation$LoginType registerForApp;
+  late Register$Mutation$LoginType registerForApp;
 
   @override
   List<Object?> get props => [registerForApp];
   @override
-  Map<String, dynamic> toJson() => _$RegisterForApp$MutationToJson(this);
+  Map<String, dynamic> toJson() => _$Register$MutationToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class UserInput extends JsonSerializable with EquatableMixin {
+  UserInput({
+    this.email,
+    this.username,
+    this.phone,
+    required this.password,
+    this.picture,
+    this.pictures,
+    this.covers,
+    this.firstName,
+    this.status,
+    this.title,
+    this.about,
+    this.lastName,
+    this.maritalStatus,
+    this.gender,
+    this.languages,
+    this.isMailValid,
+    this.plugged,
+    this.dateOfBirth,
+    this.chatContact,
+    this.socialMedia,
+    this.nationality,
+    this.locale,
+    this.placeOfBirth,
+    this.residentialAddress,
+    this.shippingAddress,
+    this.billingAddress,
+    this.mobileTheme,
+    this.source,
+    this.newsletterSubs,
+    required this.roles,
+    this.apps,
+    this.phoneNumber,
+  });
+
+  factory UserInput.fromJson(Map<String, dynamic> json) =>
+      _$UserInputFromJson(json);
+
+  String? email;
+
+  String? username;
+
+  IPhoneInput? phone;
+
+  late String password;
+
+  PictureInput? picture;
+
+  List<PictureInput>? pictures;
+
+  List<PictureInput>? covers;
+
+  String? firstName;
+
+  @JsonKey(unknownEnumValue: UserStatus.artemisUnknown)
+  UserStatus? status;
+
+  String? title;
+
+  String? about;
+
+  String? lastName;
+
+  @JsonKey(unknownEnumValue: MaritalStatus.artemisUnknown)
+  MaritalStatus? maritalStatus;
+
+  @JsonKey(unknownEnumValue: Gender.artemisUnknown)
+  Gender? gender;
+
+  List<String>? languages;
+
+  bool? isMailValid;
+
+  bool? plugged;
+
+  DateTime? dateOfBirth;
+
+  List<SocialValueInput>? chatContact;
+
+  List<SocialValueInput>? socialMedia;
+
+  String? nationality;
+
+  String? locale;
+
+  String? placeOfBirth;
+
+  List<FullAddressInput>? residentialAddress;
+
+  List<FullAddressInput>? shippingAddress;
+
+  List<FullAddressInput>? billingAddress;
+
+  @JsonKey(unknownEnumValue: MobileThemesEnum.artemisUnknown)
+  MobileThemesEnum? mobileTheme;
+
+  @JsonKey(unknownEnumValue: SourcesEnum.artemisUnknown)
+  SourcesEnum? source;
+
+  bool? newsletterSubs;
+
+  @JsonKey(unknownEnumValue: UserRole.artemisUnknown)
+  late List<UserRole> roles;
+
+  @JsonKey(unknownEnumValue: App.artemisUnknown)
+  List<App>? apps;
+
+  String? phoneNumber;
+
+  @override
+  List<Object?> get props => [
+        email,
+        username,
+        phone,
+        password,
+        picture,
+        pictures,
+        covers,
+        firstName,
+        status,
+        title,
+        about,
+        lastName,
+        maritalStatus,
+        gender,
+        languages,
+        isMailValid,
+        plugged,
+        dateOfBirth,
+        chatContact,
+        socialMedia,
+        nationality,
+        locale,
+        placeOfBirth,
+        residentialAddress,
+        shippingAddress,
+        billingAddress,
+        mobileTheme,
+        source,
+        newsletterSubs,
+        roles,
+        apps,
+        phoneNumber
+      ];
+  @override
+  Map<String, dynamic> toJson() => _$UserInputToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
@@ -1475,6 +1677,41 @@ class EmailTempVariablesBrandInput extends JsonSerializable
   List<Object?> get props => [logo, website, name];
   @override
   Map<String, dynamic> toJson() => _$EmailTempVariablesBrandInputToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class RegisterForApp$Mutation$LoginType extends JsonSerializable
+    with EquatableMixin {
+  RegisterForApp$Mutation$LoginType();
+
+  factory RegisterForApp$Mutation$LoginType.fromJson(
+          Map<String, dynamic> json) =>
+      _$RegisterForApp$Mutation$LoginTypeFromJson(json);
+
+  late String accessToken;
+
+  late double expiresIn;
+
+  @override
+  List<Object?> get props => [accessToken, expiresIn];
+  @override
+  Map<String, dynamic> toJson() =>
+      _$RegisterForApp$Mutation$LoginTypeToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class RegisterForApp$Mutation extends JsonSerializable with EquatableMixin {
+  RegisterForApp$Mutation();
+
+  factory RegisterForApp$Mutation.fromJson(Map<String, dynamic> json) =>
+      _$RegisterForApp$MutationFromJson(json);
+
+  late RegisterForApp$Mutation$LoginType registerForApp;
+
+  @override
+  List<Object?> get props => [registerForApp];
+  @override
+  Map<String, dynamic> toJson() => _$RegisterForApp$MutationToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
@@ -2405,7 +2642,7 @@ class ListenForUserAuthentication$Subscription$UserAuthenticationType$UserType
 
   String? firstName;
 
-  bool? isPlugged;
+  bool? plugged;
 
   late DateTime createdAt;
 
@@ -2477,7 +2714,7 @@ class ListenForUserAuthentication$Subscription$UserAuthenticationType$UserType
         lastName,
         username,
         firstName,
-        isPlugged,
+        plugged,
         createdAt,
         updatedAt,
         isMailValid,
@@ -2943,7 +3180,7 @@ final UPDATE_CURRENT_USER_LOGINS_MUTATION_DOCUMENT = DocumentNode(definitions: [
                 selectionSet: null,
               ),
               FieldNode(
-                name: NameNode(value: 'isPlugged'),
+                name: NameNode(value: 'plugged'),
                 alias: null,
                 arguments: [],
                 directives: [],
@@ -6621,21 +6858,16 @@ class UpdateCurrentUserLoginsMutation extends GraphQLQuery<
 
 @JsonSerializable(explicitToJson: true)
 class LoginForAppArguments extends JsonSerializable with EquatableMixin {
-  LoginForAppArguments({
-    required this.login,
-    required this.password,
-  });
+  LoginForAppArguments({required this.input});
 
   @override
   factory LoginForAppArguments.fromJson(Map<String, dynamic> json) =>
       _$LoginForAppArgumentsFromJson(json);
 
-  late String login;
-
-  late String password;
+  late LoginInput input;
 
   @override
-  List<Object?> get props => [login, password];
+  List<Object?> get props => [input];
   @override
   Map<String, dynamic> toJson() => _$LoginForAppArgumentsToJson(this);
 }
@@ -6647,23 +6879,14 @@ final LOGIN_FOR_APP_QUERY_DOCUMENT = DocumentNode(definitions: [
     name: NameNode(value: 'loginForApp'),
     variableDefinitions: [
       VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'login')),
+        variable: VariableNode(name: NameNode(value: 'input')),
         type: NamedTypeNode(
-          name: NameNode(value: 'String'),
+          name: NameNode(value: 'LoginInput'),
           isNonNull: true,
         ),
         defaultValue: DefaultValueNode(value: null),
         directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'password')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: true,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
+      )
     ],
     directives: [],
     selectionSet: SelectionSetNode(selections: [
@@ -6672,15 +6895,24 @@ final LOGIN_FOR_APP_QUERY_DOCUMENT = DocumentNode(definitions: [
         alias: null,
         arguments: [
           ArgumentNode(
-            name: NameNode(value: 'login'),
-            value: VariableNode(name: NameNode(value: 'login')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'password'),
-            value: VariableNode(name: NameNode(value: 'password')),
-          ),
+            name: NameNode(value: 'input'),
+            value: VariableNode(name: NameNode(value: 'input')),
+          )
         ],
-        directives: [],
+        directives: [
+          DirectiveNode(
+            name: NameNode(value: 'namedClient'),
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'name'),
+                value: StringValueNode(
+                  value: 'auth',
+                  isBlock: false,
+                ),
+              )
+            ],
+          )
+        ],
         selectionSet: SelectionSetNode(selections: [
           FieldNode(
             name: NameNode(value: 'accessToken'),
@@ -6720,6 +6952,89 @@ class LoginForAppQuery
   @override
   LoginForApp$Query parse(Map<String, dynamic> json) =>
       LoginForApp$Query.fromJson(json);
+}
+
+@JsonSerializable(explicitToJson: true)
+class LoginArguments extends JsonSerializable with EquatableMixin {
+  LoginArguments({required this.input});
+
+  @override
+  factory LoginArguments.fromJson(Map<String, dynamic> json) =>
+      _$LoginArgumentsFromJson(json);
+
+  late LoginInput input;
+
+  @override
+  List<Object?> get props => [input];
+  @override
+  Map<String, dynamic> toJson() => _$LoginArgumentsToJson(this);
+}
+
+final LOGIN_QUERY_DOCUMENT_OPERATION_NAME = 'login';
+final LOGIN_QUERY_DOCUMENT = DocumentNode(definitions: [
+  OperationDefinitionNode(
+    type: OperationType.query,
+    name: NameNode(value: 'login'),
+    variableDefinitions: [
+      VariableDefinitionNode(
+        variable: VariableNode(name: NameNode(value: 'input')),
+        type: NamedTypeNode(
+          name: NameNode(value: 'LoginInput'),
+          isNonNull: true,
+        ),
+        defaultValue: DefaultValueNode(value: null),
+        directives: [],
+      )
+    ],
+    directives: [],
+    selectionSet: SelectionSetNode(selections: [
+      FieldNode(
+        name: NameNode(value: 'login'),
+        alias: null,
+        arguments: [
+          ArgumentNode(
+            name: NameNode(value: 'input'),
+            value: VariableNode(name: NameNode(value: 'input')),
+          )
+        ],
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+            name: NameNode(value: 'accessToken'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
+          ),
+          FieldNode(
+            name: NameNode(value: 'expiresIn'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
+          ),
+        ]),
+      )
+    ]),
+  )
+]);
+
+class LoginQuery extends GraphQLQuery<Login$Query, LoginArguments> {
+  LoginQuery({required this.variables});
+
+  @override
+  final DocumentNode document = LOGIN_QUERY_DOCUMENT;
+
+  @override
+  final String operationName = LOGIN_QUERY_DOCUMENT_OPERATION_NAME;
+
+  @override
+  final LoginArguments variables;
+
+  @override
+  List<Object?> get props => [document, operationName, variables];
+  @override
+  Login$Query parse(Map<String, dynamic> json) => Login$Query.fromJson(json);
 }
 
 @JsonSerializable(explicitToJson: true)
@@ -6765,7 +7080,20 @@ final LOGIN_WITH_FACEBOOK_QUERY_DOCUMENT = DocumentNode(definitions: [
             value: VariableNode(name: NameNode(value: 'token')),
           )
         ],
-        directives: [],
+        directives: [
+          DirectiveNode(
+            name: NameNode(value: 'namedClient'),
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'name'),
+                value: StringValueNode(
+                  value: 'auth',
+                  isBlock: false,
+                ),
+              )
+            ],
+          )
+        ],
         selectionSet: SelectionSetNode(selections: [
           FieldNode(
             name: NameNode(value: 'accessToken'),
@@ -6851,7 +7179,20 @@ final LOGIN_WITH_GOOGLE_QUERY_DOCUMENT = DocumentNode(definitions: [
             value: VariableNode(name: NameNode(value: 'token')),
           )
         ],
-        directives: [],
+        directives: [
+          DirectiveNode(
+            name: NameNode(value: 'namedClient'),
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'name'),
+                value: StringValueNode(
+                  value: 'auth',
+                  isBlock: false,
+                ),
+              )
+            ],
+          )
+        ],
         selectionSet: SelectionSetNode(selections: [
           FieldNode(
             name: NameNode(value: 'accessToken'),
@@ -6936,7 +7277,20 @@ final LOGIN_WITH_APPLE_QUERY_DOCUMENT = DocumentNode(definitions: [
             value: VariableNode(name: NameNode(value: 'authorizationData')),
           )
         ],
-        directives: [],
+        directives: [
+          DirectiveNode(
+            name: NameNode(value: 'namedClient'),
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'name'),
+                value: StringValueNode(
+                  value: 'auth',
+                  isBlock: false,
+                ),
+              )
+            ],
+          )
+        ],
         selectionSet: SelectionSetNode(selections: [
           FieldNode(
             name: NameNode(value: 'accessToken'),
@@ -6979,170 +7333,35 @@ class LoginWithAppleQuery
 }
 
 @JsonSerializable(explicitToJson: true)
-class RegisterForAppArguments extends JsonSerializable with EquatableMixin {
-  RegisterForAppArguments({
-    this.apps,
+class RegisterArguments extends JsonSerializable with EquatableMixin {
+  RegisterArguments({
     required this.subject,
-    this.email,
-    this.title,
-    this.about,
-    this.gender,
-    this.locale,
-    this.lastName,
-    this.username,
-    required this.password,
-    this.firstName,
-    this.phone,
-    this.status,
-    this.isPlugged,
-    required this.roles,
-    this.phoneNumber,
-    this.nationality,
-    this.source,
-    this.isMailValid,
-    this.placeOfBirth,
-    this.dateOfBirth,
-    this.picture,
-    this.newsletterSubs,
-    this.languages,
-    this.maritalStatus,
-    this.mobileTheme,
-    this.chatContact,
-    this.socialMedia,
-    this.shippingAddress,
-    this.residentialAddress,
+    required this.input,
     required this.brand,
   });
 
   @override
-  factory RegisterForAppArguments.fromJson(Map<String, dynamic> json) =>
-      _$RegisterForAppArgumentsFromJson(json);
-
-  @JsonKey(unknownEnumValue: App.artemisUnknown)
-  final List<App>? apps;
+  factory RegisterArguments.fromJson(Map<String, dynamic> json) =>
+      _$RegisterArgumentsFromJson(json);
 
   late String subject;
 
-  final String? email;
-
-  final String? title;
-
-  final String? about;
-
-  @JsonKey(unknownEnumValue: Gender.artemisUnknown)
-  final Gender? gender;
-
-  final String? locale;
-
-  final String? lastName;
-
-  final String? username;
-
-  late String password;
-
-  final String? firstName;
-
-  final IPhoneInput? phone;
-
-  @JsonKey(unknownEnumValue: UserStatus.artemisUnknown)
-  final UserStatus? status;
-
-  final bool? isPlugged;
-
-  @JsonKey(unknownEnumValue: UserRole.artemisUnknown)
-  late List<UserRole> roles;
-
-  final String? phoneNumber;
-
-  final String? nationality;
-
-  @JsonKey(unknownEnumValue: SourcesEnum.artemisUnknown)
-  final SourcesEnum? source;
-
-  final bool? isMailValid;
-
-  final String? placeOfBirth;
-
-  final DateTime? dateOfBirth;
-
-  final PictureInput? picture;
-
-  final bool? newsletterSubs;
-
-  final List<String>? languages;
-
-  @JsonKey(unknownEnumValue: MaritalStatus.artemisUnknown)
-  final MaritalStatus? maritalStatus;
-
-  @JsonKey(unknownEnumValue: MobileThemesEnum.artemisUnknown)
-  final MobileThemesEnum? mobileTheme;
-
-  final List<SocialValueInput>? chatContact;
-
-  final List<SocialValueInput>? socialMedia;
-
-  final List<FullAddressInput>? shippingAddress;
-
-  final List<FullAddressInput>? residentialAddress;
+  late UserInput input;
 
   late EmailTempVariablesBrandInput brand;
 
   @override
-  List<Object?> get props => [
-        apps,
-        subject,
-        email,
-        title,
-        about,
-        gender,
-        locale,
-        lastName,
-        username,
-        password,
-        firstName,
-        phone,
-        status,
-        isPlugged,
-        roles,
-        phoneNumber,
-        nationality,
-        source,
-        isMailValid,
-        placeOfBirth,
-        dateOfBirth,
-        picture,
-        newsletterSubs,
-        languages,
-        maritalStatus,
-        mobileTheme,
-        chatContact,
-        socialMedia,
-        shippingAddress,
-        residentialAddress,
-        brand
-      ];
+  List<Object?> get props => [subject, input, brand];
   @override
-  Map<String, dynamic> toJson() => _$RegisterForAppArgumentsToJson(this);
+  Map<String, dynamic> toJson() => _$RegisterArgumentsToJson(this);
 }
 
-final REGISTER_FOR_APP_MUTATION_DOCUMENT_OPERATION_NAME = 'registerForApp';
-final REGISTER_FOR_APP_MUTATION_DOCUMENT = DocumentNode(definitions: [
+final REGISTER_MUTATION_DOCUMENT_OPERATION_NAME = 'register';
+final REGISTER_MUTATION_DOCUMENT = DocumentNode(definitions: [
   OperationDefinitionNode(
     type: OperationType.mutation,
-    name: NameNode(value: 'registerForApp'),
+    name: NameNode(value: 'register'),
     variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'apps')),
-        type: ListTypeNode(
-          type: NamedTypeNode(
-            name: NameNode(value: 'App'),
-            isNonNull: true,
-          ),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
       VariableDefinitionNode(
         variable: VariableNode(name: NameNode(value: 'subject')),
         type: NamedTypeNode(
@@ -7153,271 +7372,10 @@ final REGISTER_FOR_APP_MUTATION_DOCUMENT = DocumentNode(definitions: [
         directives: [],
       ),
       VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'email')),
+        variable: VariableNode(name: NameNode(value: 'input')),
         type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'title')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'about')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'gender')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Gender'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'locale')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'lastName')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'username')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'password')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
+          name: NameNode(value: 'UserInput'),
           isNonNull: true,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'firstName')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'phone')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'IPhoneInput'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'status')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'UserStatus'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'isPlugged')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Boolean'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'roles')),
-        type: ListTypeNode(
-          type: NamedTypeNode(
-            name: NameNode(value: 'UserRole'),
-            isNonNull: true,
-          ),
-          isNonNull: true,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'phoneNumber')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'nationality')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'source')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'SourcesEnum'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'isMailValid')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Boolean'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'placeOfBirth')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'dateOfBirth')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'DateTime'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'picture')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'PictureInput'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'newsletterSubs')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Boolean'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'languages')),
-        type: ListTypeNode(
-          type: NamedTypeNode(
-            name: NameNode(value: 'String'),
-            isNonNull: true,
-          ),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'maritalStatus')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'MaritalStatus'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'mobileTheme')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'MobileThemesEnum'),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'chatContact')),
-        type: ListTypeNode(
-          type: NamedTypeNode(
-            name: NameNode(value: 'SocialValueInput'),
-            isNonNull: true,
-          ),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'socialMedia')),
-        type: ListTypeNode(
-          type: NamedTypeNode(
-            name: NameNode(value: 'SocialValueInput'),
-            isNonNull: true,
-          ),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'shippingAddress')),
-        type: ListTypeNode(
-          type: NamedTypeNode(
-            name: NameNode(value: 'FullAddressInput'),
-            isNonNull: true,
-          ),
-          isNonNull: false,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'residentialAddress')),
-        type: ListTypeNode(
-          type: NamedTypeNode(
-            name: NameNode(value: 'FullAddressInput'),
-            isNonNull: true,
-          ),
-          isNonNull: false,
         ),
         defaultValue: DefaultValueNode(value: null),
         directives: [],
@@ -7439,9 +7397,124 @@ final REGISTER_FOR_APP_MUTATION_DOCUMENT = DocumentNode(definitions: [
         alias: null,
         arguments: [
           ArgumentNode(
-            name: NameNode(value: 'apps'),
-            value: VariableNode(name: NameNode(value: 'apps')),
+            name: NameNode(value: 'subject'),
+            value: VariableNode(name: NameNode(value: 'subject')),
           ),
+          ArgumentNode(
+            name: NameNode(value: 'brand'),
+            value: VariableNode(name: NameNode(value: 'brand')),
+          ),
+          ArgumentNode(
+            name: NameNode(value: 'input'),
+            value: VariableNode(name: NameNode(value: 'input')),
+          ),
+        ],
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+            name: NameNode(value: 'accessToken'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
+          ),
+          FieldNode(
+            name: NameNode(value: 'expiresIn'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
+          ),
+        ]),
+      )
+    ]),
+  )
+]);
+
+class RegisterMutation
+    extends GraphQLQuery<Register$Mutation, RegisterArguments> {
+  RegisterMutation({required this.variables});
+
+  @override
+  final DocumentNode document = REGISTER_MUTATION_DOCUMENT;
+
+  @override
+  final String operationName = REGISTER_MUTATION_DOCUMENT_OPERATION_NAME;
+
+  @override
+  final RegisterArguments variables;
+
+  @override
+  List<Object?> get props => [document, operationName, variables];
+  @override
+  Register$Mutation parse(Map<String, dynamic> json) =>
+      Register$Mutation.fromJson(json);
+}
+
+@JsonSerializable(explicitToJson: true)
+class RegisterForAppArguments extends JsonSerializable with EquatableMixin {
+  RegisterForAppArguments({
+    required this.subject,
+    required this.input,
+    required this.brand,
+  });
+
+  @override
+  factory RegisterForAppArguments.fromJson(Map<String, dynamic> json) =>
+      _$RegisterForAppArgumentsFromJson(json);
+
+  late String subject;
+
+  late UserInput input;
+
+  late EmailTempVariablesBrandInput brand;
+
+  @override
+  List<Object?> get props => [subject, input, brand];
+  @override
+  Map<String, dynamic> toJson() => _$RegisterForAppArgumentsToJson(this);
+}
+
+final REGISTER_FOR_APP_MUTATION_DOCUMENT_OPERATION_NAME = 'registerForApp';
+final REGISTER_FOR_APP_MUTATION_DOCUMENT = DocumentNode(definitions: [
+  OperationDefinitionNode(
+    type: OperationType.mutation,
+    name: NameNode(value: 'registerForApp'),
+    variableDefinitions: [
+      VariableDefinitionNode(
+        variable: VariableNode(name: NameNode(value: 'subject')),
+        type: NamedTypeNode(
+          name: NameNode(value: 'String'),
+          isNonNull: true,
+        ),
+        defaultValue: DefaultValueNode(value: null),
+        directives: [],
+      ),
+      VariableDefinitionNode(
+        variable: VariableNode(name: NameNode(value: 'input')),
+        type: NamedTypeNode(
+          name: NameNode(value: 'UserInput'),
+          isNonNull: true,
+        ),
+        defaultValue: DefaultValueNode(value: null),
+        directives: [],
+      ),
+      VariableDefinitionNode(
+        variable: VariableNode(name: NameNode(value: 'brand')),
+        type: NamedTypeNode(
+          name: NameNode(value: 'EmailTempVariablesBrandInput'),
+          isNonNull: true,
+        ),
+        defaultValue: DefaultValueNode(value: null),
+        directives: [],
+      ),
+    ],
+    directives: [],
+    selectionSet: SelectionSetNode(selections: [
+      FieldNode(
+        name: NameNode(value: 'registerForApp'),
+        alias: null,
+        arguments: [
           ArgumentNode(
             name: NameNode(value: 'subject'),
             value: VariableNode(name: NameNode(value: 'subject')),
@@ -7451,119 +7524,24 @@ final REGISTER_FOR_APP_MUTATION_DOCUMENT = DocumentNode(definitions: [
             value: VariableNode(name: NameNode(value: 'brand')),
           ),
           ArgumentNode(
-            name: NameNode(value: 'email'),
-            value: VariableNode(name: NameNode(value: 'email')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'title'),
-            value: VariableNode(name: NameNode(value: 'title')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'about'),
-            value: VariableNode(name: NameNode(value: 'about')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'roles'),
-            value: VariableNode(name: NameNode(value: 'roles')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'phone'),
-            value: VariableNode(name: NameNode(value: 'phone')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'gender'),
-            value: VariableNode(name: NameNode(value: 'gender')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'locale'),
-            value: VariableNode(name: NameNode(value: 'locale')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'status'),
-            value: VariableNode(name: NameNode(value: 'status')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'source'),
-            value: VariableNode(name: NameNode(value: 'source')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'picture'),
-            value: VariableNode(name: NameNode(value: 'picture')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'password'),
-            value: VariableNode(name: NameNode(value: 'password')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'lastName'),
-            value: VariableNode(name: NameNode(value: 'lastName')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'username'),
-            value: VariableNode(name: NameNode(value: 'username')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'firstName'),
-            value: VariableNode(name: NameNode(value: 'firstName')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'isPlugged'),
-            value: VariableNode(name: NameNode(value: 'isPlugged')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'languages'),
-            value: VariableNode(name: NameNode(value: 'languages')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'dateOfBirth'),
-            value: VariableNode(name: NameNode(value: 'dateOfBirth')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'phoneNumber'),
-            value: VariableNode(name: NameNode(value: 'phoneNumber')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'nationality'),
-            value: VariableNode(name: NameNode(value: 'nationality')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'isMailValid'),
-            value: VariableNode(name: NameNode(value: 'isMailValid')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'chatContact'),
-            value: VariableNode(name: NameNode(value: 'chatContact')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'socialMedia'),
-            value: VariableNode(name: NameNode(value: 'socialMedia')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'mobileTheme'),
-            value: VariableNode(name: NameNode(value: 'mobileTheme')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'placeOfBirth'),
-            value: VariableNode(name: NameNode(value: 'placeOfBirth')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'maritalStatus'),
-            value: VariableNode(name: NameNode(value: 'maritalStatus')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'newsletterSubs'),
-            value: VariableNode(name: NameNode(value: 'newsletterSubs')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'shippingAddress'),
-            value: VariableNode(name: NameNode(value: 'shippingAddress')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'residentialAddress'),
-            value: VariableNode(name: NameNode(value: 'residentialAddress')),
+            name: NameNode(value: 'input'),
+            value: VariableNode(name: NameNode(value: 'input')),
           ),
         ],
-        directives: [],
+        directives: [
+          DirectiveNode(
+            name: NameNode(value: 'namedClient'),
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'name'),
+                value: StringValueNode(
+                  value: 'auth',
+                  isBlock: false,
+                ),
+              )
+            ],
+          )
+        ],
         selectionSet: SelectionSetNode(selections: [
           FieldNode(
             name: NameNode(value: 'accessToken'),
@@ -7727,7 +7705,7 @@ final LISTEN_FOR_USER_AUTHENTICATION_SUBSCRIPTION_DOCUMENT =
                 selectionSet: null,
               ),
               FieldNode(
-                name: NameNode(value: 'isPlugged'),
+                name: NameNode(value: 'plugged'),
                 alias: null,
                 arguments: [],
                 directives: [],

@@ -986,7 +986,7 @@ GetMessagesByMessageGroupPagination$Query$MessagePaginateType$MessageType$UserTy
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -1082,7 +1082,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -2293,7 +2293,7 @@ GetMessagesByMessageGroupPagination$Query$MessagePaginateType$MessageType$Messag
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -2389,7 +2389,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -3487,7 +3487,7 @@ GetMessagesByMessageGroupPagination$Query$MessagePaginateType$MessageType$Messag
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -3583,7 +3583,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -5059,7 +5059,7 @@ SearchMessageByMessageGroupPagination$Query$MessagePaginateType$MessageType$User
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -5155,7 +5155,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -6272,7 +6272,7 @@ SearchMessageByMessageGroupPagination$Query$MessagePaginateType$MessageType$Mess
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -6368,7 +6368,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -7466,7 +7466,7 @@ SearchMessageByMessageGroupPagination$Query$MessagePaginateType$MessageType$Mess
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -7562,7 +7562,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -8921,7 +8921,7 @@ CreateMessage$Mutation$MessageType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -9015,7 +9015,7 @@ Map<String, dynamic> _$CreateMessage$Mutation$MessageType$UserTypeToJson(
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -10128,7 +10128,7 @@ CreateMessage$Mutation$MessageType$MessageGroupType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -10223,7 +10223,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -11321,7 +11321,7 @@ CreateMessage$Mutation$MessageType$MessageGroupType$MembersType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -11417,7 +11417,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -12863,7 +12863,7 @@ SendMessageToTarget$Mutation$MessageType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -12957,7 +12957,7 @@ Map<String, dynamic> _$SendMessageToTarget$Mutation$MessageType$UserTypeToJson(
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -14071,7 +14071,7 @@ SendMessageToTarget$Mutation$MessageType$MessageGroupType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -14167,7 +14167,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -15265,7 +15265,7 @@ SendMessageToTarget$Mutation$MessageType$MessageGroupType$MembersType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -15361,7 +15361,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -16752,7 +16752,7 @@ CreateDirectMessage$Mutation$MessageType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -16846,7 +16846,7 @@ Map<String, dynamic> _$CreateDirectMessage$Mutation$MessageType$UserTypeToJson(
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -17960,7 +17960,7 @@ CreateDirectMessage$Mutation$MessageType$MessageGroupType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -18056,7 +18056,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -19154,7 +19154,7 @@ CreateDirectMessage$Mutation$MessageType$MessageGroupType$MembersType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -19250,7 +19250,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -20612,7 +20612,7 @@ MarkMessageAsSeen$Mutation$MessageType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -20706,7 +20706,7 @@ Map<String, dynamic> _$MarkMessageAsSeen$Mutation$MessageType$UserTypeToJson(
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -21819,7 +21819,7 @@ MarkMessageAsSeen$Mutation$MessageType$MessageGroupType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -21915,7 +21915,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -23013,7 +23013,7 @@ MarkMessageAsSeen$Mutation$MessageType$MessageGroupType$MembersType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -23109,7 +23109,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -24464,7 +24464,7 @@ ListenForNewMessage$Subscription$MessageType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -24559,7 +24559,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -25675,7 +25675,7 @@ ListenForNewMessage$Subscription$MessageType$MessageGroupType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -25771,7 +25771,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -26869,7 +26869,7 @@ ListenForNewMessage$Subscription$MessageType$MessageGroupType$MembersType$UserTy
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -26965,7 +26965,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -28294,7 +28294,7 @@ ListenForMessageGroupUpdated$Subscription$MessageGroupType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -28390,7 +28390,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -29488,7 +29488,7 @@ ListenForMessageGroupUpdated$Subscription$MessageGroupType$MembersType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -29584,7 +29584,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);

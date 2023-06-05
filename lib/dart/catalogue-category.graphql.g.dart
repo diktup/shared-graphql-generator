@@ -239,6 +239,7 @@ Map<String, dynamic> _$GetCatalogueCategories$Query$CatalogueCategoryTypeToJson(
 const _$ProductVarietyEnumEnumMap = {
   ProductVarietyEnum.product: 'PRODUCT',
   ProductVarietyEnum.equipment: 'EQUIPMENT',
+  ProductVarietyEnum.service: 'SERVICE',
   ProductVarietyEnum.vehicule: 'VEHICULE',
   ProductVarietyEnum.artemisUnknown: 'ARTEMIS_UNKNOWN',
 };

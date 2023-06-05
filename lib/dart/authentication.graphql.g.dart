@@ -986,7 +986,7 @@ UpdateCurrentUserLogins$Mutation$LoginType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -1081,7 +1081,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -1278,6 +1278,51 @@ Map<String, dynamic> _$LoginForApp$QueryToJson(LoginForApp$Query instance) =>
       'loginForApp': instance.loginForApp.toJson(),
     };
 
+LoginInput _$LoginInputFromJson(Map<String, dynamic> json) => LoginInput(
+      login: json['login'] as String?,
+      phone: json['phone'] == null
+          ? null
+          : IPhoneInput.fromJson(json['phone'] as Map<String, dynamic>),
+      password: json['password'] as String,
+    );
+
+Map<String, dynamic> _$LoginInputToJson(LoginInput instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('login', instance.login);
+  writeNotNull('phone', instance.phone?.toJson());
+  val['password'] = instance.password;
+  return val;
+}
+
+Login$Query$LoginType _$Login$Query$LoginTypeFromJson(
+        Map<String, dynamic> json) =>
+    Login$Query$LoginType()
+      ..accessToken = json['accessToken'] as String
+      ..expiresIn = (json['expiresIn'] as num).toDouble();
+
+Map<String, dynamic> _$Login$Query$LoginTypeToJson(
+        Login$Query$LoginType instance) =>
+    <String, dynamic>{
+      'accessToken': instance.accessToken,
+      'expiresIn': instance.expiresIn,
+    };
+
+Login$Query _$Login$QueryFromJson(Map<String, dynamic> json) => Login$Query()
+  ..login =
+      Login$Query$LoginType.fromJson(json['login'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$Login$QueryToJson(Login$Query instance) =>
+    <String, dynamic>{
+      'login': instance.login.toJson(),
+    };
+
 LoginWithFacebook$Query$LoginType _$LoginWithFacebook$Query$LoginTypeFromJson(
         Map<String, dynamic> json) =>
     LoginWithFacebook$Query$LoginType()
@@ -1385,30 +1430,147 @@ Map<String, dynamic> _$AuthorizationDataInputToJson(
   return val;
 }
 
-RegisterForApp$Mutation$LoginType _$RegisterForApp$Mutation$LoginTypeFromJson(
+Register$Mutation$LoginType _$Register$Mutation$LoginTypeFromJson(
         Map<String, dynamic> json) =>
-    RegisterForApp$Mutation$LoginType()
+    Register$Mutation$LoginType()
       ..accessToken = json['accessToken'] as String
       ..expiresIn = (json['expiresIn'] as num).toDouble();
 
-Map<String, dynamic> _$RegisterForApp$Mutation$LoginTypeToJson(
-        RegisterForApp$Mutation$LoginType instance) =>
+Map<String, dynamic> _$Register$Mutation$LoginTypeToJson(
+        Register$Mutation$LoginType instance) =>
     <String, dynamic>{
       'accessToken': instance.accessToken,
       'expiresIn': instance.expiresIn,
     };
 
-RegisterForApp$Mutation _$RegisterForApp$MutationFromJson(
-        Map<String, dynamic> json) =>
-    RegisterForApp$Mutation()
-      ..registerForApp = RegisterForApp$Mutation$LoginType.fromJson(
+Register$Mutation _$Register$MutationFromJson(Map<String, dynamic> json) =>
+    Register$Mutation()
+      ..registerForApp = Register$Mutation$LoginType.fromJson(
           json['registerForApp'] as Map<String, dynamic>);
 
-Map<String, dynamic> _$RegisterForApp$MutationToJson(
-        RegisterForApp$Mutation instance) =>
+Map<String, dynamic> _$Register$MutationToJson(Register$Mutation instance) =>
     <String, dynamic>{
       'registerForApp': instance.registerForApp.toJson(),
     };
+
+UserInput _$UserInputFromJson(Map<String, dynamic> json) => UserInput(
+      email: json['email'] as String?,
+      username: json['username'] as String?,
+      phone: json['phone'] == null
+          ? null
+          : IPhoneInput.fromJson(json['phone'] as Map<String, dynamic>),
+      password: json['password'] as String,
+      picture: json['picture'] == null
+          ? null
+          : PictureInput.fromJson(json['picture'] as Map<String, dynamic>),
+      pictures: (json['pictures'] as List<dynamic>?)
+          ?.map((e) => PictureInput.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      covers: (json['covers'] as List<dynamic>?)
+          ?.map((e) => PictureInput.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      firstName: json['firstName'] as String?,
+      status: $enumDecodeNullable(_$UserStatusEnumMap, json['status'],
+          unknownValue: UserStatus.artemisUnknown),
+      title: json['title'] as String?,
+      about: json['about'] as String?,
+      lastName: json['lastName'] as String?,
+      maritalStatus: $enumDecodeNullable(
+          _$MaritalStatusEnumMap, json['maritalStatus'],
+          unknownValue: MaritalStatus.artemisUnknown),
+      gender: $enumDecodeNullable(_$GenderEnumMap, json['gender'],
+          unknownValue: Gender.artemisUnknown),
+      languages: (json['languages'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      isMailValid: json['isMailValid'] as bool?,
+      plugged: json['plugged'] as bool?,
+      dateOfBirth: json['dateOfBirth'] == null
+          ? null
+          : DateTime.parse(json['dateOfBirth'] as String),
+      chatContact: (json['chatContact'] as List<dynamic>?)
+          ?.map((e) => SocialValueInput.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      socialMedia: (json['socialMedia'] as List<dynamic>?)
+          ?.map((e) => SocialValueInput.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      nationality: json['nationality'] as String?,
+      locale: json['locale'] as String?,
+      placeOfBirth: json['placeOfBirth'] as String?,
+      residentialAddress: (json['residentialAddress'] as List<dynamic>?)
+          ?.map((e) => FullAddressInput.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      shippingAddress: (json['shippingAddress'] as List<dynamic>?)
+          ?.map((e) => FullAddressInput.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      billingAddress: (json['billingAddress'] as List<dynamic>?)
+          ?.map((e) => FullAddressInput.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      mobileTheme: $enumDecodeNullable(
+          _$MobileThemesEnumEnumMap, json['mobileTheme'],
+          unknownValue: MobileThemesEnum.artemisUnknown),
+      source: $enumDecodeNullable(_$SourcesEnumEnumMap, json['source'],
+          unknownValue: SourcesEnum.artemisUnknown),
+      newsletterSubs: json['newsletterSubs'] as bool?,
+      roles: (json['roles'] as List<dynamic>)
+          .map((e) => $enumDecode(_$UserRoleEnumMap, e,
+              unknownValue: UserRole.artemisUnknown))
+          .toList(),
+      apps: (json['apps'] as List<dynamic>?)
+          ?.map((e) =>
+              $enumDecode(_$AppEnumMap, e, unknownValue: App.artemisUnknown))
+          .toList(),
+      phoneNumber: json['phoneNumber'] as String?,
+    );
+
+Map<String, dynamic> _$UserInputToJson(UserInput instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('email', instance.email);
+  writeNotNull('username', instance.username);
+  writeNotNull('phone', instance.phone?.toJson());
+  val['password'] = instance.password;
+  writeNotNull('picture', instance.picture?.toJson());
+  writeNotNull('pictures', instance.pictures?.map((e) => e.toJson()).toList());
+  writeNotNull('covers', instance.covers?.map((e) => e.toJson()).toList());
+  writeNotNull('firstName', instance.firstName);
+  writeNotNull('status', _$UserStatusEnumMap[instance.status]);
+  writeNotNull('title', instance.title);
+  writeNotNull('about', instance.about);
+  writeNotNull('lastName', instance.lastName);
+  writeNotNull('maritalStatus', _$MaritalStatusEnumMap[instance.maritalStatus]);
+  writeNotNull('gender', _$GenderEnumMap[instance.gender]);
+  writeNotNull('languages', instance.languages);
+  writeNotNull('isMailValid', instance.isMailValid);
+  writeNotNull('plugged', instance.plugged);
+  writeNotNull('dateOfBirth', instance.dateOfBirth?.toIso8601String());
+  writeNotNull(
+      'chatContact', instance.chatContact?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'socialMedia', instance.socialMedia?.map((e) => e.toJson()).toList());
+  writeNotNull('nationality', instance.nationality);
+  writeNotNull('locale', instance.locale);
+  writeNotNull('placeOfBirth', instance.placeOfBirth);
+  writeNotNull('residentialAddress',
+      instance.residentialAddress?.map((e) => e.toJson()).toList());
+  writeNotNull('shippingAddress',
+      instance.shippingAddress?.map((e) => e.toJson()).toList());
+  writeNotNull('billingAddress',
+      instance.billingAddress?.map((e) => e.toJson()).toList());
+  writeNotNull('mobileTheme', _$MobileThemesEnumEnumMap[instance.mobileTheme]);
+  writeNotNull('source', _$SourcesEnumEnumMap[instance.source]);
+  writeNotNull('newsletterSubs', instance.newsletterSubs);
+  val['roles'] = instance.roles.map((e) => _$UserRoleEnumMap[e]!).toList();
+  writeNotNull('apps', instance.apps?.map((e) => _$AppEnumMap[e]!).toList());
+  writeNotNull('phoneNumber', instance.phoneNumber);
+  return val;
+}
 
 PictureInput _$PictureInputFromJson(Map<String, dynamic> json) => PictureInput(
       width: json['width'] as int?,
@@ -1569,6 +1731,31 @@ Map<String, dynamic> _$EmailTempVariablesBrandInputToJson(
   writeNotNull('name', instance.name);
   return val;
 }
+
+RegisterForApp$Mutation$LoginType _$RegisterForApp$Mutation$LoginTypeFromJson(
+        Map<String, dynamic> json) =>
+    RegisterForApp$Mutation$LoginType()
+      ..accessToken = json['accessToken'] as String
+      ..expiresIn = (json['expiresIn'] as num).toDouble();
+
+Map<String, dynamic> _$RegisterForApp$Mutation$LoginTypeToJson(
+        RegisterForApp$Mutation$LoginType instance) =>
+    <String, dynamic>{
+      'accessToken': instance.accessToken,
+      'expiresIn': instance.expiresIn,
+    };
+
+RegisterForApp$Mutation _$RegisterForApp$MutationFromJson(
+        Map<String, dynamic> json) =>
+    RegisterForApp$Mutation()
+      ..registerForApp = RegisterForApp$Mutation$LoginType.fromJson(
+          json['registerForApp'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$RegisterForApp$MutationToJson(
+        RegisterForApp$Mutation instance) =>
+    <String, dynamic>{
+      'registerForApp': instance.registerForApp.toJson(),
+    };
 
 ListenForUserAuthentication$Subscription$UserAuthenticationType$UserType$PhoneType
     _$ListenForUserAuthentication$Subscription$UserAuthenticationType$UserType$PhoneTypeFromJson(
@@ -2542,7 +2729,7 @@ ListenForUserAuthentication$Subscription$UserAuthenticationType$UserType
           ..lastName = json['lastName'] as String?
           ..username = json['username'] as String?
           ..firstName = json['firstName'] as String?
-          ..isPlugged = json['isPlugged'] as bool?
+          ..plugged = json['plugged'] as bool?
           ..createdAt = DateTime.parse(json['createdAt'] as String)
           ..updatedAt = DateTime.parse(json['updatedAt'] as String)
           ..isMailValid = json['isMailValid'] as bool?
@@ -2638,7 +2825,7 @@ Map<String, dynamic>
   writeNotNull('lastName', instance.lastName);
   writeNotNull('username', instance.username);
   writeNotNull('firstName', instance.firstName);
-  writeNotNull('isPlugged', instance.isPlugged);
+  writeNotNull('plugged', instance.plugged);
   val['createdAt'] = instance.createdAt.toIso8601String();
   val['updatedAt'] = instance.updatedAt.toIso8601String();
   writeNotNull('isMailValid', instance.isMailValid);
@@ -2745,15 +2932,23 @@ Map<String, dynamic> _$UpdateCurrentUserLoginsArgumentsToJson(
 LoginForAppArguments _$LoginForAppArgumentsFromJson(
         Map<String, dynamic> json) =>
     LoginForAppArguments(
-      login: json['login'] as String,
-      password: json['password'] as String,
+      input: LoginInput.fromJson(json['input'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$LoginForAppArgumentsToJson(
         LoginForAppArguments instance) =>
     <String, dynamic>{
-      'login': instance.login,
-      'password': instance.password,
+      'input': instance.input.toJson(),
+    };
+
+LoginArguments _$LoginArgumentsFromJson(Map<String, dynamic> json) =>
+    LoginArguments(
+      input: LoginInput.fromJson(json['input'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$LoginArgumentsToJson(LoginArguments instance) =>
+    <String, dynamic>{
+      'input': instance.input.toJson(),
     };
 
 LoginWithFacebookArguments _$LoginWithFacebookArgumentsFromJson(
@@ -2793,116 +2988,34 @@ Map<String, dynamic> _$LoginWithAppleArgumentsToJson(
       'authorizationData': instance.authorizationData.toJson(),
     };
 
+RegisterArguments _$RegisterArgumentsFromJson(Map<String, dynamic> json) =>
+    RegisterArguments(
+      subject: json['subject'] as String,
+      input: UserInput.fromJson(json['input'] as Map<String, dynamic>),
+      brand: EmailTempVariablesBrandInput.fromJson(
+          json['brand'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$RegisterArgumentsToJson(RegisterArguments instance) =>
+    <String, dynamic>{
+      'subject': instance.subject,
+      'input': instance.input.toJson(),
+      'brand': instance.brand.toJson(),
+    };
+
 RegisterForAppArguments _$RegisterForAppArgumentsFromJson(
         Map<String, dynamic> json) =>
     RegisterForAppArguments(
-      apps: (json['apps'] as List<dynamic>?)
-          ?.map((e) =>
-              $enumDecode(_$AppEnumMap, e, unknownValue: App.artemisUnknown))
-          .toList(),
       subject: json['subject'] as String,
-      email: json['email'] as String?,
-      title: json['title'] as String?,
-      about: json['about'] as String?,
-      gender: $enumDecodeNullable(_$GenderEnumMap, json['gender'],
-          unknownValue: Gender.artemisUnknown),
-      locale: json['locale'] as String?,
-      lastName: json['lastName'] as String?,
-      username: json['username'] as String?,
-      password: json['password'] as String,
-      firstName: json['firstName'] as String?,
-      phone: json['phone'] == null
-          ? null
-          : IPhoneInput.fromJson(json['phone'] as Map<String, dynamic>),
-      status: $enumDecodeNullable(_$UserStatusEnumMap, json['status'],
-          unknownValue: UserStatus.artemisUnknown),
-      isPlugged: json['isPlugged'] as bool?,
-      roles: (json['roles'] as List<dynamic>)
-          .map((e) => $enumDecode(_$UserRoleEnumMap, e,
-              unknownValue: UserRole.artemisUnknown))
-          .toList(),
-      phoneNumber: json['phoneNumber'] as String?,
-      nationality: json['nationality'] as String?,
-      source: $enumDecodeNullable(_$SourcesEnumEnumMap, json['source'],
-          unknownValue: SourcesEnum.artemisUnknown),
-      isMailValid: json['isMailValid'] as bool?,
-      placeOfBirth: json['placeOfBirth'] as String?,
-      dateOfBirth: json['dateOfBirth'] == null
-          ? null
-          : DateTime.parse(json['dateOfBirth'] as String),
-      picture: json['picture'] == null
-          ? null
-          : PictureInput.fromJson(json['picture'] as Map<String, dynamic>),
-      newsletterSubs: json['newsletterSubs'] as bool?,
-      languages: (json['languages'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      maritalStatus: $enumDecodeNullable(
-          _$MaritalStatusEnumMap, json['maritalStatus'],
-          unknownValue: MaritalStatus.artemisUnknown),
-      mobileTheme: $enumDecodeNullable(
-          _$MobileThemesEnumEnumMap, json['mobileTheme'],
-          unknownValue: MobileThemesEnum.artemisUnknown),
-      chatContact: (json['chatContact'] as List<dynamic>?)
-          ?.map((e) => SocialValueInput.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      socialMedia: (json['socialMedia'] as List<dynamic>?)
-          ?.map((e) => SocialValueInput.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      shippingAddress: (json['shippingAddress'] as List<dynamic>?)
-          ?.map((e) => FullAddressInput.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      residentialAddress: (json['residentialAddress'] as List<dynamic>?)
-          ?.map((e) => FullAddressInput.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      input: UserInput.fromJson(json['input'] as Map<String, dynamic>),
       brand: EmailTempVariablesBrandInput.fromJson(
           json['brand'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$RegisterForAppArgumentsToJson(
-    RegisterForAppArguments instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('apps', instance.apps?.map((e) => _$AppEnumMap[e]!).toList());
-  val['subject'] = instance.subject;
-  writeNotNull('email', instance.email);
-  writeNotNull('title', instance.title);
-  writeNotNull('about', instance.about);
-  writeNotNull('gender', _$GenderEnumMap[instance.gender]);
-  writeNotNull('locale', instance.locale);
-  writeNotNull('lastName', instance.lastName);
-  writeNotNull('username', instance.username);
-  val['password'] = instance.password;
-  writeNotNull('firstName', instance.firstName);
-  writeNotNull('phone', instance.phone?.toJson());
-  writeNotNull('status', _$UserStatusEnumMap[instance.status]);
-  writeNotNull('isPlugged', instance.isPlugged);
-  val['roles'] = instance.roles.map((e) => _$UserRoleEnumMap[e]!).toList();
-  writeNotNull('phoneNumber', instance.phoneNumber);
-  writeNotNull('nationality', instance.nationality);
-  writeNotNull('source', _$SourcesEnumEnumMap[instance.source]);
-  writeNotNull('isMailValid', instance.isMailValid);
-  writeNotNull('placeOfBirth', instance.placeOfBirth);
-  writeNotNull('dateOfBirth', instance.dateOfBirth?.toIso8601String());
-  writeNotNull('picture', instance.picture?.toJson());
-  writeNotNull('newsletterSubs', instance.newsletterSubs);
-  writeNotNull('languages', instance.languages);
-  writeNotNull('maritalStatus', _$MaritalStatusEnumMap[instance.maritalStatus]);
-  writeNotNull('mobileTheme', _$MobileThemesEnumEnumMap[instance.mobileTheme]);
-  writeNotNull(
-      'chatContact', instance.chatContact?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'socialMedia', instance.socialMedia?.map((e) => e.toJson()).toList());
-  writeNotNull('shippingAddress',
-      instance.shippingAddress?.map((e) => e.toJson()).toList());
-  writeNotNull('residentialAddress',
-      instance.residentialAddress?.map((e) => e.toJson()).toList());
-  val['brand'] = instance.brand.toJson();
-  return val;
-}
+        RegisterForAppArguments instance) =>
+    <String, dynamic>{
+      'subject': instance.subject,
+      'input': instance.input.toJson(),
+      'brand': instance.brand.toJson(),
+    };

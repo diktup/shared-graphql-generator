@@ -4919,6 +4919,8 @@ enum ProductVarietyEnum {
   product,
   @JsonValue('EQUIPMENT')
   equipment,
+  @JsonValue('SERVICE')
+  service,
   @JsonValue('VEHICULE')
   vehicule,
   @JsonValue('ARTEMIS_UNKNOWN')
