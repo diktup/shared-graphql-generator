@@ -19,10 +19,10 @@ targets:
               output: lib/dart/account.graphql.dart
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/authentication.graphql
-              output: lib/dart/authentication.graphql.dart            
+              output: lib/dart/authentication.graphql.dart
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/board-card.graphql
-              output  : lib/dart/board-card.graphql.dart
+              output: lib/dart/board-card.graphql.dart
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/board-list.graphql
               output: lib/dart/board-list.graphql.dart
@@ -31,7 +31,7 @@ targets:
               output: lib/dart/board.graphql.dart
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/comment.graphql
-              output: lib/dart/comment.graphql.dart            
+              output: lib/dart/comment.graphql.dart
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/company.graphql
               output: lib/dart/company.graphql.dart
@@ -43,7 +43,7 @@ targets:
               output: lib/dart/tickets.graphql.dart
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/user.graphql
-              output: lib/dart/user.graphql.dart            
+              output: lib/dart/user.graphql.dart
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/country.graphql
               output: lib/dart/country.graphql.dart
@@ -61,16 +61,16 @@ targets:
               output: lib/dart/catalogue-category.graphql.dart
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/internal-product.graphql
-              output: lib/dart/internal-product.graphql.dart            
+              output: lib/dart/internal-product.graphql.dart
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/contact.graphql
-              output: lib/dart/contact.graphql.dart            
+              output: lib/dart/contact.graphql.dart
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/quotation.graphql
               output: lib/dart/quotation.graphql.dart
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/message.graphql
-              output: lib/dart/message.graphql.dart            
+              output: lib/dart/message.graphql.dart
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/message-group.graphql
               output: lib/dart/message-group.graphql.dart
@@ -83,3 +83,9 @@ targets:
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/department.graphql
               output: lib/dart/department.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/task.graphql
+              output: lib/dart/task.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/task-section.graphql
+              output: lib/dart/task-section.graphql.dart
