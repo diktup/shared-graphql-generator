@@ -42,7 +42,7 @@ query getTickets {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -1022,7 +1022,7 @@ query getTickets {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -1701,7 +1701,7 @@ query getTickets {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -2381,7 +2381,7 @@ query getTickets {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -3064,7 +3064,7 @@ query getTickets {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -5985,7 +5985,7 @@ query ticket($id: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -6965,7 +6965,7 @@ query ticket($id: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -7644,7 +7644,7 @@ query ticket($id: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -8324,7 +8324,7 @@ query ticket($id: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -9007,7 +9007,7 @@ query ticket($id: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -11928,7 +11928,7 @@ query getTicketsByTarget($target: TargetACIInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -12908,7 +12908,7 @@ query getTicketsByTarget($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -13587,7 +13587,7 @@ query getTicketsByTarget($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -14267,7 +14267,7 @@ query getTicketsByTarget($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -14950,7 +14950,7 @@ query getTicketsByTarget($target: TargetACIInput!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -17874,7 +17874,7 @@ query getTicketsByTargetWithFilter($target: TargetACIInput!, $filter: TicketsFil
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -18854,7 +18854,7 @@ query getTicketsByTargetWithFilter($target: TargetACIInput!, $filter: TicketsFil
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -19533,7 +19533,7 @@ query getTicketsByTargetWithFilter($target: TargetACIInput!, $filter: TicketsFil
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -20213,7 +20213,7 @@ query getTicketsByTargetWithFilter($target: TargetACIInput!, $filter: TicketsFil
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -20896,7 +20896,7 @@ query getTicketsByTargetWithFilter($target: TargetACIInput!, $filter: TicketsFil
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -23819,7 +23819,7 @@ mutation createTicket($input: TicketInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -24799,7 +24799,7 @@ mutation createTicket($input: TicketInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -25478,7 +25478,7 @@ mutation createTicket($input: TicketInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -26158,7 +26158,7 @@ mutation createTicket($input: TicketInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -26841,7 +26841,7 @@ mutation createTicket($input: TicketInput!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -29762,7 +29762,7 @@ mutation updateTicket($input: TicketUpdateInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -30742,7 +30742,7 @@ mutation updateTicket($input: TicketUpdateInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -31421,7 +31421,7 @@ mutation updateTicket($input: TicketUpdateInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -32101,7 +32101,7 @@ mutation updateTicket($input: TicketUpdateInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -32784,7 +32784,7 @@ mutation updateTicket($input: TicketUpdateInput!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid

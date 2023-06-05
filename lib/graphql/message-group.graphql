@@ -20,7 +20,7 @@ query getMessageGroupsPagination($pagination: PaginationInput) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -652,7 +652,7 @@ query getMessageGroupsPagination($pagination: PaginationInput) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -1308,7 +1308,7 @@ query getMessageGroup($id: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -1940,7 +1940,7 @@ query getMessageGroup($id: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -2595,7 +2595,7 @@ query getMessageGroupByMember($memberId: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -3227,7 +3227,7 @@ query getMessageGroupByMember($memberId: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -3885,7 +3885,7 @@ query searchMessageGroup($searchString: String!, $pagination: PaginationInput, $
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -4517,7 +4517,7 @@ query searchMessageGroup($searchString: String!, $pagination: PaginationInput, $
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -5172,7 +5172,7 @@ query getMessageGroupMembers($id: ID!, $pagination: PaginationInput) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -5789,7 +5789,7 @@ mutation createMessageGroup($input: MessageGroupInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -6421,7 +6421,7 @@ mutation createMessageGroup($input: MessageGroupInput!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -7076,7 +7076,7 @@ mutation archiveMessageGroup($id: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -7708,7 +7708,7 @@ mutation archiveMessageGroup($id: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -8363,7 +8363,7 @@ mutation muteMessageGroup($id: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -8995,7 +8995,7 @@ mutation muteMessageGroup($id: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -9650,7 +9650,7 @@ mutation unmuteMessageGroup($id: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -10282,7 +10282,7 @@ mutation unmuteMessageGroup($id: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -10937,7 +10937,7 @@ mutation addMemeberToMessageGroup($id: ID!, $user: [ID!]!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -11569,7 +11569,7 @@ mutation addMemeberToMessageGroup($id: ID!, $user: [ID!]!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -12224,7 +12224,7 @@ mutation removeMemberFromMessageGroup($id: ID!, $user: [ID!]!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -12856,7 +12856,7 @@ mutation removeMemberFromMessageGroup($id: ID!, $user: [ID!]!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -13511,7 +13511,7 @@ mutation updateMessageGroup($input: MessageGroupUpdateInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -14143,7 +14143,7 @@ mutation updateMessageGroup($input: MessageGroupUpdateInput!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid

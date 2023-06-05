@@ -19,7 +19,7 @@ query getBoards {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -666,7 +666,7 @@ query getBoards {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -1345,7 +1345,7 @@ query getBoards {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -2025,7 +2025,7 @@ query getBoards {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -4926,7 +4926,7 @@ query getBoard($id: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -5573,7 +5573,7 @@ query getBoard($id: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -6252,7 +6252,7 @@ query getBoard($id: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -6932,7 +6932,7 @@ query getBoard($id: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -9833,7 +9833,7 @@ query getBoardsByTarget($target: TargetACIInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -10480,7 +10480,7 @@ query getBoardsByTarget($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -11159,7 +11159,7 @@ query getBoardsByTarget($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -11839,7 +11839,7 @@ query getBoardsByTarget($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -14743,7 +14743,7 @@ query getBoardsByTargetPaginated($target: TargetACIInput!, $category: BoardCateg
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -15390,7 +15390,7 @@ query getBoardsByTargetPaginated($target: TargetACIInput!, $category: BoardCateg
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -16069,7 +16069,7 @@ query getBoardsByTargetPaginated($target: TargetACIInput!, $category: BoardCateg
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -16749,7 +16749,7 @@ query getBoardsByTargetPaginated($target: TargetACIInput!, $category: BoardCateg
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -19651,7 +19651,7 @@ query getBoardsByMemberAndTarget($target: TargetACIInput!, $member: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -20298,7 +20298,7 @@ query getBoardsByMemberAndTarget($target: TargetACIInput!, $member: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -20977,7 +20977,7 @@ query getBoardsByMemberAndTarget($target: TargetACIInput!, $member: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -21657,7 +21657,7 @@ query getBoardsByMemberAndTarget($target: TargetACIInput!, $member: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -24566,7 +24566,7 @@ query getBoardsByMemberAndTargetPaginated(
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -25213,7 +25213,7 @@ query getBoardsByMemberAndTargetPaginated(
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -25892,7 +25892,7 @@ query getBoardsByMemberAndTargetPaginated(
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -26572,7 +26572,7 @@ query getBoardsByMemberAndTargetPaginated(
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -29474,7 +29474,7 @@ query getBoardWithListsAndCards($id: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -30121,7 +30121,7 @@ query getBoardWithListsAndCards($id: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -30800,7 +30800,7 @@ query getBoardWithListsAndCards($id: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -31480,7 +31480,7 @@ query getBoardWithListsAndCards($id: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -36685,7 +36685,7 @@ query getBoardWithListsAndCards($id: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -37332,7 +37332,7 @@ query getBoardWithListsAndCards($id: ID!) {
               lastName
               username
               firstName
-              isPlugged
+              plugged
               createdAt
               updatedAt
               isMailValid
@@ -38011,7 +38011,7 @@ query getBoardWithListsAndCards($id: ID!) {
               lastName
               username
               firstName
-              isPlugged
+              plugged
               createdAt
               updatedAt
               isMailValid
@@ -38691,7 +38691,7 @@ query getBoardWithListsAndCards($id: ID!) {
               lastName
               username
               firstName
-              isPlugged
+              plugged
               createdAt
               updatedAt
               isMailValid
@@ -39708,7 +39708,7 @@ query getBoardWithListsAndCards($id: ID!) {
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -40339,7 +40339,7 @@ mutation createBoard($title: String!, $description: String, $icon: String, $memb
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -40986,7 +40986,7 @@ mutation createBoard($title: String!, $description: String, $icon: String, $memb
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -41665,7 +41665,7 @@ mutation createBoard($title: String!, $description: String, $icon: String, $memb
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -42345,7 +42345,7 @@ mutation createBoard($title: String!, $description: String, $icon: String, $memb
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -45246,7 +45246,7 @@ mutation updateBoard($id: ID!, $title: String!, $description: String, $icon: Str
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -45893,7 +45893,7 @@ mutation updateBoard($id: ID!, $title: String!, $description: String, $icon: Str
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -46572,7 +46572,7 @@ mutation updateBoard($id: ID!, $title: String!, $description: String, $icon: Str
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -47252,7 +47252,7 @@ mutation updateBoard($id: ID!, $title: String!, $description: String, $icon: Str
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid

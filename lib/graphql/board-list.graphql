@@ -24,7 +24,7 @@ query getBoardLists {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -2927,7 +2927,7 @@ query getBoardList($id: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -5830,7 +5830,7 @@ query getBoardListByBoard($boardId: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -8728,7 +8728,7 @@ query getCRMBoard($target: TargetACIInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -9375,7 +9375,7 @@ query getCRMBoard($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -10054,7 +10054,7 @@ query getCRMBoard($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -10734,7 +10734,7 @@ query getCRMBoard($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -15939,7 +15939,7 @@ query getCRMBoard($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -16586,7 +16586,7 @@ query getCRMBoard($target: TargetACIInput!) {
               lastName
               username
               firstName
-              isPlugged
+              plugged
               createdAt
               updatedAt
               isMailValid
@@ -17265,7 +17265,7 @@ query getCRMBoard($target: TargetACIInput!) {
               lastName
               username
               firstName
-              isPlugged
+              plugged
               createdAt
               updatedAt
               isMailValid
@@ -17945,7 +17945,7 @@ query getCRMBoard($target: TargetACIInput!) {
               lastName
               username
               firstName
-              isPlugged
+              plugged
               createdAt
               updatedAt
               isMailValid
@@ -18962,7 +18962,7 @@ query getCRMBoard($target: TargetACIInput!) {
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -19592,7 +19592,7 @@ query getMaintenanceBoard($target: TargetACIInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -20239,7 +20239,7 @@ query getMaintenanceBoard($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -20918,7 +20918,7 @@ query getMaintenanceBoard($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -21598,7 +21598,7 @@ query getMaintenanceBoard($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -26803,7 +26803,7 @@ query getMaintenanceBoard($target: TargetACIInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -27450,7 +27450,7 @@ query getMaintenanceBoard($target: TargetACIInput!) {
               lastName
               username
               firstName
-              isPlugged
+              plugged
               createdAt
               updatedAt
               isMailValid
@@ -28129,7 +28129,7 @@ query getMaintenanceBoard($target: TargetACIInput!) {
               lastName
               username
               firstName
-              isPlugged
+              plugged
               createdAt
               updatedAt
               isMailValid
@@ -28809,7 +28809,7 @@ query getMaintenanceBoard($target: TargetACIInput!) {
               lastName
               username
               firstName
-              isPlugged
+              plugged
               createdAt
               updatedAt
               isMailValid
@@ -29826,7 +29826,7 @@ query getMaintenanceBoard($target: TargetACIInput!) {
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -30462,7 +30462,7 @@ mutation createBoardList($name: String!, $rank: Int, $board: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -33365,7 +33365,7 @@ mutation reorderBoardList($id: ID!, $rank: Int!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -36268,7 +36268,7 @@ mutation updateBoardList($id: ID!, $name: String!, $rank: Int, $board: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid

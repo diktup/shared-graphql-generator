@@ -20,7 +20,7 @@ query getMessagesByMessageGroupPagination($messageGroup: ID!, $pagination: Pagin
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -638,7 +638,7 @@ query getMessagesByMessageGroupPagination($messageGroup: ID!, $pagination: Pagin
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -1269,7 +1269,7 @@ query getMessagesByMessageGroupPagination($messageGroup: ID!, $pagination: Pagin
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -1901,7 +1901,7 @@ query getMessagesByMessageGroupPagination($messageGroup: ID!, $pagination: Pagin
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -2577,7 +2577,7 @@ query searchMessageByMessageGroupPagination($searchString: String!, $messageGrou
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -3195,7 +3195,7 @@ query searchMessageByMessageGroupPagination($searchString: String!, $messageGrou
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -3826,7 +3826,7 @@ query searchMessageByMessageGroupPagination($searchString: String!, $messageGrou
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -4458,7 +4458,7 @@ query searchMessageByMessageGroupPagination($searchString: String!, $messageGrou
             lastName
             username
             firstName
-            isPlugged
+            plugged
             createdAt
             updatedAt
             isMailValid
@@ -5118,7 +5118,7 @@ mutation createMessage($input: MessageInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -5736,7 +5736,7 @@ mutation createMessage($input: MessageInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -6367,7 +6367,7 @@ mutation createMessage($input: MessageInput!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -6999,7 +6999,7 @@ mutation createMessage($input: MessageInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -7657,7 +7657,7 @@ mutation sendMessageToTarget($input: SendMessageToTargetInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -8275,7 +8275,7 @@ mutation sendMessageToTarget($input: SendMessageToTargetInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -8906,7 +8906,7 @@ mutation sendMessageToTarget($input: SendMessageToTargetInput!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -9538,7 +9538,7 @@ mutation sendMessageToTarget($input: SendMessageToTargetInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -10196,7 +10196,7 @@ mutation createDirectMessage($input: DirectMessageInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -10814,7 +10814,7 @@ mutation createDirectMessage($input: DirectMessageInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -11445,7 +11445,7 @@ mutation createDirectMessage($input: DirectMessageInput!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -12077,7 +12077,7 @@ mutation createDirectMessage($input: DirectMessageInput!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -12735,7 +12735,7 @@ mutation markMessageAsSeen($id: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -13353,7 +13353,7 @@ mutation markMessageAsSeen($id: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -13984,7 +13984,7 @@ mutation markMessageAsSeen($id: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -14616,7 +14616,7 @@ mutation markMessageAsSeen($id: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -15281,7 +15281,7 @@ subscription listenForNewMessage($userId: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -15899,7 +15899,7 @@ subscription listenForNewMessage($userId: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -16530,7 +16530,7 @@ subscription listenForNewMessage($userId: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -17162,7 +17162,7 @@ subscription listenForNewMessage($userId: ID!) {
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -17820,7 +17820,7 @@ subscription listenForMessageGroupUpdated($userId: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -18452,7 +18452,7 @@ subscription listenForMessageGroupUpdated($userId: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid

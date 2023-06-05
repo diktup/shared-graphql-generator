@@ -19,7 +19,7 @@ query getQuotations {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -4442,7 +4442,7 @@ query getQuotations {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -8424,7 +8424,7 @@ query quotation($id: ID!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -12847,7 +12847,7 @@ query quotation($id: ID!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -16829,7 +16829,7 @@ query getQuotationsByTarget($target: TargetACIInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -21252,7 +21252,7 @@ query getQuotationsByTarget($target: TargetACIInput!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -25247,7 +25247,7 @@ query getQuotationsByTargetPaginated($target: TargetACIInput!, $filter: Invoicin
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -29670,7 +29670,7 @@ query getQuotationsByTargetPaginated($target: TargetACIInput!, $filter: Invoicin
           lastName
           username
           firstName
-          isPlugged
+          plugged
           createdAt
           updatedAt
           isMailValid
@@ -33654,7 +33654,7 @@ mutation createQuotation($input: QuotationInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -38077,7 +38077,7 @@ mutation createQuotation($input: QuotationInput!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid
@@ -42059,7 +42059,7 @@ mutation updateQuotation($input: QuotationUpdateInput!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -46482,7 +46482,7 @@ mutation updateQuotation($input: QuotationUpdateInput!) {
         lastName
         username
         firstName
-        isPlugged
+        plugged
         createdAt
         updatedAt
         isMailValid

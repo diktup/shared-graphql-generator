@@ -20,7 +20,7 @@ mutation updateCurrentUserLogins(
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -617,97 +617,45 @@ mutation updateCurrentUserLogins(
     }
   }
 }
-query loginForApp($login: String!, $password: String!) {
-  loginForApp(login: $login, password: $password) {
+query loginForApp($input: LoginInput!) {
+  loginForApp(input: $input) @namedClient(name: "auth") {
+    accessToken
+    expiresIn
+  }
+}
+query login($input: LoginInput!) {
+  login(input: $input) {
     accessToken
     expiresIn
   }
 }
 query loginWithFacebook($token: String!) {
-  loginWithFacebook(token: $token) {
+  loginWithFacebook(token: $token) @namedClient(name: "auth") {
     accessToken
     expiresIn
   }
 }
 query loginWithGoogle($token: String!) {
-  loginWithGoogle(token: $token) {
+  loginWithGoogle(token: $token) @namedClient(name: "auth") {
     accessToken
     expiresIn
   }
 }
 query loginWithApple($authorizationData: AuthorizationDataInput!) {
-  loginWithApple(authorizationData: $authorizationData) {
+  loginWithApple(authorizationData: $authorizationData) @namedClient(name: "auth") {
     accessToken
     expiresIn
   }
 }
 
-mutation registerForApp(
-  $apps: [App!]
-  $subject: String!
-  $email: String
-  $title: String
-  $about: String
-  $gender: Gender
-  $locale: String
-  $lastName: String
-  $username: String
-  $password: String!
-  $firstName: String
-  $phone: IPhoneInput
-  $status: UserStatus
-  $isPlugged: Boolean
-  $roles: [UserRole!]!
-  $phoneNumber: String
-  $nationality: String
-  $source: SourcesEnum
-  $isMailValid: Boolean
-  $placeOfBirth: String
-  $dateOfBirth: DateTime
-  $picture: PictureInput
-  $newsletterSubs: Boolean
-  $languages: [String!]
-  $maritalStatus: MaritalStatus
-  $mobileTheme: MobileThemesEnum
-  $chatContact: [SocialValueInput!]
-  $socialMedia: [SocialValueInput!]
-  $shippingAddress: [FullAddressInput!]
-  $residentialAddress: [FullAddressInput!]
-  $brand: EmailTempVariablesBrandInput!
-) {
-  registerForApp(
-    apps: $apps
-    subject: $subject
-    brand: $brand
-    email: $email
-    title: $title
-    about: $about
-    roles: $roles
-    phone: $phone
-    gender: $gender
-    locale: $locale
-    status: $status
-    source: $source
-    picture: $picture
-    password: $password
-    lastName: $lastName
-    username: $username
-    firstName: $firstName
-    isPlugged: $isPlugged
-    languages: $languages
-    dateOfBirth: $dateOfBirth
-    phoneNumber: $phoneNumber
-    nationality: $nationality
-    isMailValid: $isMailValid
-    chatContact: $chatContact
-    socialMedia: $socialMedia
-    mobileTheme: $mobileTheme
-    placeOfBirth: $placeOfBirth
-    maritalStatus: $maritalStatus
-    newsletterSubs: $newsletterSubs
-    shippingAddress: $shippingAddress
-    residentialAddress: $residentialAddress
-  ) {
+mutation register($subject: String!, $input: UserInput!, $brand: EmailTempVariablesBrandInput!) {
+  registerForApp(subject: $subject, brand: $brand, input: $input) {
+    accessToken
+    expiresIn
+  }
+}
+mutation registerForApp($subject: String!, $input: UserInput!, $brand: EmailTempVariablesBrandInput!) {
+  registerForApp(subject: $subject, brand: $brand, input: $input) @namedClient(name: "auth") {
     accessToken
     expiresIn
   }
@@ -730,7 +678,7 @@ subscription listenForUserAuthentication {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid

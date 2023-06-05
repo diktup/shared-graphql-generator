@@ -13,7 +13,7 @@ query getUsers {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -624,7 +624,7 @@ query currentUser {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -1240,7 +1240,7 @@ query user($id: String!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -1851,7 +1851,7 @@ query userByEmail($email: String!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -2469,7 +2469,7 @@ query isEmailExist($email: String!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -3084,7 +3084,7 @@ query getUsersPagination($pagination: PaginationInput) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -3698,7 +3698,7 @@ query isLoginExist($login: String, $phone: IPhoneInput) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -4313,7 +4313,7 @@ query searchUser($pagination: PaginationInput, $searchString: String) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -4926,7 +4926,7 @@ mutation validateMail($token: String!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -5537,7 +5537,7 @@ mutation mergeAccounts($token: String!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -6148,7 +6148,7 @@ mutation updateCurrentUserApp($app: App!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -6764,7 +6764,7 @@ mutation updateUserApp($app: App!, $id: String!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -7386,7 +7386,7 @@ mutation updateCurrentUser($input: UserUpdateInput!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -7997,7 +7997,7 @@ mutation createUser($input: UserInput!, $subject: String!, $variables: EmailTemp
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -8608,7 +8608,7 @@ mutation updateUserPasswordForApp($id: ID!, $newPassword: String!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -9219,7 +9219,7 @@ mutation validatePhoneNumber($smsNumber: Int!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -9830,7 +9830,7 @@ mutation updateUser($input: UserUpdateInput!, $id: ID!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -10441,7 +10441,7 @@ mutation saveCurrentUserStatus($status: UserStatus!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -11052,7 +11052,7 @@ mutation resetPassword($password: String!, $token: String!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -11666,7 +11666,7 @@ mutation updateCurrentUserEmail($email: String!) {
       lastName
       username
       firstName
-      isPlugged
+      plugged
       createdAt
       updatedAt
       isMailValid
@@ -12278,7 +12278,7 @@ mutation processWelcomeMail($password: String!, $token: String!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -12900,7 +12900,7 @@ mutation resetPasswordWithMailForApp($token: String!, $password: String!) {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -13511,7 +13511,7 @@ mutation updateCurrentUserPassword($newPassword: String!, $oldPassword: String!)
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -14133,7 +14133,7 @@ mutation createUserForApp($input: UserInput!, $subject: String!, $variables: Ema
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -14744,7 +14744,7 @@ mutation updateCurrentUserPasswordForApp($newPassword: String!, $oldPassword: St
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -15362,7 +15362,7 @@ subscription listenForUserCreated {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
@@ -15973,7 +15973,7 @@ subscription listenForUserStatusChanged {
     lastName
     username
     firstName
-    isPlugged
+    plugged
     createdAt
     updatedAt
     isMailValid
