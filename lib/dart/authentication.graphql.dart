@@ -6899,20 +6899,7 @@ final LOGIN_FOR_APP_QUERY_DOCUMENT = DocumentNode(definitions: [
             value: VariableNode(name: NameNode(value: 'input')),
           )
         ],
-        directives: [
-          DirectiveNode(
-            name: NameNode(value: 'namedClient'),
-            arguments: [
-              ArgumentNode(
-                name: NameNode(value: 'name'),
-                value: StringValueNode(
-                  value: 'auth',
-                  isBlock: false,
-                ),
-              )
-            ],
-          )
-        ],
+        directives: [],
         selectionSet: SelectionSetNode(selections: [
           FieldNode(
             name: NameNode(value: 'accessToken'),
@@ -7080,20 +7067,7 @@ final LOGIN_WITH_FACEBOOK_QUERY_DOCUMENT = DocumentNode(definitions: [
             value: VariableNode(name: NameNode(value: 'token')),
           )
         ],
-        directives: [
-          DirectiveNode(
-            name: NameNode(value: 'namedClient'),
-            arguments: [
-              ArgumentNode(
-                name: NameNode(value: 'name'),
-                value: StringValueNode(
-                  value: 'auth',
-                  isBlock: false,
-                ),
-              )
-            ],
-          )
-        ],
+        directives: [],
         selectionSet: SelectionSetNode(selections: [
           FieldNode(
             name: NameNode(value: 'accessToken'),
@@ -7179,20 +7153,7 @@ final LOGIN_WITH_GOOGLE_QUERY_DOCUMENT = DocumentNode(definitions: [
             value: VariableNode(name: NameNode(value: 'token')),
           )
         ],
-        directives: [
-          DirectiveNode(
-            name: NameNode(value: 'namedClient'),
-            arguments: [
-              ArgumentNode(
-                name: NameNode(value: 'name'),
-                value: StringValueNode(
-                  value: 'auth',
-                  isBlock: false,
-                ),
-              )
-            ],
-          )
-        ],
+        directives: [],
         selectionSet: SelectionSetNode(selections: [
           FieldNode(
             name: NameNode(value: 'accessToken'),
@@ -7277,20 +7238,7 @@ final LOGIN_WITH_APPLE_QUERY_DOCUMENT = DocumentNode(definitions: [
             value: VariableNode(name: NameNode(value: 'authorizationData')),
           )
         ],
-        directives: [
-          DirectiveNode(
-            name: NameNode(value: 'namedClient'),
-            arguments: [
-              ArgumentNode(
-                name: NameNode(value: 'name'),
-                value: StringValueNode(
-                  value: 'auth',
-                  isBlock: false,
-                ),
-              )
-            ],
-          )
-        ],
+        directives: [],
         selectionSet: SelectionSetNode(selections: [
           FieldNode(
             name: NameNode(value: 'accessToken'),
@@ -7528,20 +7476,7 @@ final REGISTER_FOR_APP_MUTATION_DOCUMENT = DocumentNode(definitions: [
             value: VariableNode(name: NameNode(value: 'input')),
           ),
         ],
-        directives: [
-          DirectiveNode(
-            name: NameNode(value: 'namedClient'),
-            arguments: [
-              ArgumentNode(
-                name: NameNode(value: 'name'),
-                value: StringValueNode(
-                  value: 'auth',
-                  isBlock: false,
-                ),
-              )
-            ],
-          )
-        ],
+        directives: [],
         selectionSet: SelectionSetNode(selections: [
           FieldNode(
             name: NameNode(value: 'accessToken'),
