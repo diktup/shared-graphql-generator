@@ -92,3 +92,9 @@ targets:
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/payment.graphql
               output: lib/dart/payment.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/request.graphql
+              output: lib/dart/request.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/blog.graphql
+              output: lib/dart/blog.graphql.dart
