@@ -104,3 +104,6 @@ targets:
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/bank-details.graphql
               output: lib/dart/bank-details.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/barcode.graphql
+              output: lib/dart/barcode.graphql.dart
