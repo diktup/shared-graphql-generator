@@ -134,3 +134,6 @@ targets:
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/corporate-notification.graphql
               output: lib/dart/corporate-notification.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/corporate-authentication.graphql
+              output: lib/dart/corporate-authentication.graphql.dart
