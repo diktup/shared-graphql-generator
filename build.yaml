@@ -113,3 +113,6 @@ targets:
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/corporate-rating.graphql
               output: lib/dart/corporate-rating.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/corporate-rating-definition.graphql
+              output: lib/dart/corporate-rating-definition.graphql.dart
