@@ -2902,9 +2902,7 @@ query getCoupons {
           updatedAt
         }
       }
-    }
-    createdAt
-    updatedAt
+    } 
   }
 }
 query coupon($id: ID!) {
@@ -2912,9 +2910,7 @@ query coupon($id: ID!) {
     id
     to
     from
-    redeemed
-    createdAt
-    updatedAt
+    redeemed 
     couponCode
     user {
       id
@@ -5829,9 +5825,7 @@ query getPaginatedCoupons($pagination: PaginationInput) {
       id
       to
       from
-      redeemed
-      createdAt
-      updatedAt
+      redeemed 
       couponCode
       user {
         id
@@ -8739,9 +8733,7 @@ query findCouponsByTarget($target: TargetACIInput!) {
     id
     to
     from
-    redeemed
-    createdAt
-    updatedAt
+    redeemed 
     couponCode
     user {
       id
@@ -11656,9 +11648,7 @@ query findCouponsByTargetWithFilterPaginated(
       id
       to
       from
-      redeemed
-      createdAt
-      updatedAt
+      redeemed 
       couponCode
       user {
         id
@@ -14566,9 +14556,7 @@ query findCouponByTargetAndCode($couponCode: String!, $target: TargetACIInput!) 
     id
     to
     from
-    redeemed
-    createdAt
-    updatedAt
+    redeemed 
     couponCode
     user {
       id
@@ -17492,9 +17480,7 @@ mutation createCoupon($input: CouponInput!) {
     id
     to
     from
-    redeemed
-    createdAt
-    updatedAt
+    redeemed 
     couponCode
     user {
       id
@@ -20401,9 +20387,7 @@ mutation updateCoupon($input: UpdateCouponInput!, $id: ID!) {
     id
     to
     from
-    redeemed
-    createdAt
-    updatedAt
+    redeemed 
     couponCode
     user {
       id
@@ -23310,9 +23294,7 @@ mutation generateCoupons($input: CouponsInput!) {
     id
     to
     from
-    redeemed
-    createdAt
-    updatedAt
+    redeemed 
     couponCode
     user {
       id
@@ -26220,8 +26202,6 @@ mutation redeemCoupon($couponCode: String!, $target: TargetACIInput!) {
     to
     from
     redeemed
-    createdAt
-    updatedAt
     couponCode
     user {
       id
@@ -29128,9 +29108,7 @@ mutation disableCoupon($id: String!) {
     id
     to
     from
-    redeemed
-    createdAt
-    updatedAt
+    redeemed 
     couponCode
     user {
       id
