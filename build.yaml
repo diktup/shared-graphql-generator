@@ -116,3 +116,21 @@ targets:
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/corporate-rating-definition.graphql
               output: lib/dart/corporate-rating-definition.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/coupons.graphql
+              output: lib/dart/coupons.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/order-settings.graphql
+              output: lib/dart/order-settings.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/promotion.graphql
+              output: lib/dart/promotion.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/shopping-cart.graphql
+              output: lib/dart/shopping-cart.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/newsletter.graphql
+              output: lib/dart/newsletter.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/corporate-notification.graphql
+              output: lib/dart/corporate-notification.graphql.dart
