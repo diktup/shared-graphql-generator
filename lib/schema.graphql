@@ -1812,6 +1812,39 @@ enum ProductStatusEnum {
   ARCHIVED
 }
 
+type InternalProductWithStockType {
+  id: ID
+  name: String
+  description: String
+  descriptionList: [String!]
+  specs: [ProductSpecsType!]
+  externalId: String
+  tags: [String!]
+  sku: String
+  condition: ProductConditionEnum
+  status: ProductStatusEnum
+  picture: PictureType
+  pictures: [PictureType!]
+  media: MediaType
+  structure: ProductStructureEnum
+  rent: Boolean
+  variety: ProductVarietyEnum
+  price: String
+  priceBeforeReduction: String
+  discount: DiscountDtoType
+  product: ProductType
+  target: TargetType!
+  catalogueCategory: [CatalogueCategoryType!]
+  globalCategory: GlobalCategoryProductType
+  tax: String
+  brand: BrandType
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  class: [ProductClassEnum!]
+  barcodes: [BarcodeType!]
+  stock: StockRawType
+}
+
 type InternalProductWithFavoriteStatusType {
   id: ID
   name: String
@@ -2215,7 +2248,7 @@ type RentalInvoicingType {
   id: ID!
   number: String!
   description: String
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   address: InvoicingAddressType
   totalTax: String
   totalPrice: InvoicingPriceType
@@ -2225,7 +2258,7 @@ type RentalInvoicingType {
   date: DateTime
 }
 
-enum GenericInvoicingStatus {
+enum GenericInvoicingStatusEnum {
   DRAFT
   OPEN
   ISSUED
@@ -2798,332 +2831,6 @@ type ChallengeTypeType {
   updatedAt: DateTime!
 }
 
-type ChallengeTypeWinner {
-  rank: Int!
-  reward: Float
-}
-
-type ChallengeTypeCheckpoint {
-  checkpoint: Int
-  amount: Float
-}
-
-type ChallengeType {
-  id: ID!
-  title: String
-  description: String
-  media: MediaType
-  challengeType: ChallengeTypeType
-  startDate: DateTime
-  endDate: DateTime
-  status: ChallengeStatusEnum
-  winners: [ChallengeTypeWinner!]
-  checkpoints: [ChallengeTypeCheckpoint!]
-  maxAnswers: Float
-  audience: String
-  target: TargetType
-  createdAt: DateTime!
-  updatedAt: DateTime!
-}
-
-enum ChallengeStatusEnum {
-  DRAFT
-  ONGOING
-  FINISHED
-}
-
-type ChallengeStepType {
-  id: ID!
-  title: String
-  description: String
-  media: MediaType
-  startDate: DateTime
-  endDate: DateTime
-  randomize: Boolean
-  challenge: ChallengeType
-  createdAt: DateTime!
-  updatedAt: DateTime!
-}
-
-type QuestionDtoType {
-  id: ID!
-  mandatory: Boolean
-  title: String!
-  choices: [String!]!
-  order: Int!
-  type: QuestionTypeEnum!
-  challengeStep: ChallengeStepType
-  score: Boolean
-  points: Int
-  createdAt: DateTime!
-  updatedAt: DateTime!
-}
-
-enum QuestionTypeEnum {
-  SHORT_ANSWER
-  PARAGRAPH
-  MULTIPLE_CHOICE
-  CHECKBOXES
-  DROPDOWN
-  PICTURE
-  DATE
-  TIME
-}
-
-type FormResponseType {
-  id: ID!
-  title: String!
-  description: String!
-  questions: [QuestionDtoType!]!
-  owner: FormOwnerDtoType!
-  type: FormType!
-  status: FormStatus!
-  createdAt: DateTime!
-  updatedAt: DateTime!
-}
-
-enum FormType {
-  GUIDED
-  AUTONOMOUS
-}
-
-enum FormStatus {
-  DRAFT
-  CHECKED
-  ONGOING
-  FINISHED
-}
-
-type AnswerDtoType {
-  count: Int!
-  answers: [String!]!
-}
-
-type TargetDtoType {
-  pos: PointOfSaleType
-  user: UserType
-}
-
-type ResponseDtoType {
-  id: ID!
-  target: TargetDtoType!
-  executor: UserType!
-  question: QuestionDtoType!
-  answers: [String!]!
-  createdAt: DateTime!
-  updatedAt: DateTime!
-}
-
-type SingleAnswerDtoType {
-  count: Int!
-  answer: String!
-}
-
-type AccessLoggerClientDataType {
-  name: String
-  engine: String
-  family: String
-  version: String
-  clientType: String
-  engineVersion: String
-  type: String
-}
-
-type AccessLoggerOperatingSystemDataType {
-  name: String
-  version: String
-  brand: String
-  model: String
-}
-
-type AccessLoggerMachineDataType {
-  id: String
-  deviceType: String
-  brand: String
-  model: String
-}
-
-type AccessLoggerIosDataType {
-  name: String
-  model: String
-  systemName: String
-  systemVersion: String
-  localizedModel: String
-  utsnameMachine: String
-  utsnameRelease: String
-  utsnameSysname: String
-  utsnameVersion: String
-  utsnameNodename: String
-  isPhysicalDevice: String
-  identifierForVendor: String
-}
-
-type AccessLoggerAndroidDataType {
-  id: String
-  host: String
-  tags: String
-  deviceType: String
-  board: String
-  brand: String
-  model: String
-  device: String
-  display: String
-  product: String
-  hardware: String
-  androidId: String
-  bootloader: String
-  fingerprint: String
-  manufacturer: String
-  versionBaseOS: String
-  versionSdkInt: String
-  versionRelease: String
-  supportedAbis: [String!]
-  versionCodename: String
-  systemFeatures: [String!]
-  isPhysicalDevice: String
-  versionIncremental: String
-  versionPreviewSdkInt: String
-  versionSecurityPatch: String
-  supported32BitAbis: [String!]
-  supported64BitAbis: [String!]
-}
-
-type AccessLoggerDeviceDataType {
-  iosData: AccessLoggerIosDataType!
-  androidData: AccessLoggerAndroidDataType!
-  os: AccessLoggerOperatingSystemDataType!
-  client: AccessLoggerClientDataType!
-  device: AccessLoggerMachineDataType!
-}
-
-type AccessLoggerRequestType {
-  host: String
-  port: String
-  token: String
-  origin: String
-  hostname: String
-  pathname: String
-  protocol: String
-  variables: String
-  url: String!
-  query: String!
-  operationName: String!
-}
-
-type ReduciblePriceType {
-  beforeReduction: String
-  afterReduction: String
-}
-
-type PriceCreditType {
-  amount: String
-  periodValue: Int
-  periodCycle: RecurrenceType
-}
-
-type PriceFullType {
-  net: ReduciblePriceType
-  gross: ReduciblePriceType
-}
-
-type OrderPOSProductType {
-  id: String!
-  name: String!
-  tax: String!
-  price: String!
-  brand: BrandType
-  picture: PictureType
-}
-
-type OrderShoppingCartAttributeType {
-  label: String!
-  externalId: String!
-  isRequired: Boolean!
-  isMultipleChoice: Boolean!
-}
-
-type OrderShoppingCartAttributesValuesType {
-  label: String!
-  externalId: String!
-  attribute: OrderShoppingCartAttributeType!
-}
-
-type OrderShoppingCartBarcodeType {
-  id: ID!
-  price: String!
-  barcode: String!
-  name: String!
-  discount: DiscountDtoType
-  media: MediaType
-  productAttributesValues: [OrderShoppingCartAttributesValuesType!]
-}
-
-type TaxValueType {
-  unit: String
-  total: String
-}
-
-type ProductPriceType {
-  unitNet: String
-  unitGross: String
-  net: String
-  gross: String
-}
-
-type OrderShoppingCartProductType {
-  internalProductId: String!
-  name: String
-  product: OrderPOSProductType!
-  target: TargetType
-  taxValue: TaxValueType!
-  price: ProductPriceType!
-  deliveryMan: UserType
-  quantity: Int!
-  pickupTime: DateTime
-  barcode: OrderShoppingCartBarcodeType!
-  orderProductStatus: OrderStatus!
-}
-
-enum OrderStatus {
-  OPEN
-  CONFIRMED
-  ASSIGNED
-  READY_FOR_PICKUP
-  DELIVERED
-  CANCELED
-}
-
-type MarketPlaceOrderShoppingCartType {
-  target: TargetType
-  products: [OrderShoppingCartProductType!]
-  taxValue: ReduciblePriceType
-  deliveryFees: String
-  price: PriceFullType
-  discount: DiscountDtoType
-}
-
-type MarketPlaceOrderDtoType {
-  id: ID!
-  number: String!
-  user: UserType
-  notes: String
-  orderType: OrderTypeEnum
-  installments: [InstallmentType!]
-  deliveryAddress: FullAddressType
-  hasInvoice: Boolean
-  shoppingCart: MarketPlaceOrderShoppingCartType!
-  orderTime: DateTime
-  createdAt: DateTime!
-  updatedAt: DateTime!
-}
-
-enum OrderTypeEnum {
-  ORDER_AHEAD
-  PICKUP
-  DELIVERY
-  IN_HOUSE
-}
-
 type AudienceCriteriaType {
   id: ID!
   title: String
@@ -3385,6 +3092,298 @@ type AudienceType {
   target: TargetType
   createdAt: DateTime!
   updatedAt: DateTime!
+}
+
+type ChallengeTypeWinner {
+  rank: Int!
+  reward: Float
+}
+
+type ChallengeTypeCheckpoint {
+  checkpoint: Int
+  amount: Float
+}
+
+type ChallengeType {
+  id: ID!
+  title: String
+  description: String
+  media: MediaType
+  challengeType: ChallengeTypeType
+  startDate: DateTime
+  endDate: DateTime
+  status: ChallengeStatusEnum
+  winners: [ChallengeTypeWinner!]
+  checkpoints: [ChallengeTypeCheckpoint!]
+  maxAnswers: Int
+  audience: AudienceType
+  target: TargetType
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+enum ChallengeStatusEnum {
+  DRAFT
+  ONGOING
+  FINISHED
+}
+
+type ChallengeStepType {
+  id: ID!
+  title: String
+  description: String
+  media: MediaType
+  startDate: DateTime
+  endDate: DateTime
+  randomize: Boolean
+  challenge: ChallengeType
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type QuestionDtoType {
+  id: ID!
+  mandatory: Boolean
+  title: String!
+  choices: [String!]!
+  order: Int!
+  type: QuestionTypeEnum!
+  challengeStep: ChallengeStepType
+  score: Boolean
+  points: Int
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+enum QuestionTypeEnum {
+  SHORT_ANSWER
+  PARAGRAPH
+  MULTIPLE_CHOICE
+  CHECKBOXES
+  DROPDOWN
+  PICTURE
+  DATE
+  TIME
+}
+
+type FormResponseType {
+  id: ID!
+  title: String!
+  description: String!
+  questions: [QuestionDtoType!]!
+  owner: FormOwnerDtoType!
+  type: FormType!
+  status: FormStatus!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+enum FormType {
+  GUIDED
+  AUTONOMOUS
+}
+
+enum FormStatus {
+  DRAFT
+  CHECKED
+  ONGOING
+  FINISHED
+}
+
+type AnswerDtoType {
+  count: Int!
+  answers: [String!]!
+}
+
+type TargetDtoType {
+  pos: PointOfSaleType
+  user: UserType
+}
+
+type ResponseDtoType {
+  id: ID!
+  target: TargetDtoType!
+  executor: UserType!
+  question: QuestionDtoType!
+  answers: [String!]!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type SingleAnswerDtoType {
+  count: Int!
+  answer: String!
+}
+
+type AccessLoggerClientDataType {
+  name: String
+  engine: String
+  family: String
+  version: String
+  clientType: String
+  engineVersion: String
+  type: String
+}
+
+type AccessLoggerOperatingSystemDataType {
+  name: String
+  version: String
+  brand: String
+  model: String
+}
+
+type AccessLoggerMachineDataType {
+  id: String
+  deviceType: String
+  brand: String
+  model: String
+}
+
+type AccessLoggerIosDataType {
+  name: String
+  model: String
+  systemName: String
+  systemVersion: String
+  localizedModel: String
+  utsnameMachine: String
+  utsnameRelease: String
+  utsnameSysname: String
+  utsnameVersion: String
+  utsnameNodename: String
+  isPhysicalDevice: String
+  identifierForVendor: String
+}
+
+type AccessLoggerAndroidDataType {
+  id: String
+  host: String
+  tags: String
+  deviceType: String
+  board: String
+  brand: String
+  model: String
+  device: String
+  display: String
+  product: String
+  hardware: String
+  androidId: String
+  bootloader: String
+  fingerprint: String
+  manufacturer: String
+  versionBaseOS: String
+  versionSdkInt: String
+  versionRelease: String
+  supportedAbis: [String!]
+  versionCodename: String
+  systemFeatures: [String!]
+  isPhysicalDevice: String
+  versionIncremental: String
+  versionPreviewSdkInt: String
+  versionSecurityPatch: String
+  supported32BitAbis: [String!]
+  supported64BitAbis: [String!]
+}
+
+type AccessLoggerDeviceDataType {
+  iosData: AccessLoggerIosDataType!
+  androidData: AccessLoggerAndroidDataType!
+  os: AccessLoggerOperatingSystemDataType!
+  client: AccessLoggerClientDataType!
+  device: AccessLoggerMachineDataType!
+}
+
+type AccessLoggerRequestType {
+  host: String
+  port: String
+  token: String
+  origin: String
+  hostname: String
+  pathname: String
+  protocol: String
+  variables: String
+  url: String!
+  query: String!
+  operationName: String!
+}
+
+type ReduciblePriceType {
+  beforeReduction: String
+  afterReduction: String
+}
+
+type PriceCreditType {
+  amount: String
+  periodValue: Int
+  periodCycle: RecurrenceType
+}
+
+type PriceFullType {
+  net: ReduciblePriceType
+  gross: ReduciblePriceType
+}
+
+type TaxValueType {
+  unit: String
+  total: String
+}
+
+type ProductPriceType {
+  unitNet: String
+  unitGross: String
+  net: String
+  gross: String
+}
+
+type OrderShoppingCartProductType {
+  name: String
+  target: TargetType
+  taxValue: TaxValueType!
+  price: ProductPriceType!
+  deliveryMan: UserType
+  quantity: Int!
+  pickupTime: DateTime
+  barcode: BarcodeType!
+  orderProductStatus: OrderStatus!
+}
+
+enum OrderStatus {
+  OPEN
+  CONFIRMED
+  ASSIGNED
+  READY_FOR_PICKUP
+  DELIVERED
+  CANCELED
+}
+
+type MarketPlaceOrderShoppingCartType {
+  target: TargetType
+  products: [OrderShoppingCartProductType!]
+  taxValue: ReduciblePriceType
+  deliveryFees: String
+  price: PriceFullType
+  discount: DiscountDtoType
+}
+
+type MarketPlaceOrderDtoType {
+  id: ID!
+  number: String!
+  user: UserType
+  notes: String
+  orderType: OrderTypeEnum
+  installments: [InstallmentType!]
+  deliveryAddress: FullAddressType
+  hasInvoice: Boolean
+  shoppingCart: MarketPlaceOrderShoppingCartType!
+  orderTime: DateTime
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+enum OrderTypeEnum {
+  ORDER_AHEAD
+  PICKUP
+  DELIVERY
+  IN_HOUSE
 }
 
 type QuestType {
@@ -3981,6 +3980,68 @@ type FollowType {
   target: TargetWithGroupType!
 }
 
+type MembersType {
+  users: [UserType!]
+}
+
+type LastMessageType {
+  text: String
+  gif: String
+  sticker: String
+  media: MessageMediaType
+  location: LonLatType
+  custom: CustomMessageType
+  unread: Boolean
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type MessageGroupWallpaperType {
+  picture: PictureType
+  gradientColors: [String!]
+  assetImage: String
+}
+
+type MessageGroupType {
+  id: ID
+  name: String
+  mute: Boolean
+  creator: UserType
+  profilePicture: PictureType
+  wallpaper: MessageGroupWallpaperType
+  sound: MessageSoundEnum
+  status: MessageGroupStatusEnum
+  type: MessageGroupTypeEnum
+  members: MembersType
+  lastMessage: LastMessageType
+  unreadCount: Int
+  isDirectMessage: Boolean
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+enum MessageSoundEnum {
+  DEFAULT
+  NONE
+  AURORA
+}
+
+enum MessageGroupStatusEnum {
+  ACTIVE
+  ARCHIVED
+}
+
+enum MessageGroupTypeEnum {
+  SUPPORT
+  INTERNAL
+}
+
+type MessageGroupPaginateType {
+  count: Int
+  isLast: Boolean
+  objects: [MessageGroupType!]!
+}
+
 type MessageMediaType {
   picture: [PictureType!]
   video: [PictureType!]
@@ -4020,62 +4081,6 @@ type MessageMediaPaginateType {
   count: Int
   isLast: Boolean
   objects: [PictureType!]!
-}
-
-type MembersType {
-  users: [UserType!]
-}
-
-type LastMessageType {
-  text: String
-  gif: String
-  sticker: String
-  media: MessageMediaType
-  location: LonLatType
-  custom: CustomMessageType
-  unread: Boolean
-  createdAt: DateTime!
-  updatedAt: DateTime!
-}
-
-type MessageGroupWallpaperType {
-  picture: PictureType
-  gradientColors: [String!]
-  assetImage: String
-}
-
-type MessageGroupType {
-  id: ID
-  name: String
-  mute: Boolean
-  creator: UserType
-  profilePicture: PictureType
-  wallpaper: MessageGroupWallpaperType
-  sound: MessageSoundEnum
-  status: MessageGroupStatusEnum
-  members: MembersType
-  lastMessage: LastMessageType
-  unreadCount: Int
-  isDirectMessage: Boolean
-  createdAt: DateTime!
-  updatedAt: DateTime!
-}
-
-enum MessageSoundEnum {
-  DEFAULT
-  NONE
-  AURORA
-}
-
-enum MessageGroupStatusEnum {
-  ACTIVE
-  ARCHIVED
-}
-
-type MessageGroupPaginateType {
-  count: Int
-  isLast: Boolean
-  objects: [MessageGroupType!]!
 }
 
 type CorporateEmailTemplateType {
@@ -5590,6 +5595,19 @@ type JobApplicationBasePaginatedType {
   objects: [JobApplicationBaseType!]!
 }
 
+type OrderShoppingCartAttributeType {
+  label: String!
+  externalId: String!
+  isRequired: Boolean!
+  isMultipleChoice: Boolean!
+}
+
+type OrderShoppingCartAttributesValuesType {
+  label: String!
+  externalId: String!
+  attribute: OrderShoppingCartAttributeType!
+}
+
 type IsCouponValidType {
   isValid: Boolean!
 }
@@ -5940,7 +5958,7 @@ type SaleDeliveryNoteType {
   creator: UserType
   note: String
   description: String
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   details: [KeyValueType!]
   products: [InvoicingProductsBundleType!]
   address: InvoicingAddressType
@@ -5979,7 +5997,7 @@ type QuotationType {
   creator: UserType
   note: String
   description: String
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   details: [KeyValueType!]
   products: [InvoicingProductsBundleType!]
   address: InvoicingAddressType
@@ -6023,7 +6041,7 @@ type SaleInvoiceType {
   creator: UserType
   note: String
   description: String
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   details: [KeyValueType!]
   products: [InvoicingProductsBundleType!]
   address: InvoicingAddressType
@@ -6076,7 +6094,7 @@ type SaleOrderType {
   creator: UserType
   note: String
   description: String
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   details: [KeyValueType!]
   products: [InvoicingProductsBundleType!]
   address: InvoicingAddressType
@@ -6116,7 +6134,7 @@ type SaleIssueNoteType {
   creator: UserType
   note: String
   description: String
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   details: [KeyValueType!]
   products: [InvoicingProductsBundleType!]
   address: InvoicingAddressType
@@ -6163,7 +6181,7 @@ type PurchaseDeliveryNoteType {
   creator: UserType
   note: String
   description: String
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   details: [KeyValueType!]
   products: [InvoicingProductsBundleType!]
   address: InvoicingAddressType
@@ -6200,7 +6218,7 @@ type PurchaseInvoiceType {
   creator: UserType
   note: String
   description: String
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   details: [KeyValueType!]
   products: [InvoicingProductsBundleType!]
   address: InvoicingAddressType
@@ -6237,7 +6255,7 @@ type PurchaseOrderType {
   creator: UserType
   note: String
   description: String
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   details: [KeyValueType!]
   products: [InvoicingProductsBundleType!]
   address: InvoicingAddressType
@@ -8805,7 +8823,7 @@ type Query {
   ): InvoicePDFType!
   sendCorporateUsersBymail(
     subject: String!
-    email: String!
+    emails: [String!]
     sortingField: String
     searchString: String
     status: [UserStatus!]
@@ -8865,6 +8883,16 @@ type Query {
   ): MessageGroupPaginateType!
   getMessageGroup(id: ID!): MessageGroupType!
   searchMessageGroup(
+    status: MessageGroupStatusEnum
+    pagination: PaginationInput = { page: 0, limit: 20 }
+    searchString: String
+  ): MessageGroupPaginateType!
+  searchSupportMessageGroup(
+    status: MessageGroupStatusEnum
+    pagination: PaginationInput = { page: 0, limit: 20 }
+    searchString: String
+  ): MessageGroupPaginateType!
+  searchInternalMessageGroup(
     status: MessageGroupStatusEnum
     pagination: PaginationInput = { page: 0, limit: 20 }
     searchString: String
@@ -9242,6 +9270,10 @@ type Query {
     filter: BarcodeWithVarietyAndStructureFilterInput!
     target: TargetACIInput!
   ): BarcodePaginateType!
+  getSimpleBarcodeByBarcodeAndTarget(
+    target: TargetACIInput!
+    barcode: String!
+  ): BarcodeType!
   getSimpleProductWithFilter(
     searchString: String
     pagination: PaginationInput = { page: 0, limit: 20 }
@@ -9328,6 +9360,7 @@ type Query {
     productId: ID!
   ): InternalProductPaginateType!
   getInternalProduct(id: ID!): InternalProductType!
+  getInternalProductWithStock(id: ID!): InternalProductWithStockType!
   getInternalProductWithFavoriteStatus(
     id: ID!
   ): InternalProductWithFavoriteStatusType!
@@ -9476,7 +9509,7 @@ type Query {
   ): InvoicePDFType!
   sendRequestsBymail(
     subject: String!
-    email: String!
+    emails: [String!]
     searchString: String
     type: RequestTypeEnum
     target: TargetACIInput
@@ -9535,7 +9568,7 @@ type Query {
   ): DocumentResultType!
   exportBookingsWithFilterByMail(
     subject: String!
-    email: String!
+    emails: [String!]
     bookingFilterInput: BookingFilterInput!
   ): MailResponseDto!
   countUnseenNotificationsByPOS(posId: String!): UnseenNotificationCountType!
@@ -9833,7 +9866,7 @@ type Query {
   ): InvoicePDFType!
   sendNewslettersBymail(
     subject: String!
-    email: String!
+    emails: [String!]
     searchString: String
     target: TargetACIInput
   ): MailResponseDto!
@@ -9888,7 +9921,7 @@ type Query {
   sendCouponsBymail(
     filter: CouponFilterInput
     subject: String!
-    email: String!
+    emails: [String!]
     searchString: String
     target: TargetACIInput
   ): MailResponseDto!
@@ -10015,7 +10048,7 @@ type Query {
   ): InvoicePDFType!
   sendJobDefinitionsBymail(
     subject: String!
-    email: String!
+    emails: [String!]
     searchString: String
     status: [JobDefinitionStatusEnum!]
     target: TargetACIInput
@@ -10050,7 +10083,7 @@ type Query {
   ): InvoicePDFType!
   sendJobApplicationsByMail(
     subject: String!
-    email: String!
+    emails: [String!]
     searchString: String
     filter: JobApplicationFilterInput
     target: TargetACIInput
@@ -10128,7 +10161,7 @@ type Query {
   ): InvoicePDFType!
   sendTargetSubscribersBymail(
     subject: String!
-    email: String!
+    emails: [String!]
     searchString: String
     statuses: [SubscriptionStatus!]
     target: TargetACIInput
@@ -10150,6 +10183,10 @@ type Query {
   getQuests: [QuestType!]!
   quest(id: ID!): QuestType!
   getQuestsByTarget(target: TargetACIInput!): [QuestType!]!
+  getQuestsByTargetPaginated(
+    pagination: PaginationInput = { page: 0, limit: 20 }
+    target: TargetACIInput!
+  ): QuestPaginateType!
   findQuestsByCategoryAndTarget(target: TargetACIInput!): [QuestType!]!
   getQuestActions: [QuestActionType!]!
   getQuestActionsPaginated(
@@ -10188,7 +10225,7 @@ type Query {
   sendTargetTransactionsBymail(
     activityType: [ActivityLogTypeEnum!]
     subject: String!
-    email: String!
+    emails: [String!]
     searchString: String
     target: TargetACIInput
   ): MailResponseDto!
@@ -10221,7 +10258,7 @@ type Query {
   sendLiveLeaderboardByCycleBymail(
     input: LeaderboardWithRequiredCycleInput
     subject: String!
-    email: String!
+    emails: [String!]
   ): MailResponseDto!
   getLeaderboardByCyclePaginated(
     input: LeaderboardWithRequiredCycleInput
@@ -10283,6 +10320,7 @@ type Query {
   findTargetOrders(
     input: MarketPlaceOrderFilterInput!
     pagination: PaginationInput = { page: 0, limit: 20 }
+    searchString: String
   ): MarketPlaceOrderPaginateType!
   getTargetOrdersByExcel(
     path: String
@@ -10290,7 +10328,7 @@ type Query {
   ): InvoicePDFType!
   sendTargetOrdersBymail(
     subject: String!
-    email: String!
+    emails: [String!]
     input: MarketPlaceOrderFilterInput!
   ): MailResponseDto!
   findTargetOrdersByCurrentUser(
@@ -10312,7 +10350,7 @@ type Query {
     input: MarketPlaceOrderFilterInput!
     brand: EmailTempVariablesBrandInput!
     subject: String!
-    email: String!
+    emails: [String!]!
   ): MailResponseDto!
   getInvoiceStatuses: StringListType!
   getInvoicesPagination(
@@ -10421,7 +10459,7 @@ type Query {
   ): InvoicePDFType!
   sendProjectsBymail(
     subject: String!
-    email: String!
+    emails: [String!]
     searchString: String
     filter: ProjectFilterInput
     target: TargetACIInput
@@ -10447,7 +10485,7 @@ type Query {
   ): InvoicePDFType!
   sendTicketsBymail(
     subject: String!
-    email: String!
+    emails: [String!]
     searchString: String
     filter: TicketsFilterInput
     target: TargetACIInput
@@ -10562,7 +10600,7 @@ type Query {
     document: EmailTempVariablesDocumentInput!
     brand: EmailTempVariablesBrandInput!
     subject: String!
-    email: String!
+    emails: [String!]
   ): MailResponseDto!
   getInvoicingByExcel(
     path: String
@@ -10572,7 +10610,7 @@ type Query {
   ): InvoicePDFType!
   sendInvoicingBymail(
     subject: String!
-    email: String!
+    emails: [String!]
     filter: InvoicingFilterInput
     category: SequenceCategoryEnum!
     target: TargetACIInput
@@ -10634,6 +10672,7 @@ type Query {
     searchString: String
   ): SaleInvoicePaginateType!
   getBarcodeStats(barcodeId: ID!): BarcodeStatsType!
+  getInternalProductStats(internalProductId: ID!): BarcodeStatsType!
   getSaleInvoicesStatsWithFilter(
     filter: InvoicingStatsFilterInput
     target: TargetACIInput!
@@ -10857,14 +10896,16 @@ type Query {
     path: String
     base64: String
   ): CatalogueImportValidationType!
+  getPosTemplateByExcel(path: String): InvoicePDFType!
+  sendPosTemplateBymail(emails: [String!], subject: String!): MailResponseDto!
   getCatalogueTemplateByExcel(path: String): InvoicePDFType!
   sendCatalogueTemplateBymail(
-    email: String!
+    emails: [String!]
     subject: String!
   ): MailResponseDto!
   getServicesCatalogueTemplateByExcel(path: String): InvoicePDFType!
   sendServicesCatalogueTemplateBymail(
-    email: String!
+    emails: [String!]
     subject: String!
   ): MailResponseDto!
   getFullCatalogueByExcel(
@@ -10874,7 +10915,7 @@ type Query {
   ): InvoicePDFType!
   sendFullCatalogueBymail(
     subject: String!
-    email: String!
+    emails: [String!]
     withStock: Boolean!
     target: TargetACIInput
   ): MailResponseDto!
@@ -10939,7 +10980,7 @@ type Query {
 }
 
 input EmailTempInput {
-  to: String!
+  to: [String!]!
   subject: String!
   template: EmailTemplateTypeEnum
   content: EmailContentInput
@@ -11005,7 +11046,7 @@ input InvoicingInput {
   note: String
   details: [KeyValueInput!]
   products: [InvoicingProductsBundleInput!]!
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   address: InvoicingAddressInput
   taxes: [taxRankInput!]
   installments: [InstallmentInput!]
@@ -11782,7 +11823,7 @@ input CalculationsInput {
 
 input InvoicingFilterInput {
   number: [String!]
-  status: [GenericInvoicingStatus!]
+  status: [GenericInvoicingStatusEnum!]
   from: DateTime
   to: DateTime
 }
@@ -13112,6 +13153,13 @@ type Mutation {
     calendarId: String!
     userId: String!
   ): GoogleCalendarEventType!
+  importPosByExcel(
+    # base64 string from excel file.
+    base64: String
+
+    # path to excel file in server.
+    path: String
+  ): SuccessResponseDtoType!
   importFullCorporateCatalogueByExcel(
     target: TargetACIInput!
 
@@ -13358,6 +13406,7 @@ input MessageGroupInput {
   wallpaper: MessageGroupWallpaperInput
   sound: MessageSoundEnum
   status: MessageGroupStatusEnum
+  type: MessageGroupTypeEnum
   members: [String!]
 }
 
@@ -13373,6 +13422,7 @@ input MessageGroupUpdateInput {
   profilePicture: PictureInput
   wallpaper: MessageGroupWallpaperInput
   sound: MessageSoundEnum
+  type: MessageGroupTypeEnum
   id: ID!
 }
 
@@ -13893,12 +13943,12 @@ input CreateSimpleProductInput {
   class: [ProductClassEnum!]
   structure: ProductStructureEnum
   variety: ProductVarietyEnum
+  condition: ProductConditionEnum
+  status: ProductStatusEnum
   rent: Boolean
   discount: DiscountDtoInput
   sku: String
   brand: String
-  condition: ProductConditionEnum
-  status: ProductStatusEnum
   picture: PictureInput
   pictures: [PictureInput!]
   media: MediaInput
@@ -13926,12 +13976,12 @@ input UpdateSimpleProductInput {
   class: [ProductClassEnum!]
   structure: ProductStructureEnum
   variety: ProductVarietyEnum
+  condition: ProductConditionEnum
+  status: ProductStatusEnum
   rent: Boolean
   discount: DiscountDtoInput
   sku: String
   brand: String
-  condition: ProductConditionEnum
-  status: ProductStatusEnum
   picture: PictureInput
   pictures: [PictureInput!]
   media: MediaInput
@@ -13954,12 +14004,12 @@ input CreateInternalProductInput {
   class: [ProductClassEnum!]
   structure: ProductStructureEnum
   variety: ProductVarietyEnum
+  condition: ProductConditionEnum
+  status: ProductStatusEnum
   rent: Boolean
   discount: DiscountDtoInput
   sku: String
   brand: String
-  condition: ProductConditionEnum
-  status: ProductStatusEnum
   picture: PictureInput
   pictures: [PictureInput!]
   media: MediaInput
@@ -13997,12 +14047,12 @@ input CreateCustomInternalProductInput {
   class: [ProductClassEnum!]
   structure: ProductStructureEnum
   variety: ProductVarietyEnum
+  condition: ProductConditionEnum
+  status: ProductStatusEnum
   rent: Boolean
   discount: DiscountDtoInput
   sku: String
   brand: String
-  condition: ProductConditionEnum
-  status: ProductStatusEnum
   picture: PictureInput
   pictures: [PictureInput!]
   media: MediaInput
@@ -14031,12 +14081,12 @@ input UpdateInternalProductInput {
   class: [ProductClassEnum!]
   structure: ProductStructureEnum
   variety: ProductVarietyEnum
+  condition: ProductConditionEnum
+  status: ProductStatusEnum
   rent: Boolean
   discount: DiscountDtoInput
   sku: String
   brand: String
-  condition: ProductConditionEnum
-  status: ProductStatusEnum
   picture: PictureInput
   pictures: [PictureInput!]
   media: MediaInput
@@ -15530,7 +15580,7 @@ input QuotationInput {
   note: String
   details: [KeyValueInput!]
   products: [InvoicingProductsBundleInput!]!
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   address: InvoicingAddressInput
   taxes: [taxRankInput!]
   installments: [InstallmentInput!]
@@ -15565,7 +15615,7 @@ input QuotationUpdateInput {
   note: String
   details: [KeyValueInput!]
   products: [InvoicingProductsBundleInput!]
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   address: InvoicingAddressInput
   taxes: [taxRankInput!]
   installments: [InstallmentInput!]
@@ -15590,7 +15640,7 @@ input SaleOrderInput {
   note: String
   details: [KeyValueInput!]
   products: [InvoicingProductsBundleInput!]!
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   address: InvoicingAddressInput
   taxes: [taxRankInput!]
   installments: [InstallmentInput!]
@@ -15624,7 +15674,7 @@ input SaleIssueNoteInput {
   note: String
   details: [KeyValueInput!]
   products: [InvoicingProductsBundleInput!]!
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   address: InvoicingAddressInput
   taxes: [taxRankInput!]
   installments: [InstallmentInput!]
@@ -15647,7 +15697,7 @@ input SaleInvoiceInput {
   note: String
   details: [KeyValueInput!]
   products: [InvoicingProductsBundleInput!]!
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   address: InvoicingAddressInput
   taxes: [taxRankInput!]
   installments: [InstallmentInput!]
@@ -15676,7 +15726,7 @@ input SaleAvoirInput {
   note: String
   details: [KeyValueInput!]
   products: [InvoicingProductsBundleInput!]!
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   address: InvoicingAddressInput
   taxes: [taxRankInput!]
   installments: [InstallmentInput!]
@@ -15701,7 +15751,7 @@ input SaleDeliveryNoteInput {
   note: String
   details: [KeyValueInput!]
   products: [InvoicingProductsBundleInput!]!
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   address: InvoicingAddressInput
   taxes: [taxRankInput!]
   installments: [InstallmentInput!]
@@ -15731,7 +15781,7 @@ input PurchaseOrderInput {
   note: String
   details: [KeyValueInput!]
   products: [InvoicingProductsBundleInput!]!
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   address: InvoicingAddressInput
   taxes: [taxRankInput!]
   installments: [InstallmentInput!]
@@ -15770,7 +15820,7 @@ input PurchaseInvoiceInput {
   note: String
   details: [KeyValueInput!]
   products: [InvoicingProductsBundleInput!]!
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   address: InvoicingAddressInput
   taxes: [taxRankInput!]
   installments: [InstallmentInput!]
@@ -15799,7 +15849,7 @@ input PurchaseDeliveryNoteInput {
   note: String
   details: [KeyValueInput!]
   products: [InvoicingProductsBundleInput!]!
-  status: GenericInvoicingStatus
+  status: GenericInvoicingStatusEnum
   address: InvoicingAddressInput
   taxes: [taxRankInput!]
   installments: [InstallmentInput!]

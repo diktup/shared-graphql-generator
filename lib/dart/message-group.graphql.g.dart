@@ -10419,6 +10419,5185 @@ Map<String, dynamic> _$SearchMessageGroup$QueryToJson(
       'searchMessageGroup': instance.searchMessageGroup.toJson(),
     };
 
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PhoneType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PhoneTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PhoneType()
+          ..number = json['number'] as String?
+          ..isValid = json['isValid'] as bool?
+          ..countryCode = json['countryCode'] as String?
+          ..validationNumber = json['validationNumber'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PhoneTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PhoneType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('number', instance.number);
+  writeNotNull('isValid', instance.isValid);
+  writeNotNull('countryCode', instance.countryCode);
+  writeNotNull('validationNumber', instance.validationNumber);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..dialCode = json['dialCode'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$LonLatType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$LonLatTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$LonLatType()
+          ..type = json['type'] as String?
+          ..coordinates = (json['coordinates'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList();
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$LonLatTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$LonLatType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('type', instance.type);
+  writeNotNull('coordinates', instance.coordinates);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..dialCode = json['dialCode'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..dialCode = json['dialCode'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..created = DateTime.parse(json['created'] as String)
+          ..surface = json['surface'] as String
+          ..dialCode = json['dialCode'] as String?
+          ..country = json['country'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType
+                  .fromJson(json['country'] as Map<String, dynamic>)
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  val['created'] = instance.created.toIso8601String();
+  val['surface'] = instance.surface;
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('country', instance.country?.toJson());
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType()
+          ..number = json['number'] as String?
+          ..countryCode = json['countryCode'] as String?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('number', instance.number);
+  writeNotNull('countryCode', instance.countryCode);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType()
+          ..name = json['name'] as String?
+          ..phone = json['phone'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType
+                  .fromJson(json['phone'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('phone', instance.phone?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType()
+          ..city = json['city'] as String?
+          ..address = json['address'] as String?
+          ..postCode = json['postCode'] as String?
+          ..addressLine = json['addressLine'] as String?
+          ..location = json['location'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$LonLatType
+                  .fromJson(json['location'] as Map<String, dynamic>)
+          ..country = json['country'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType
+                  .fromJson(json['country'] as Map<String, dynamic>)
+          ..state = json['state'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType
+                  .fromJson(json['state'] as Map<String, dynamic>)
+          ..owner = json['owner'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType
+                  .fromJson(json['owner'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('city', instance.city);
+  writeNotNull('address', instance.address);
+  writeNotNull('postCode', instance.postCode);
+  writeNotNull('addressLine', instance.addressLine);
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('country', instance.country?.toJson());
+  writeNotNull('state', instance.state?.toJson());
+  writeNotNull('owner', instance.owner?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType()
+          ..size48 = json['size48'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size48'] as Map<String, dynamic>)
+          ..size96 = json['size96'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size96'] as Map<String, dynamic>)
+          ..size144 = json['size144'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size144'] as Map<String, dynamic>)
+          ..size240 = json['size240'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size240'] as Map<String, dynamic>)
+          ..size480 = json['size480'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size480'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('size48', instance.size48?.toJson());
+  writeNotNull('size96', instance.size96?.toJson());
+  writeNotNull('size144', instance.size144?.toJson());
+  writeNotNull('size240', instance.size240?.toJson());
+  writeNotNull('size480', instance.size480?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType()
+          ..svg = json['svg'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+                  .fromJson(json['svg'] as Map<String, dynamic>)
+          ..png = json['png'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+                  .fromJson(json['png'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('svg', instance.svg?.toJson());
+  writeNotNull('png', instance.png?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType()
+          ..style = $enumDecode(_$SocialImageStyleEnumEnumMap, json['style'],
+              unknownValue: SocialImageStyleEnum.artemisUnknown)
+          ..images = (json['images'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType
+            instance) {
+  final val = <String, dynamic>{
+    'style': _$SocialImageStyleEnumEnumMap[instance.style]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('images', instance.images?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..fontIcon = json['fontIcon'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..images = (json['images'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('fontIcon', instance.fontIcon);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('images', instance.images?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType()
+          ..name = json['name'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType
+                  .fromJson(json['name'] as Map<String, dynamic>)
+          ..value = json['value'] as String?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name?.toJson());
+  writeNotNull('value', instance.value);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$OoredooDataType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$OoredooDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$OoredooDataType()
+          ..id = json['id'] as String?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$OoredooDataTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$OoredooDataType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$FacebookDataType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$FacebookDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$FacebookDataType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String?
+          ..token = json['token'] as String
+          ..email = json['email'] as String
+          ..lastName = json['last_name'] as String?
+          ..firstName = json['first_name'] as String?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$FacebookDataTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$FacebookDataType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  val['token'] = instance.token;
+  val['email'] = instance.email;
+  writeNotNull('last_name', instance.lastName);
+  writeNotNull('first_name', instance.firstName);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$GoogleDataType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$GoogleDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$GoogleDataType()
+          ..sub = json['sub'] as String
+          ..name = json['name'] as String?
+          ..email = json['email'] as String
+          ..token = json['token'] as String
+          ..locale = json['locale'] as String?
+          ..picture = json['picture'] as String?
+          ..givenName = json['given_name'] as String?
+          ..familyName = json['family_name'] as String?
+          ..emailVerified = json['email_verified'] as bool?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$GoogleDataTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$GoogleDataType
+            instance) {
+  final val = <String, dynamic>{
+    'sub': instance.sub,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  val['email'] = instance.email;
+  val['token'] = instance.token;
+  writeNotNull('locale', instance.locale);
+  writeNotNull('picture', instance.picture);
+  writeNotNull('given_name', instance.givenName);
+  writeNotNull('family_name', instance.familyName);
+  writeNotNull('email_verified', instance.emailVerified);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$AppleDataType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$AppleDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$AppleDataType()
+          ..email = json['email'] as String?
+          ..status = json['status'] as String?
+          ..givenName = json['givenName'] as String?
+          ..familyName = json['familyName'] as String?
+          ..identityToken = json['identityToken'] as String
+          ..userIdentifier = json['userIdentifier'] as String?
+          ..authorizationCode = json['authorizationCode'] as String?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$AppleDataTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$AppleDataType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('email', instance.email);
+  writeNotNull('status', instance.status);
+  writeNotNull('givenName', instance.givenName);
+  writeNotNull('familyName', instance.familyName);
+  val['identityToken'] = instance.identityToken;
+  writeNotNull('userIdentifier', instance.userIdentifier);
+  writeNotNull('authorizationCode', instance.authorizationCode);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType()
+          ..ooredoo = json['ooredoo'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$OoredooDataType
+                  .fromJson(json['ooredoo'] as Map<String, dynamic>)
+          ..facebook = json['facebook'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$FacebookDataType
+                  .fromJson(json['facebook'] as Map<String, dynamic>)
+          ..google = json['google'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$GoogleDataType
+                  .fromJson(json['google'] as Map<String, dynamic>)
+          ..apple = json['apple'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$AppleDataType
+                  .fromJson(json['apple'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('ooredoo', instance.ooredoo?.toJson());
+  writeNotNull('facebook', instance.facebook?.toJson());
+  writeNotNull('google', instance.google?.toJson());
+  writeNotNull('apple', instance.apple?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType()
+          ..id = json['id'] as String
+          ..apps = (json['apps'] as List<dynamic>?)
+              ?.map((e) => $enumDecode(_$AppEnumMap, e,
+                  unknownValue: App.artemisUnknown))
+              .toList()
+          ..email = json['email'] as String?
+          ..roles = (json['roles'] as List<dynamic>?)
+              ?.map((e) => $enumDecode(_$UserRoleEnumMap, e,
+                  unknownValue: UserRole.artemisUnknown))
+              .toList()
+          ..title = json['title'] as String?
+          ..about = json['about'] as String?
+          ..gender = $enumDecodeNullable(_$GenderEnumMap, json['gender'],
+              unknownValue: Gender.artemisUnknown)
+          ..locale = json['locale'] as String?
+          ..source = $enumDecodeNullable(_$SourcesEnumEnumMap, json['source'],
+              unknownValue: SourcesEnum.artemisUnknown)
+          ..status = $enumDecodeNullable(_$UserStatusEnumMap, json['status'],
+              unknownValue: UserStatus.artemisUnknown)
+          ..lastName = json['lastName'] as String?
+          ..username = json['username'] as String?
+          ..firstName = json['firstName'] as String?
+          ..plugged = json['plugged'] as bool?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..isMailValid = json['isMailValid'] as bool?
+          ..dateOfBirth = json['dateOfBirth'] == null
+              ? null
+              : DateTime.parse(json['dateOfBirth'] as String)
+          ..phoneNumber = json['phoneNumber'] as String?
+          ..mobileTheme = $enumDecodeNullable(
+              _$MobileThemesEnumEnumMap, json['mobileTheme'],
+              unknownValue: MobileThemesEnum.artemisUnknown)
+          ..placeOfBirth = json['placeOfBirth'] as String?
+          ..maritalStatus = $enumDecodeNullable(
+              _$MaritalStatusEnumMap, json['maritalStatus'],
+              unknownValue: MaritalStatus.artemisUnknown)
+          ..newsletterSubs = json['newsletterSubs'] as bool?
+          ..hasAutoGeneratedEmail = json['hasAutoGeneratedEmail'] as bool?
+          ..phone = json['phone'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PhoneType
+                  .fromJson(json['phone'] as Map<String, dynamic>)
+          ..picture = json['picture'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureType
+                  .fromJson(json['picture'] as Map<String, dynamic>)
+          ..pictures = (json['pictures'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..languages = (json['languages'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..nationality = json['nationality'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType
+                  .fromJson(json['nationality'] as Map<String, dynamic>)
+          ..billingAddress = (json['billingAddress'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..shippingAddress = (json['shippingAddress'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..residentialAddress = (json['residentialAddress'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..chatContact = (json['chatContact'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..socialMedia = (json['socialMedia'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..socialLoginData = json['socialLoginData'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType
+                  .fromJson(json['socialLoginData'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('apps', instance.apps?.map((e) => _$AppEnumMap[e]!).toList());
+  writeNotNull('email', instance.email);
+  writeNotNull(
+      'roles', instance.roles?.map((e) => _$UserRoleEnumMap[e]!).toList());
+  writeNotNull('title', instance.title);
+  writeNotNull('about', instance.about);
+  writeNotNull('gender', _$GenderEnumMap[instance.gender]);
+  writeNotNull('locale', instance.locale);
+  writeNotNull('source', _$SourcesEnumEnumMap[instance.source]);
+  writeNotNull('status', _$UserStatusEnumMap[instance.status]);
+  writeNotNull('lastName', instance.lastName);
+  writeNotNull('username', instance.username);
+  writeNotNull('firstName', instance.firstName);
+  writeNotNull('plugged', instance.plugged);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('isMailValid', instance.isMailValid);
+  writeNotNull('dateOfBirth', instance.dateOfBirth?.toIso8601String());
+  writeNotNull('phoneNumber', instance.phoneNumber);
+  writeNotNull('mobileTheme', _$MobileThemesEnumEnumMap[instance.mobileTheme]);
+  writeNotNull('placeOfBirth', instance.placeOfBirth);
+  writeNotNull('maritalStatus', _$MaritalStatusEnumMap[instance.maritalStatus]);
+  writeNotNull('newsletterSubs', instance.newsletterSubs);
+  writeNotNull('hasAutoGeneratedEmail', instance.hasAutoGeneratedEmail);
+  writeNotNull('phone', instance.phone?.toJson());
+  writeNotNull('picture', instance.picture?.toJson());
+  writeNotNull('pictures', instance.pictures?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'languages', instance.languages?.map((e) => e.toJson()).toList());
+  writeNotNull('nationality', instance.nationality?.toJson());
+  writeNotNull('billingAddress',
+      instance.billingAddress?.map((e) => e.toJson()).toList());
+  writeNotNull('shippingAddress',
+      instance.shippingAddress?.map((e) => e.toJson()).toList());
+  writeNotNull('residentialAddress',
+      instance.residentialAddress?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'chatContact', instance.chatContact?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'socialMedia', instance.socialMedia?.map((e) => e.toJson()).toList());
+  writeNotNull('socialLoginData', instance.socialLoginData?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType()
+          ..picture = json['picture'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType$PictureType
+                  .fromJson(json['picture'] as Map<String, dynamic>)
+          ..gradientColors = (json['gradientColors'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList()
+          ..assetImage = json['assetImage'] as String?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('picture', instance.picture?.toJson());
+  writeNotNull('gradientColors', instance.gradientColors);
+  writeNotNull('assetImage', instance.assetImage);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PhoneType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PhoneTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PhoneType()
+          ..number = json['number'] as String?
+          ..isValid = json['isValid'] as bool?
+          ..countryCode = json['countryCode'] as String?
+          ..validationNumber = json['validationNumber'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PhoneTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PhoneType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('number', instance.number);
+  writeNotNull('isValid', instance.isValid);
+  writeNotNull('countryCode', instance.countryCode);
+  writeNotNull('validationNumber', instance.validationNumber);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..dialCode = json['dialCode'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$LonLatType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$LonLatTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$LonLatType()
+          ..type = json['type'] as String?
+          ..coordinates = (json['coordinates'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList();
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$LonLatTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$LonLatType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('type', instance.type);
+  writeNotNull('coordinates', instance.coordinates);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..dialCode = json['dialCode'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..dialCode = json['dialCode'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..created = DateTime.parse(json['created'] as String)
+          ..surface = json['surface'] as String
+          ..dialCode = json['dialCode'] as String?
+          ..country = json['country'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType
+                  .fromJson(json['country'] as Map<String, dynamic>)
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  val['created'] = instance.created.toIso8601String();
+  val['surface'] = instance.surface;
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('country', instance.country?.toJson());
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType()
+          ..number = json['number'] as String?
+          ..countryCode = json['countryCode'] as String?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('number', instance.number);
+  writeNotNull('countryCode', instance.countryCode);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType()
+          ..name = json['name'] as String?
+          ..phone = json['phone'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType
+                  .fromJson(json['phone'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('phone', instance.phone?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType()
+          ..city = json['city'] as String?
+          ..address = json['address'] as String?
+          ..postCode = json['postCode'] as String?
+          ..addressLine = json['addressLine'] as String?
+          ..location = json['location'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$LonLatType
+                  .fromJson(json['location'] as Map<String, dynamic>)
+          ..country = json['country'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType
+                  .fromJson(json['country'] as Map<String, dynamic>)
+          ..state = json['state'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType
+                  .fromJson(json['state'] as Map<String, dynamic>)
+          ..owner = json['owner'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType
+                  .fromJson(json['owner'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('city', instance.city);
+  writeNotNull('address', instance.address);
+  writeNotNull('postCode', instance.postCode);
+  writeNotNull('addressLine', instance.addressLine);
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('country', instance.country?.toJson());
+  writeNotNull('state', instance.state?.toJson());
+  writeNotNull('owner', instance.owner?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType()
+          ..size48 = json['size48'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size48'] as Map<String, dynamic>)
+          ..size96 = json['size96'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size96'] as Map<String, dynamic>)
+          ..size144 = json['size144'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size144'] as Map<String, dynamic>)
+          ..size240 = json['size240'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size240'] as Map<String, dynamic>)
+          ..size480 = json['size480'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size480'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('size48', instance.size48?.toJson());
+  writeNotNull('size96', instance.size96?.toJson());
+  writeNotNull('size144', instance.size144?.toJson());
+  writeNotNull('size240', instance.size240?.toJson());
+  writeNotNull('size480', instance.size480?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType()
+          ..svg = json['svg'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+                  .fromJson(json['svg'] as Map<String, dynamic>)
+          ..png = json['png'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+                  .fromJson(json['png'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('svg', instance.svg?.toJson());
+  writeNotNull('png', instance.png?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType()
+          ..style = $enumDecode(_$SocialImageStyleEnumEnumMap, json['style'],
+              unknownValue: SocialImageStyleEnum.artemisUnknown)
+          ..images = (json['images'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType
+            instance) {
+  final val = <String, dynamic>{
+    'style': _$SocialImageStyleEnumEnumMap[instance.style]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('images', instance.images?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..fontIcon = json['fontIcon'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..images = (json['images'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('fontIcon', instance.fontIcon);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('images', instance.images?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType()
+          ..name = json['name'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType
+                  .fromJson(json['name'] as Map<String, dynamic>)
+          ..value = json['value'] as String?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name?.toJson());
+  writeNotNull('value', instance.value);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$OoredooDataType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$OoredooDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$OoredooDataType()
+          ..id = json['id'] as String?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$OoredooDataTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$OoredooDataType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$FacebookDataType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$FacebookDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$FacebookDataType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String?
+          ..token = json['token'] as String
+          ..email = json['email'] as String
+          ..lastName = json['last_name'] as String?
+          ..firstName = json['first_name'] as String?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$FacebookDataTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$FacebookDataType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  val['token'] = instance.token;
+  val['email'] = instance.email;
+  writeNotNull('last_name', instance.lastName);
+  writeNotNull('first_name', instance.firstName);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$GoogleDataType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$GoogleDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$GoogleDataType()
+          ..sub = json['sub'] as String
+          ..name = json['name'] as String?
+          ..email = json['email'] as String
+          ..token = json['token'] as String
+          ..locale = json['locale'] as String?
+          ..picture = json['picture'] as String?
+          ..givenName = json['given_name'] as String?
+          ..familyName = json['family_name'] as String?
+          ..emailVerified = json['email_verified'] as bool?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$GoogleDataTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$GoogleDataType
+            instance) {
+  final val = <String, dynamic>{
+    'sub': instance.sub,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  val['email'] = instance.email;
+  val['token'] = instance.token;
+  writeNotNull('locale', instance.locale);
+  writeNotNull('picture', instance.picture);
+  writeNotNull('given_name', instance.givenName);
+  writeNotNull('family_name', instance.familyName);
+  writeNotNull('email_verified', instance.emailVerified);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$AppleDataType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$AppleDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$AppleDataType()
+          ..email = json['email'] as String?
+          ..status = json['status'] as String?
+          ..givenName = json['givenName'] as String?
+          ..familyName = json['familyName'] as String?
+          ..identityToken = json['identityToken'] as String
+          ..userIdentifier = json['userIdentifier'] as String?
+          ..authorizationCode = json['authorizationCode'] as String?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$AppleDataTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$AppleDataType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('email', instance.email);
+  writeNotNull('status', instance.status);
+  writeNotNull('givenName', instance.givenName);
+  writeNotNull('familyName', instance.familyName);
+  val['identityToken'] = instance.identityToken;
+  writeNotNull('userIdentifier', instance.userIdentifier);
+  writeNotNull('authorizationCode', instance.authorizationCode);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType()
+          ..ooredoo = json['ooredoo'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$OoredooDataType
+                  .fromJson(json['ooredoo'] as Map<String, dynamic>)
+          ..facebook = json['facebook'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$FacebookDataType
+                  .fromJson(json['facebook'] as Map<String, dynamic>)
+          ..google = json['google'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$GoogleDataType
+                  .fromJson(json['google'] as Map<String, dynamic>)
+          ..apple = json['apple'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$AppleDataType
+                  .fromJson(json['apple'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('ooredoo', instance.ooredoo?.toJson());
+  writeNotNull('facebook', instance.facebook?.toJson());
+  writeNotNull('google', instance.google?.toJson());
+  writeNotNull('apple', instance.apple?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType()
+          ..id = json['id'] as String
+          ..apps = (json['apps'] as List<dynamic>?)
+              ?.map((e) => $enumDecode(_$AppEnumMap, e,
+                  unknownValue: App.artemisUnknown))
+              .toList()
+          ..email = json['email'] as String?
+          ..roles = (json['roles'] as List<dynamic>?)
+              ?.map((e) => $enumDecode(_$UserRoleEnumMap, e,
+                  unknownValue: UserRole.artemisUnknown))
+              .toList()
+          ..title = json['title'] as String?
+          ..about = json['about'] as String?
+          ..gender = $enumDecodeNullable(_$GenderEnumMap, json['gender'],
+              unknownValue: Gender.artemisUnknown)
+          ..locale = json['locale'] as String?
+          ..source = $enumDecodeNullable(_$SourcesEnumEnumMap, json['source'],
+              unknownValue: SourcesEnum.artemisUnknown)
+          ..status = $enumDecodeNullable(_$UserStatusEnumMap, json['status'],
+              unknownValue: UserStatus.artemisUnknown)
+          ..lastName = json['lastName'] as String?
+          ..username = json['username'] as String?
+          ..firstName = json['firstName'] as String?
+          ..plugged = json['plugged'] as bool?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..isMailValid = json['isMailValid'] as bool?
+          ..dateOfBirth = json['dateOfBirth'] == null
+              ? null
+              : DateTime.parse(json['dateOfBirth'] as String)
+          ..phoneNumber = json['phoneNumber'] as String?
+          ..mobileTheme = $enumDecodeNullable(
+              _$MobileThemesEnumEnumMap, json['mobileTheme'],
+              unknownValue: MobileThemesEnum.artemisUnknown)
+          ..placeOfBirth = json['placeOfBirth'] as String?
+          ..maritalStatus = $enumDecodeNullable(
+              _$MaritalStatusEnumMap, json['maritalStatus'],
+              unknownValue: MaritalStatus.artemisUnknown)
+          ..newsletterSubs = json['newsletterSubs'] as bool?
+          ..hasAutoGeneratedEmail = json['hasAutoGeneratedEmail'] as bool?
+          ..phone = json['phone'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PhoneType
+                  .fromJson(json['phone'] as Map<String, dynamic>)
+          ..picture = json['picture'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureType
+                  .fromJson(json['picture'] as Map<String, dynamic>)
+          ..pictures = (json['pictures'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..languages = (json['languages'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..nationality = json['nationality'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType
+                  .fromJson(json['nationality'] as Map<String, dynamic>)
+          ..billingAddress = (json['billingAddress'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..shippingAddress = (json['shippingAddress'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..residentialAddress = (json['residentialAddress'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..chatContact = (json['chatContact'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..socialMedia = (json['socialMedia'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..socialLoginData = json['socialLoginData'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType
+                  .fromJson(json['socialLoginData'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('apps', instance.apps?.map((e) => _$AppEnumMap[e]!).toList());
+  writeNotNull('email', instance.email);
+  writeNotNull(
+      'roles', instance.roles?.map((e) => _$UserRoleEnumMap[e]!).toList());
+  writeNotNull('title', instance.title);
+  writeNotNull('about', instance.about);
+  writeNotNull('gender', _$GenderEnumMap[instance.gender]);
+  writeNotNull('locale', instance.locale);
+  writeNotNull('source', _$SourcesEnumEnumMap[instance.source]);
+  writeNotNull('status', _$UserStatusEnumMap[instance.status]);
+  writeNotNull('lastName', instance.lastName);
+  writeNotNull('username', instance.username);
+  writeNotNull('firstName', instance.firstName);
+  writeNotNull('plugged', instance.plugged);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('isMailValid', instance.isMailValid);
+  writeNotNull('dateOfBirth', instance.dateOfBirth?.toIso8601String());
+  writeNotNull('phoneNumber', instance.phoneNumber);
+  writeNotNull('mobileTheme', _$MobileThemesEnumEnumMap[instance.mobileTheme]);
+  writeNotNull('placeOfBirth', instance.placeOfBirth);
+  writeNotNull('maritalStatus', _$MaritalStatusEnumMap[instance.maritalStatus]);
+  writeNotNull('newsletterSubs', instance.newsletterSubs);
+  writeNotNull('hasAutoGeneratedEmail', instance.hasAutoGeneratedEmail);
+  writeNotNull('phone', instance.phone?.toJson());
+  writeNotNull('picture', instance.picture?.toJson());
+  writeNotNull('pictures', instance.pictures?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'languages', instance.languages?.map((e) => e.toJson()).toList());
+  writeNotNull('nationality', instance.nationality?.toJson());
+  writeNotNull('billingAddress',
+      instance.billingAddress?.map((e) => e.toJson()).toList());
+  writeNotNull('shippingAddress',
+      instance.shippingAddress?.map((e) => e.toJson()).toList());
+  writeNotNull('residentialAddress',
+      instance.residentialAddress?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'chatContact', instance.chatContact?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'socialMedia', instance.socialMedia?.map((e) => e.toJson()).toList());
+  writeNotNull('socialLoginData', instance.socialLoginData?.toJson());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType()
+          ..users = (json['users'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('users', instance.users?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType()
+          ..video = (json['video'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..picture = (json['picture'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('video', instance.video?.map((e) => e.toJson()).toList());
+  writeNotNull('picture', instance.picture?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$LonLatType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$LonLatTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$LonLatType()
+          ..type = json['type'] as String?
+          ..coordinates = (json['coordinates'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList();
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$LonLatTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$LonLatType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('type', instance.type);
+  writeNotNull('coordinates', instance.coordinates);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$CustomMessageType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$CustomMessageTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$CustomMessageType()
+          ..id = json['id'] as String?
+          ..type = json['type'] as String?;
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$CustomMessageTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$CustomMessageType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('type', instance.type);
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType()
+          ..text = json['text'] as String?
+          ..gif = json['gif'] as String?
+          ..sticker = json['sticker'] as String?
+          ..media = json['media'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType
+                  .fromJson(json['media'] as Map<String, dynamic>)
+          ..location = json['location'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$LonLatType
+                  .fromJson(json['location'] as Map<String, dynamic>)
+          ..custom = json['custom'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$CustomMessageType
+                  .fromJson(json['custom'] as Map<String, dynamic>)
+          ..unread = json['unread'] as bool?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('text', instance.text);
+  writeNotNull('gif', instance.gif);
+  writeNotNull('sticker', instance.sticker);
+  writeNotNull('media', instance.media?.toJson());
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('custom', instance.custom?.toJson());
+  writeNotNull('unread', instance.unread);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType()
+          ..id = json['id'] as String?
+          ..name = json['name'] as String?
+          ..mute = json['mute'] as bool?
+          ..creator = json['creator'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType
+                  .fromJson(json['creator'] as Map<String, dynamic>)
+          ..profilePicture = json['profilePicture'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$PictureType
+                  .fromJson(json['profilePicture'] as Map<String, dynamic>)
+          ..wallpaper = json['wallpaper'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType
+                  .fromJson(json['wallpaper'] as Map<String, dynamic>)
+          ..sound = $enumDecodeNullable(
+              _$MessageSoundEnumEnumMap, json['sound'],
+              unknownValue: MessageSoundEnum.artemisUnknown)
+          ..isDirectMessage = json['isDirectMessage'] as bool?
+          ..members = json['members'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType
+                  .fromJson(json['members'] as Map<String, dynamic>)
+          ..status = $enumDecodeNullable(
+              _$MessageGroupStatusEnumEnumMap, json['status'],
+              unknownValue: MessageGroupStatusEnum.artemisUnknown)
+          ..lastMessage = json['lastMessage'] == null
+              ? null
+              : SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType
+                  .fromJson(json['lastMessage'] as Map<String, dynamic>)
+          ..unreadCount = json['unreadCount'] as int?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String);
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('name', instance.name);
+  writeNotNull('mute', instance.mute);
+  writeNotNull('creator', instance.creator?.toJson());
+  writeNotNull('profilePicture', instance.profilePicture?.toJson());
+  writeNotNull('wallpaper', instance.wallpaper?.toJson());
+  writeNotNull('sound', _$MessageSoundEnumEnumMap[instance.sound]);
+  writeNotNull('isDirectMessage', instance.isDirectMessage);
+  writeNotNull('members', instance.members?.toJson());
+  writeNotNull('status', _$MessageGroupStatusEnumEnumMap[instance.status]);
+  writeNotNull('lastMessage', instance.lastMessage?.toJson());
+  writeNotNull('unreadCount', instance.unreadCount);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  return val;
+}
+
+SearchInternalMessageGroup$Query$MessageGroupPaginateType
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType()
+          ..count = json['count'] as int?
+          ..isLast = json['isLast'] as bool?
+          ..objects = (json['objects'] as List<dynamic>)
+              .map((e) =>
+                  SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchInternalMessageGroup$Query$MessageGroupPaginateTypeToJson(
+        SearchInternalMessageGroup$Query$MessageGroupPaginateType instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('count', instance.count);
+  writeNotNull('isLast', instance.isLast);
+  val['objects'] = instance.objects.map((e) => e.toJson()).toList();
+  return val;
+}
+
+SearchInternalMessageGroup$Query _$SearchInternalMessageGroup$QueryFromJson(
+        Map<String, dynamic> json) =>
+    SearchInternalMessageGroup$Query()
+      ..searchInternalMessageGroup =
+          SearchInternalMessageGroup$Query$MessageGroupPaginateType.fromJson(
+              json['searchInternalMessageGroup'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$SearchInternalMessageGroup$QueryToJson(
+        SearchInternalMessageGroup$Query instance) =>
+    <String, dynamic>{
+      'searchInternalMessageGroup':
+          instance.searchInternalMessageGroup.toJson(),
+    };
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PhoneType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PhoneTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PhoneType()
+          ..number = json['number'] as String?
+          ..isValid = json['isValid'] as bool?
+          ..countryCode = json['countryCode'] as String?
+          ..validationNumber = json['validationNumber'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PhoneTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PhoneType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('number', instance.number);
+  writeNotNull('isValid', instance.isValid);
+  writeNotNull('countryCode', instance.countryCode);
+  writeNotNull('validationNumber', instance.validationNumber);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..dialCode = json['dialCode'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$LonLatType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$LonLatTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$LonLatType()
+          ..type = json['type'] as String?
+          ..coordinates = (json['coordinates'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList();
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$LonLatTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$LonLatType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('type', instance.type);
+  writeNotNull('coordinates', instance.coordinates);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..dialCode = json['dialCode'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..dialCode = json['dialCode'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..created = DateTime.parse(json['created'] as String)
+          ..surface = json['surface'] as String
+          ..dialCode = json['dialCode'] as String?
+          ..country = json['country'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$CountryType
+                  .fromJson(json['country'] as Map<String, dynamic>)
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  val['created'] = instance.created.toIso8601String();
+  val['surface'] = instance.surface;
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('country', instance.country?.toJson());
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType()
+          ..number = json['number'] as String?
+          ..countryCode = json['countryCode'] as String?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('number', instance.number);
+  writeNotNull('countryCode', instance.countryCode);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType()
+          ..name = json['name'] as String?
+          ..phone = json['phone'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType
+                  .fromJson(json['phone'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('phone', instance.phone?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType()
+          ..city = json['city'] as String?
+          ..address = json['address'] as String?
+          ..postCode = json['postCode'] as String?
+          ..addressLine = json['addressLine'] as String?
+          ..location = json['location'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$LonLatType
+                  .fromJson(json['location'] as Map<String, dynamic>)
+          ..country = json['country'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$CountryType
+                  .fromJson(json['country'] as Map<String, dynamic>)
+          ..state = json['state'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$StateType
+                  .fromJson(json['state'] as Map<String, dynamic>)
+          ..owner = json['owner'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType$FullAddressOwnerType
+                  .fromJson(json['owner'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('city', instance.city);
+  writeNotNull('address', instance.address);
+  writeNotNull('postCode', instance.postCode);
+  writeNotNull('addressLine', instance.addressLine);
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('country', instance.country?.toJson());
+  writeNotNull('state', instance.state?.toJson());
+  writeNotNull('owner', instance.owner?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType()
+          ..size48 = json['size48'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size48'] as Map<String, dynamic>)
+          ..size96 = json['size96'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size96'] as Map<String, dynamic>)
+          ..size144 = json['size144'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size144'] as Map<String, dynamic>)
+          ..size240 = json['size240'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size240'] as Map<String, dynamic>)
+          ..size480 = json['size480'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size480'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('size48', instance.size48?.toJson());
+  writeNotNull('size96', instance.size96?.toJson());
+  writeNotNull('size144', instance.size144?.toJson());
+  writeNotNull('size240', instance.size240?.toJson());
+  writeNotNull('size480', instance.size480?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType()
+          ..svg = json['svg'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+                  .fromJson(json['svg'] as Map<String, dynamic>)
+          ..png = json['png'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+                  .fromJson(json['png'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('svg', instance.svg?.toJson());
+  writeNotNull('png', instance.png?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType()
+          ..style = $enumDecode(_$SocialImageStyleEnumEnumMap, json['style'],
+              unknownValue: SocialImageStyleEnum.artemisUnknown)
+          ..images = (json['images'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType
+            instance) {
+  final val = <String, dynamic>{
+    'style': _$SocialImageStyleEnumEnumMap[instance.style]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('images', instance.images?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..fontIcon = json['fontIcon'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..images = (json['images'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType$SocialImagesType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('fontIcon', instance.fontIcon);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('images', instance.images?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType()
+          ..name = json['name'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType$SocialType
+                  .fromJson(json['name'] as Map<String, dynamic>)
+          ..value = json['value'] as String?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name?.toJson());
+  writeNotNull('value', instance.value);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$OoredooDataType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$OoredooDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$OoredooDataType()
+          ..id = json['id'] as String?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$OoredooDataTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$OoredooDataType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$FacebookDataType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$FacebookDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$FacebookDataType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String?
+          ..token = json['token'] as String
+          ..email = json['email'] as String
+          ..lastName = json['last_name'] as String?
+          ..firstName = json['first_name'] as String?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$FacebookDataTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$FacebookDataType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  val['token'] = instance.token;
+  val['email'] = instance.email;
+  writeNotNull('last_name', instance.lastName);
+  writeNotNull('first_name', instance.firstName);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$GoogleDataType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$GoogleDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$GoogleDataType()
+          ..sub = json['sub'] as String
+          ..name = json['name'] as String?
+          ..email = json['email'] as String
+          ..token = json['token'] as String
+          ..locale = json['locale'] as String?
+          ..picture = json['picture'] as String?
+          ..givenName = json['given_name'] as String?
+          ..familyName = json['family_name'] as String?
+          ..emailVerified = json['email_verified'] as bool?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$GoogleDataTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$GoogleDataType
+            instance) {
+  final val = <String, dynamic>{
+    'sub': instance.sub,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  val['email'] = instance.email;
+  val['token'] = instance.token;
+  writeNotNull('locale', instance.locale);
+  writeNotNull('picture', instance.picture);
+  writeNotNull('given_name', instance.givenName);
+  writeNotNull('family_name', instance.familyName);
+  writeNotNull('email_verified', instance.emailVerified);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$AppleDataType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$AppleDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$AppleDataType()
+          ..email = json['email'] as String?
+          ..status = json['status'] as String?
+          ..givenName = json['givenName'] as String?
+          ..familyName = json['familyName'] as String?
+          ..identityToken = json['identityToken'] as String
+          ..userIdentifier = json['userIdentifier'] as String?
+          ..authorizationCode = json['authorizationCode'] as String?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$AppleDataTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$AppleDataType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('email', instance.email);
+  writeNotNull('status', instance.status);
+  writeNotNull('givenName', instance.givenName);
+  writeNotNull('familyName', instance.familyName);
+  val['identityToken'] = instance.identityToken;
+  writeNotNull('userIdentifier', instance.userIdentifier);
+  writeNotNull('authorizationCode', instance.authorizationCode);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType()
+          ..ooredoo = json['ooredoo'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$OoredooDataType
+                  .fromJson(json['ooredoo'] as Map<String, dynamic>)
+          ..facebook = json['facebook'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$FacebookDataType
+                  .fromJson(json['facebook'] as Map<String, dynamic>)
+          ..google = json['google'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$GoogleDataType
+                  .fromJson(json['google'] as Map<String, dynamic>)
+          ..apple = json['apple'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType$AppleDataType
+                  .fromJson(json['apple'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('ooredoo', instance.ooredoo?.toJson());
+  writeNotNull('facebook', instance.facebook?.toJson());
+  writeNotNull('google', instance.google?.toJson());
+  writeNotNull('apple', instance.apple?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType()
+          ..id = json['id'] as String
+          ..apps = (json['apps'] as List<dynamic>?)
+              ?.map((e) => $enumDecode(_$AppEnumMap, e,
+                  unknownValue: App.artemisUnknown))
+              .toList()
+          ..email = json['email'] as String?
+          ..roles = (json['roles'] as List<dynamic>?)
+              ?.map((e) => $enumDecode(_$UserRoleEnumMap, e,
+                  unknownValue: UserRole.artemisUnknown))
+              .toList()
+          ..title = json['title'] as String?
+          ..about = json['about'] as String?
+          ..gender = $enumDecodeNullable(_$GenderEnumMap, json['gender'],
+              unknownValue: Gender.artemisUnknown)
+          ..locale = json['locale'] as String?
+          ..source = $enumDecodeNullable(_$SourcesEnumEnumMap, json['source'],
+              unknownValue: SourcesEnum.artemisUnknown)
+          ..status = $enumDecodeNullable(_$UserStatusEnumMap, json['status'],
+              unknownValue: UserStatus.artemisUnknown)
+          ..lastName = json['lastName'] as String?
+          ..username = json['username'] as String?
+          ..firstName = json['firstName'] as String?
+          ..plugged = json['plugged'] as bool?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..isMailValid = json['isMailValid'] as bool?
+          ..dateOfBirth = json['dateOfBirth'] == null
+              ? null
+              : DateTime.parse(json['dateOfBirth'] as String)
+          ..phoneNumber = json['phoneNumber'] as String?
+          ..mobileTheme = $enumDecodeNullable(
+              _$MobileThemesEnumEnumMap, json['mobileTheme'],
+              unknownValue: MobileThemesEnum.artemisUnknown)
+          ..placeOfBirth = json['placeOfBirth'] as String?
+          ..maritalStatus = $enumDecodeNullable(
+              _$MaritalStatusEnumMap, json['maritalStatus'],
+              unknownValue: MaritalStatus.artemisUnknown)
+          ..newsletterSubs = json['newsletterSubs'] as bool?
+          ..hasAutoGeneratedEmail = json['hasAutoGeneratedEmail'] as bool?
+          ..phone = json['phone'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PhoneType
+                  .fromJson(json['phone'] as Map<String, dynamic>)
+          ..picture = json['picture'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureType
+                  .fromJson(json['picture'] as Map<String, dynamic>)
+          ..pictures = (json['pictures'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$PictureType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..languages = (json['languages'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$LanguageType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..nationality = json['nationality'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$CountryType
+                  .fromJson(json['nationality'] as Map<String, dynamic>)
+          ..billingAddress = (json['billingAddress'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..shippingAddress = (json['shippingAddress'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..residentialAddress = (json['residentialAddress'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$FullAddressType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..chatContact = (json['chatContact'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..socialMedia = (json['socialMedia'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialValueType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..socialLoginData = json['socialLoginData'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType$SocialLoginDataType
+                  .fromJson(json['socialLoginData'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('apps', instance.apps?.map((e) => _$AppEnumMap[e]!).toList());
+  writeNotNull('email', instance.email);
+  writeNotNull(
+      'roles', instance.roles?.map((e) => _$UserRoleEnumMap[e]!).toList());
+  writeNotNull('title', instance.title);
+  writeNotNull('about', instance.about);
+  writeNotNull('gender', _$GenderEnumMap[instance.gender]);
+  writeNotNull('locale', instance.locale);
+  writeNotNull('source', _$SourcesEnumEnumMap[instance.source]);
+  writeNotNull('status', _$UserStatusEnumMap[instance.status]);
+  writeNotNull('lastName', instance.lastName);
+  writeNotNull('username', instance.username);
+  writeNotNull('firstName', instance.firstName);
+  writeNotNull('plugged', instance.plugged);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('isMailValid', instance.isMailValid);
+  writeNotNull('dateOfBirth', instance.dateOfBirth?.toIso8601String());
+  writeNotNull('phoneNumber', instance.phoneNumber);
+  writeNotNull('mobileTheme', _$MobileThemesEnumEnumMap[instance.mobileTheme]);
+  writeNotNull('placeOfBirth', instance.placeOfBirth);
+  writeNotNull('maritalStatus', _$MaritalStatusEnumMap[instance.maritalStatus]);
+  writeNotNull('newsletterSubs', instance.newsletterSubs);
+  writeNotNull('hasAutoGeneratedEmail', instance.hasAutoGeneratedEmail);
+  writeNotNull('phone', instance.phone?.toJson());
+  writeNotNull('picture', instance.picture?.toJson());
+  writeNotNull('pictures', instance.pictures?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'languages', instance.languages?.map((e) => e.toJson()).toList());
+  writeNotNull('nationality', instance.nationality?.toJson());
+  writeNotNull('billingAddress',
+      instance.billingAddress?.map((e) => e.toJson()).toList());
+  writeNotNull('shippingAddress',
+      instance.shippingAddress?.map((e) => e.toJson()).toList());
+  writeNotNull('residentialAddress',
+      instance.residentialAddress?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'chatContact', instance.chatContact?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'socialMedia', instance.socialMedia?.map((e) => e.toJson()).toList());
+  writeNotNull('socialLoginData', instance.socialLoginData?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType()
+          ..picture = json['picture'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType$PictureType
+                  .fromJson(json['picture'] as Map<String, dynamic>)
+          ..gradientColors = (json['gradientColors'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList()
+          ..assetImage = json['assetImage'] as String?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('picture', instance.picture?.toJson());
+  writeNotNull('gradientColors', instance.gradientColors);
+  writeNotNull('assetImage', instance.assetImage);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PhoneType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PhoneTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PhoneType()
+          ..number = json['number'] as String?
+          ..isValid = json['isValid'] as bool?
+          ..countryCode = json['countryCode'] as String?
+          ..validationNumber = json['validationNumber'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PhoneTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PhoneType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('number', instance.number);
+  writeNotNull('isValid', instance.isValid);
+  writeNotNull('countryCode', instance.countryCode);
+  writeNotNull('validationNumber', instance.validationNumber);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..dialCode = json['dialCode'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$LonLatType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$LonLatTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$LonLatType()
+          ..type = json['type'] as String?
+          ..coordinates = (json['coordinates'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList();
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$LonLatTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$LonLatType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('type', instance.type);
+  writeNotNull('coordinates', instance.coordinates);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..dialCode = json['dialCode'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..dialCode = json['dialCode'] as String?
+          ..iconFlag = json['iconFlag'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('iconFlag', instance.iconFlag);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..created = DateTime.parse(json['created'] as String)
+          ..surface = json['surface'] as String
+          ..dialCode = json['dialCode'] as String?
+          ..country = json['country'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$CountryType
+                  .fromJson(json['country'] as Map<String, dynamic>)
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..flagSquare = json['flagSquare'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureType
+                  .fromJson(json['flagSquare'] as Map<String, dynamic>)
+          ..flagWide = json['flagWide'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType$PictureType
+                  .fromJson(json['flagWide'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  val['created'] = instance.created.toIso8601String();
+  val['surface'] = instance.surface;
+  writeNotNull('dialCode', instance.dialCode);
+  writeNotNull('country', instance.country?.toJson());
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('flagSquare', instance.flagSquare?.toJson());
+  writeNotNull('flagWide', instance.flagWide?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType()
+          ..number = json['number'] as String?
+          ..countryCode = json['countryCode'] as String?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('number', instance.number);
+  writeNotNull('countryCode', instance.countryCode);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType()
+          ..name = json['name'] as String?
+          ..phone = json['phone'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType$FullAddressOwnerPhoneType
+                  .fromJson(json['phone'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('phone', instance.phone?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType()
+          ..city = json['city'] as String?
+          ..address = json['address'] as String?
+          ..postCode = json['postCode'] as String?
+          ..addressLine = json['addressLine'] as String?
+          ..location = json['location'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$LonLatType
+                  .fromJson(json['location'] as Map<String, dynamic>)
+          ..country = json['country'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$CountryType
+                  .fromJson(json['country'] as Map<String, dynamic>)
+          ..state = json['state'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$StateType
+                  .fromJson(json['state'] as Map<String, dynamic>)
+          ..owner = json['owner'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType$FullAddressOwnerType
+                  .fromJson(json['owner'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('city', instance.city);
+  writeNotNull('address', instance.address);
+  writeNotNull('postCode', instance.postCode);
+  writeNotNull('addressLine', instance.addressLine);
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('country', instance.country?.toJson());
+  writeNotNull('state', instance.state?.toJson());
+  writeNotNull('owner', instance.owner?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType()
+          ..size48 = json['size48'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size48'] as Map<String, dynamic>)
+          ..size96 = json['size96'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size96'] as Map<String, dynamic>)
+          ..size144 = json['size144'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size144'] as Map<String, dynamic>)
+          ..size240 = json['size240'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size240'] as Map<String, dynamic>)
+          ..size480 = json['size480'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType$PictureType
+                  .fromJson(json['size480'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('size48', instance.size48?.toJson());
+  writeNotNull('size96', instance.size96?.toJson());
+  writeNotNull('size144', instance.size144?.toJson());
+  writeNotNull('size240', instance.size240?.toJson());
+  writeNotNull('size480', instance.size480?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType()
+          ..svg = json['svg'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+                  .fromJson(json['svg'] as Map<String, dynamic>)
+          ..png = json['png'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType$SocialImagesImagesSetType
+                  .fromJson(json['png'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('svg', instance.svg?.toJson());
+  writeNotNull('png', instance.png?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType()
+          ..style = $enumDecode(_$SocialImageStyleEnumEnumMap, json['style'],
+              unknownValue: SocialImageStyleEnum.artemisUnknown)
+          ..images = (json['images'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType$SocialImagesImagesType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType
+            instance) {
+  final val = <String, dynamic>{
+    'style': _$SocialImageStyleEnumEnumMap[instance.style]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('images', instance.images?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String
+          ..code = json['code'] as String?
+          ..fontIcon = json['fontIcon'] as String?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..images = (json['images'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType$SocialImagesType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'name': instance.name,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('code', instance.code);
+  writeNotNull('fontIcon', instance.fontIcon);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('images', instance.images?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType()
+          ..name = json['name'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType$SocialType
+                  .fromJson(json['name'] as Map<String, dynamic>)
+          ..value = json['value'] as String?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name?.toJson());
+  writeNotNull('value', instance.value);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$OoredooDataType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$OoredooDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$OoredooDataType()
+          ..id = json['id'] as String?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$OoredooDataTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$OoredooDataType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$FacebookDataType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$FacebookDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$FacebookDataType()
+          ..id = json['id'] as String
+          ..name = json['name'] as String?
+          ..token = json['token'] as String
+          ..email = json['email'] as String
+          ..lastName = json['last_name'] as String?
+          ..firstName = json['first_name'] as String?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$FacebookDataTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$FacebookDataType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  val['token'] = instance.token;
+  val['email'] = instance.email;
+  writeNotNull('last_name', instance.lastName);
+  writeNotNull('first_name', instance.firstName);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$GoogleDataType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$GoogleDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$GoogleDataType()
+          ..sub = json['sub'] as String
+          ..name = json['name'] as String?
+          ..email = json['email'] as String
+          ..token = json['token'] as String
+          ..locale = json['locale'] as String?
+          ..picture = json['picture'] as String?
+          ..givenName = json['given_name'] as String?
+          ..familyName = json['family_name'] as String?
+          ..emailVerified = json['email_verified'] as bool?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$GoogleDataTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$GoogleDataType
+            instance) {
+  final val = <String, dynamic>{
+    'sub': instance.sub,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  val['email'] = instance.email;
+  val['token'] = instance.token;
+  writeNotNull('locale', instance.locale);
+  writeNotNull('picture', instance.picture);
+  writeNotNull('given_name', instance.givenName);
+  writeNotNull('family_name', instance.familyName);
+  writeNotNull('email_verified', instance.emailVerified);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$AppleDataType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$AppleDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$AppleDataType()
+          ..email = json['email'] as String?
+          ..status = json['status'] as String?
+          ..givenName = json['givenName'] as String?
+          ..familyName = json['familyName'] as String?
+          ..identityToken = json['identityToken'] as String
+          ..userIdentifier = json['userIdentifier'] as String?
+          ..authorizationCode = json['authorizationCode'] as String?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$AppleDataTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$AppleDataType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('email', instance.email);
+  writeNotNull('status', instance.status);
+  writeNotNull('givenName', instance.givenName);
+  writeNotNull('familyName', instance.familyName);
+  val['identityToken'] = instance.identityToken;
+  writeNotNull('userIdentifier', instance.userIdentifier);
+  writeNotNull('authorizationCode', instance.authorizationCode);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType()
+          ..ooredoo = json['ooredoo'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$OoredooDataType
+                  .fromJson(json['ooredoo'] as Map<String, dynamic>)
+          ..facebook = json['facebook'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$FacebookDataType
+                  .fromJson(json['facebook'] as Map<String, dynamic>)
+          ..google = json['google'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$GoogleDataType
+                  .fromJson(json['google'] as Map<String, dynamic>)
+          ..apple = json['apple'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType$AppleDataType
+                  .fromJson(json['apple'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('ooredoo', instance.ooredoo?.toJson());
+  writeNotNull('facebook', instance.facebook?.toJson());
+  writeNotNull('google', instance.google?.toJson());
+  writeNotNull('apple', instance.apple?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType()
+          ..id = json['id'] as String
+          ..apps = (json['apps'] as List<dynamic>?)
+              ?.map((e) => $enumDecode(_$AppEnumMap, e,
+                  unknownValue: App.artemisUnknown))
+              .toList()
+          ..email = json['email'] as String?
+          ..roles = (json['roles'] as List<dynamic>?)
+              ?.map((e) => $enumDecode(_$UserRoleEnumMap, e,
+                  unknownValue: UserRole.artemisUnknown))
+              .toList()
+          ..title = json['title'] as String?
+          ..about = json['about'] as String?
+          ..gender = $enumDecodeNullable(_$GenderEnumMap, json['gender'],
+              unknownValue: Gender.artemisUnknown)
+          ..locale = json['locale'] as String?
+          ..source = $enumDecodeNullable(_$SourcesEnumEnumMap, json['source'],
+              unknownValue: SourcesEnum.artemisUnknown)
+          ..status = $enumDecodeNullable(_$UserStatusEnumMap, json['status'],
+              unknownValue: UserStatus.artemisUnknown)
+          ..lastName = json['lastName'] as String?
+          ..username = json['username'] as String?
+          ..firstName = json['firstName'] as String?
+          ..plugged = json['plugged'] as bool?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String)
+          ..isMailValid = json['isMailValid'] as bool?
+          ..dateOfBirth = json['dateOfBirth'] == null
+              ? null
+              : DateTime.parse(json['dateOfBirth'] as String)
+          ..phoneNumber = json['phoneNumber'] as String?
+          ..mobileTheme = $enumDecodeNullable(
+              _$MobileThemesEnumEnumMap, json['mobileTheme'],
+              unknownValue: MobileThemesEnum.artemisUnknown)
+          ..placeOfBirth = json['placeOfBirth'] as String?
+          ..maritalStatus = $enumDecodeNullable(
+              _$MaritalStatusEnumMap, json['maritalStatus'],
+              unknownValue: MaritalStatus.artemisUnknown)
+          ..newsletterSubs = json['newsletterSubs'] as bool?
+          ..hasAutoGeneratedEmail = json['hasAutoGeneratedEmail'] as bool?
+          ..phone = json['phone'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PhoneType
+                  .fromJson(json['phone'] as Map<String, dynamic>)
+          ..picture = json['picture'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureType
+                  .fromJson(json['picture'] as Map<String, dynamic>)
+          ..pictures = (json['pictures'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$PictureType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..languages = (json['languages'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$LanguageType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..nationality = json['nationality'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$CountryType
+                  .fromJson(json['nationality'] as Map<String, dynamic>)
+          ..billingAddress = (json['billingAddress'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..shippingAddress = (json['shippingAddress'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..residentialAddress = (json['residentialAddress'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$FullAddressType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..chatContact = (json['chatContact'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..socialMedia = (json['socialMedia'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialValueType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..socialLoginData = json['socialLoginData'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType$SocialLoginDataType
+                  .fromJson(json['socialLoginData'] as Map<String, dynamic>);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType
+            instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('apps', instance.apps?.map((e) => _$AppEnumMap[e]!).toList());
+  writeNotNull('email', instance.email);
+  writeNotNull(
+      'roles', instance.roles?.map((e) => _$UserRoleEnumMap[e]!).toList());
+  writeNotNull('title', instance.title);
+  writeNotNull('about', instance.about);
+  writeNotNull('gender', _$GenderEnumMap[instance.gender]);
+  writeNotNull('locale', instance.locale);
+  writeNotNull('source', _$SourcesEnumEnumMap[instance.source]);
+  writeNotNull('status', _$UserStatusEnumMap[instance.status]);
+  writeNotNull('lastName', instance.lastName);
+  writeNotNull('username', instance.username);
+  writeNotNull('firstName', instance.firstName);
+  writeNotNull('plugged', instance.plugged);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  writeNotNull('isMailValid', instance.isMailValid);
+  writeNotNull('dateOfBirth', instance.dateOfBirth?.toIso8601String());
+  writeNotNull('phoneNumber', instance.phoneNumber);
+  writeNotNull('mobileTheme', _$MobileThemesEnumEnumMap[instance.mobileTheme]);
+  writeNotNull('placeOfBirth', instance.placeOfBirth);
+  writeNotNull('maritalStatus', _$MaritalStatusEnumMap[instance.maritalStatus]);
+  writeNotNull('newsletterSubs', instance.newsletterSubs);
+  writeNotNull('hasAutoGeneratedEmail', instance.hasAutoGeneratedEmail);
+  writeNotNull('phone', instance.phone?.toJson());
+  writeNotNull('picture', instance.picture?.toJson());
+  writeNotNull('pictures', instance.pictures?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'languages', instance.languages?.map((e) => e.toJson()).toList());
+  writeNotNull('nationality', instance.nationality?.toJson());
+  writeNotNull('billingAddress',
+      instance.billingAddress?.map((e) => e.toJson()).toList());
+  writeNotNull('shippingAddress',
+      instance.shippingAddress?.map((e) => e.toJson()).toList());
+  writeNotNull('residentialAddress',
+      instance.residentialAddress?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'chatContact', instance.chatContact?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'socialMedia', instance.socialMedia?.map((e) => e.toJson()).toList());
+  writeNotNull('socialLoginData', instance.socialLoginData?.toJson());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType()
+          ..users = (json['users'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType$UserType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('users', instance.users?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureType()
+          ..baseUrl = json['baseUrl'] as String?
+          ..path = json['path'] as String?
+          ..width = json['width'] as int?
+          ..height = json['height'] as int?
+          ..x = json['x'] as int?
+          ..y = json['y'] as int?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('baseUrl', instance.baseUrl);
+  writeNotNull('path', instance.path);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('x', instance.x);
+  writeNotNull('y', instance.y);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType()
+          ..video = (json['video'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList()
+          ..picture = (json['picture'] as List<dynamic>?)
+              ?.map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType$PictureType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('video', instance.video?.map((e) => e.toJson()).toList());
+  writeNotNull('picture', instance.picture?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$LonLatType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$LonLatTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$LonLatType()
+          ..type = json['type'] as String?
+          ..coordinates = (json['coordinates'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList();
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$LonLatTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$LonLatType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('type', instance.type);
+  writeNotNull('coordinates', instance.coordinates);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$CustomMessageType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$CustomMessageTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$CustomMessageType()
+          ..id = json['id'] as String?
+          ..type = json['type'] as String?;
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$CustomMessageTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$CustomMessageType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('type', instance.type);
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType()
+          ..text = json['text'] as String?
+          ..gif = json['gif'] as String?
+          ..sticker = json['sticker'] as String?
+          ..media = json['media'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$MessageMediaType
+                  .fromJson(json['media'] as Map<String, dynamic>)
+          ..location = json['location'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$LonLatType
+                  .fromJson(json['location'] as Map<String, dynamic>)
+          ..custom = json['custom'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType$CustomMessageType
+                  .fromJson(json['custom'] as Map<String, dynamic>)
+          ..unread = json['unread'] as bool?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('text', instance.text);
+  writeNotNull('gif', instance.gif);
+  writeNotNull('sticker', instance.sticker);
+  writeNotNull('media', instance.media?.toJson());
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('custom', instance.custom?.toJson());
+  writeNotNull('unread', instance.unread);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType()
+          ..id = json['id'] as String?
+          ..name = json['name'] as String?
+          ..mute = json['mute'] as bool?
+          ..creator = json['creator'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$UserType
+                  .fromJson(json['creator'] as Map<String, dynamic>)
+          ..profilePicture = json['profilePicture'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$PictureType
+                  .fromJson(json['profilePicture'] as Map<String, dynamic>)
+          ..wallpaper = json['wallpaper'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MessageGroupWallpaperType
+                  .fromJson(json['wallpaper'] as Map<String, dynamic>)
+          ..sound = $enumDecodeNullable(
+              _$MessageSoundEnumEnumMap, json['sound'],
+              unknownValue: MessageSoundEnum.artemisUnknown)
+          ..isDirectMessage = json['isDirectMessage'] as bool?
+          ..members = json['members'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$MembersType
+                  .fromJson(json['members'] as Map<String, dynamic>)
+          ..status = $enumDecodeNullable(
+              _$MessageGroupStatusEnumEnumMap, json['status'],
+              unknownValue: MessageGroupStatusEnum.artemisUnknown)
+          ..lastMessage = json['lastMessage'] == null
+              ? null
+              : SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType$LastMessageType
+                  .fromJson(json['lastMessage'] as Map<String, dynamic>)
+          ..unreadCount = json['unreadCount'] as int?
+          ..createdAt = DateTime.parse(json['createdAt'] as String)
+          ..updatedAt = DateTime.parse(json['updatedAt'] as String);
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType
+            instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('name', instance.name);
+  writeNotNull('mute', instance.mute);
+  writeNotNull('creator', instance.creator?.toJson());
+  writeNotNull('profilePicture', instance.profilePicture?.toJson());
+  writeNotNull('wallpaper', instance.wallpaper?.toJson());
+  writeNotNull('sound', _$MessageSoundEnumEnumMap[instance.sound]);
+  writeNotNull('isDirectMessage', instance.isDirectMessage);
+  writeNotNull('members', instance.members?.toJson());
+  writeNotNull('status', _$MessageGroupStatusEnumEnumMap[instance.status]);
+  writeNotNull('lastMessage', instance.lastMessage?.toJson());
+  writeNotNull('unreadCount', instance.unreadCount);
+  val['createdAt'] = instance.createdAt.toIso8601String();
+  val['updatedAt'] = instance.updatedAt.toIso8601String();
+  return val;
+}
+
+SearchSupportMessageGroup$Query$MessageGroupPaginateType
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateTypeFromJson(
+            Map<String, dynamic> json) =>
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType()
+          ..count = json['count'] as int?
+          ..isLast = json['isLast'] as bool?
+          ..objects = (json['objects'] as List<dynamic>)
+              .map((e) =>
+                  SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType
+                      .fromJson(e as Map<String, dynamic>))
+              .toList();
+
+Map<String, dynamic>
+    _$SearchSupportMessageGroup$Query$MessageGroupPaginateTypeToJson(
+        SearchSupportMessageGroup$Query$MessageGroupPaginateType instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('count', instance.count);
+  writeNotNull('isLast', instance.isLast);
+  val['objects'] = instance.objects.map((e) => e.toJson()).toList();
+  return val;
+}
+
+SearchSupportMessageGroup$Query _$SearchSupportMessageGroup$QueryFromJson(
+        Map<String, dynamic> json) =>
+    SearchSupportMessageGroup$Query()
+      ..searchSupportMessageGroup =
+          SearchSupportMessageGroup$Query$MessageGroupPaginateType.fromJson(
+              json['searchSupportMessageGroup'] as Map<String, dynamic>);
+
+Map<String, dynamic> _$SearchSupportMessageGroup$QueryToJson(
+        SearchSupportMessageGroup$Query instance) =>
+    <String, dynamic>{
+      'searchSupportMessageGroup': instance.searchSupportMessageGroup.toJson(),
+    };
+
 GetMessageGroupMembers$Query$UserPaginateType$UserType$PhoneType
     _$GetMessageGroupMembers$Query$UserPaginateType$UserType$PhoneTypeFromJson(
             Map<String, dynamic> json) =>
@@ -14129,6 +19308,8 @@ MessageGroupInput _$MessageGroupInputFromJson(Map<String, dynamic> json) =>
       status: $enumDecodeNullable(
           _$MessageGroupStatusEnumEnumMap, json['status'],
           unknownValue: MessageGroupStatusEnum.artemisUnknown),
+      type: $enumDecodeNullable(_$MessageGroupTypeEnumEnumMap, json['type'],
+          unknownValue: MessageGroupTypeEnum.artemisUnknown),
       members:
           (json['members'] as List<dynamic>?)?.map((e) => e as String).toList(),
     );
@@ -14149,9 +19330,16 @@ Map<String, dynamic> _$MessageGroupInputToJson(MessageGroupInput instance) {
   writeNotNull('wallpaper', instance.wallpaper?.toJson());
   writeNotNull('sound', _$MessageSoundEnumEnumMap[instance.sound]);
   writeNotNull('status', _$MessageGroupStatusEnumEnumMap[instance.status]);
+  writeNotNull('type', _$MessageGroupTypeEnumEnumMap[instance.type]);
   writeNotNull('members', instance.members);
   return val;
 }
+
+const _$MessageGroupTypeEnumEnumMap = {
+  MessageGroupTypeEnum.support: 'SUPPORT',
+  MessageGroupTypeEnum.internal: 'INTERNAL',
+  MessageGroupTypeEnum.artemisUnknown: 'ARTEMIS_UNKNOWN',
+};
 
 PictureInput _$PictureInputFromJson(Map<String, dynamic> json) => PictureInput(
       width: json['width'] as int?,
@@ -29557,6 +34745,8 @@ MessageGroupUpdateInput _$MessageGroupUpdateInputFromJson(
               json['wallpaper'] as Map<String, dynamic>),
       sound: $enumDecodeNullable(_$MessageSoundEnumEnumMap, json['sound'],
           unknownValue: MessageSoundEnum.artemisUnknown),
+      type: $enumDecodeNullable(_$MessageGroupTypeEnumEnumMap, json['type'],
+          unknownValue: MessageGroupTypeEnum.artemisUnknown),
       id: json['id'] as String,
     );
 
@@ -29575,6 +34765,7 @@ Map<String, dynamic> _$MessageGroupUpdateInputToJson(
   writeNotNull('profilePicture', instance.profilePicture?.toJson());
   writeNotNull('wallpaper', instance.wallpaper?.toJson());
   writeNotNull('sound', _$MessageSoundEnumEnumMap[instance.sound]);
+  writeNotNull('type', _$MessageGroupTypeEnumEnumMap[instance.type]);
   val['id'] = instance.id;
   return val;
 }
@@ -29641,6 +34832,66 @@ SearchMessageGroupArguments _$SearchMessageGroupArgumentsFromJson(
 
 Map<String, dynamic> _$SearchMessageGroupArgumentsToJson(
     SearchMessageGroupArguments instance) {
+  final val = <String, dynamic>{
+    'searchString': instance.searchString,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('pagination', instance.pagination?.toJson());
+  writeNotNull('status', _$MessageGroupStatusEnumEnumMap[instance.status]);
+  return val;
+}
+
+SearchInternalMessageGroupArguments
+    _$SearchInternalMessageGroupArgumentsFromJson(Map<String, dynamic> json) =>
+        SearchInternalMessageGroupArguments(
+          searchString: json['searchString'] as String,
+          pagination: json['pagination'] == null
+              ? null
+              : PaginationInput.fromJson(
+                  json['pagination'] as Map<String, dynamic>),
+          status: $enumDecodeNullable(
+              _$MessageGroupStatusEnumEnumMap, json['status'],
+              unknownValue: MessageGroupStatusEnum.artemisUnknown),
+        );
+
+Map<String, dynamic> _$SearchInternalMessageGroupArgumentsToJson(
+    SearchInternalMessageGroupArguments instance) {
+  final val = <String, dynamic>{
+    'searchString': instance.searchString,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('pagination', instance.pagination?.toJson());
+  writeNotNull('status', _$MessageGroupStatusEnumEnumMap[instance.status]);
+  return val;
+}
+
+SearchSupportMessageGroupArguments _$SearchSupportMessageGroupArgumentsFromJson(
+        Map<String, dynamic> json) =>
+    SearchSupportMessageGroupArguments(
+      searchString: json['searchString'] as String,
+      pagination: json['pagination'] == null
+          ? null
+          : PaginationInput.fromJson(
+              json['pagination'] as Map<String, dynamic>),
+      status: $enumDecodeNullable(
+          _$MessageGroupStatusEnumEnumMap, json['status'],
+          unknownValue: MessageGroupStatusEnum.artemisUnknown),
+    );
+
+Map<String, dynamic> _$SearchSupportMessageGroupArgumentsToJson(
+    SearchSupportMessageGroupArguments instance) {
   final val = <String, dynamic>{
     'searchString': instance.searchString,
   };

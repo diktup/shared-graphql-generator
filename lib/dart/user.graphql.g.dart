@@ -16122,8 +16122,8 @@ InvoicingInput _$InvoicingInputFromJson(Map<String, dynamic> json) =>
               InvoicingProductsBundleInput.fromJson(e as Map<String, dynamic>))
           .toList(),
       status: $enumDecodeNullable(
-          _$GenericInvoicingStatusEnumMap, json['status'],
-          unknownValue: GenericInvoicingStatus.artemisUnknown),
+          _$GenericInvoicingStatusEnumEnumMap, json['status'],
+          unknownValue: GenericInvoicingStatusEnum.artemisUnknown),
       address: json['address'] == null
           ? null
           : InvoicingAddressInput.fromJson(
@@ -16165,7 +16165,7 @@ Map<String, dynamic> _$InvoicingInputToJson(InvoicingInput instance) {
   writeNotNull('note', instance.note);
   writeNotNull('details', instance.details?.map((e) => e.toJson()).toList());
   val['products'] = instance.products.map((e) => e.toJson()).toList();
-  writeNotNull('status', _$GenericInvoicingStatusEnumMap[instance.status]);
+  writeNotNull('status', _$GenericInvoicingStatusEnumEnumMap[instance.status]);
   writeNotNull('address', instance.address?.toJson());
   writeNotNull('taxes', instance.taxes?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -16183,15 +16183,15 @@ Map<String, dynamic> _$InvoicingInputToJson(InvoicingInput instance) {
   return val;
 }
 
-const _$GenericInvoicingStatusEnumMap = {
-  GenericInvoicingStatus.draft: 'DRAFT',
-  GenericInvoicingStatus.open: 'OPEN',
-  GenericInvoicingStatus.issued: 'ISSUED',
-  GenericInvoicingStatus.negociation: 'NEGOCIATION',
-  GenericInvoicingStatus.confirmed: 'CONFIRMED',
-  GenericInvoicingStatus.delivered: 'DELIVERED',
-  GenericInvoicingStatus.canceled: 'CANCELED',
-  GenericInvoicingStatus.artemisUnknown: 'ARTEMIS_UNKNOWN',
+const _$GenericInvoicingStatusEnumEnumMap = {
+  GenericInvoicingStatusEnum.draft: 'DRAFT',
+  GenericInvoicingStatusEnum.open: 'OPEN',
+  GenericInvoicingStatusEnum.issued: 'ISSUED',
+  GenericInvoicingStatusEnum.negociation: 'NEGOCIATION',
+  GenericInvoicingStatusEnum.confirmed: 'CONFIRMED',
+  GenericInvoicingStatusEnum.delivered: 'DELIVERED',
+  GenericInvoicingStatusEnum.canceled: 'CANCELED',
+  GenericInvoicingStatusEnum.artemisUnknown: 'ARTEMIS_UNKNOWN',
 };
 
 KeyValueInput _$KeyValueInputFromJson(Map<String, dynamic> json) =>
