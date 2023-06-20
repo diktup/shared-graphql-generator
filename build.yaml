@@ -140,3 +140,6 @@ targets:
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/target-order.graphql
               output: lib/dart/target-order.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/manufacturer.graphql
+              output: lib/dart/manufacturer.graphql.dart
