@@ -5884,7 +5884,7 @@ query getInternalProduct($id: ID!) {
     }
   }
 }
- 
+
 query getInternalProductBarcodes($id: String!) {
   getInternalProductBarcodes(id: $id) {
     id
@@ -11909,7 +11909,10 @@ query getInternalProductBarcodes($id: String!) {
     }
   }
 }
-query getInternalProductBarcodesPaginated($id: String!, $pagination: PaginationInput) {
+query getInternalProductBarcodesPaginated(
+  $id: String!
+  $pagination: PaginationInput
+) {
   getInternalProductBarcodesPaginated(id: $id, pagination: $pagination) {
     count
     isLast
@@ -17937,14 +17940,19 @@ query getInternalProductBarcodesPaginated($id: String!, $pagination: PaginationI
     }
   }
 }
- 
+
 query getSimpleProductWithFilter(
   $pagination: PaginationInput
   $sort: [ProductSortInput!]
   $searchString: String
   $filter: InternalProductFilterInput
 ) {
-  getSimpleProductWithFilter(sort: $sort, filter: $filter, pagination: $pagination, searchString: $searchString) {
+  getSimpleProductWithFilter(
+    sort: $sort
+    filter: $filter
+    pagination: $pagination
+    searchString: $searchString
+  ) {
     count
     isLast
     objects {
@@ -18114,7 +18122,7 @@ query searchSimpleEquipments($searchInput: SearchSimpleProductInput!) {
     }
   }
 }
- 
+
 mutation updateInternalProduct($input: UpdateInternalProductInput!) {
   updateInternalProduct(input: $input) {
     id
@@ -24006,7 +24014,11 @@ query getBarcodesWithVarietyAndStructureWithFilter(
   $target: TargetACIInput!
   $filter: BarcodeWithVarietyAndStructureFilterInput!
 ) {
-  getBarcodesWithVarietyAndStructureWithFilter(target: $target, filter: $filter, pagination: $pagination) {
+  getBarcodesWithVarietyAndStructureWithFilter(
+    target: $target
+    filter: $filter
+    pagination: $pagination
+  ) {
     count
     isLast
     objects {
@@ -30125,7 +30137,10 @@ query searchSimpleServices($searchInput: SearchSimpleProductInput!) {
     }
   }
 }
-query getInternalProducts($pagination: PaginationInput, $target: TargetACIInput) {
+query getInternalProducts(
+  $pagination: PaginationInput
+  $target: TargetACIInput
+) {
   getInternalProducts(pagination: $pagination, target: $target) {
     count
     isLast
@@ -36015,7 +36030,7 @@ query getInternalProducts($pagination: PaginationInput, $target: TargetACIInput)
     }
   }
 }
- mutation createBarcode($input: BarcodeInput!, $target: TargetACIInput!) {
+mutation createBarcode($input: BarcodeInput!, $target: TargetACIInput!) {
   createBarcode(input: $input, target: $target) {
     id
     name
@@ -50960,8 +50975,14 @@ mutation updateSimpleProduct($input: UpdateSimpleProductInput!) {
     }
   }
 }
-query getInternalProductsByCatalogueCategory($pagination: PaginationInput, $catalogueCategoryIds: [ID!]!) {
-  getInternalProductsByCatalogueCategory(pagination: $pagination, catalogueCategoryIds: $catalogueCategoryIds) {
+query getInternalProductsByCatalogueCategory(
+  $pagination: PaginationInput
+  $catalogueCategoryIds: [ID!]!
+) {
+  getInternalProductsByCatalogueCategory(
+    pagination: $pagination
+    catalogueCategoryIds: $catalogueCategoryIds
+  ) {
     count
     isLast
     objects {
@@ -56950,7 +56971,11 @@ query getInternalProductsByCatalogueCategory($pagination: PaginationInput, $cata
     }
   }
 }
-query searchInternalProductByCatalogueCategory($pagination: PaginationInput, $searchString: String, $catalogueCategoryId: ID!) {
+query searchInternalProductByCatalogueCategory(
+  $pagination: PaginationInput
+  $searchString: String
+  $catalogueCategoryId: ID!
+) {
   searchInternalProductByCatalogueCategory(
     pagination: $pagination
     searchString: $searchString
@@ -62944,8 +62969,17 @@ query searchInternalProductByCatalogueCategory($pagination: PaginationInput, $se
     }
   }
 }
-query searchBarcodesByTargetAndSupplier($pagination: PaginationInput, $searchString: String, $supplier: ID!, $target: TargetACIInput!) {
-  searchBarcodesByTargetAndSupplier(pagination: $pagination, searchString: $searchString, supplier: $supplier, target: $target) {
+
+query searchBarcodesByTarget(
+  $searchString: String
+  $pagination: PaginationInput
+  $target: TargetACIInput!
+) {
+  searchBarcodesByTarget(
+    searchString: $searchString
+    pagination: $pagination
+    target: $target
+  ) {
     count
     isLast
     objects {
