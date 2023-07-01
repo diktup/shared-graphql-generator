@@ -53806,13 +53806,16 @@ query getInternalProductsByCatalogueCategory(
       class
       target {
         pos {
+          name
           id
         }
         wholesaler {
           id
+          name
         }
         manufacturer {
           id
+          name
         }
       }
       barcodes {
