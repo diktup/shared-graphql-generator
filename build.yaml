@@ -146,3 +146,6 @@ targets:
             - schema: lib/schema.graphql
               queries_glob: lib/graphql/pos-category.graphql
               output: lib/dart/pos-category.graphql.dart
+            - schema: lib/schema.graphql
+              queries_glob: lib/graphql/state.graphql
+              output: lib/dart/state.graphql.dart
