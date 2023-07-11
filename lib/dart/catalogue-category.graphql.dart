@@ -3255,6 +3255,246 @@ class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$TargetT
 }
 
 @JsonSerializable(explicitToJson: true)
+class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsType
+    extends JsonSerializable with EquatableMixin {
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsType();
+
+  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsType.fromJson(
+          Map<String, dynamic> json) =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsTypeFromJson(
+          json);
+
+  String? name;
+
+  String? content;
+
+  @override
+  List<Object?> get props => [name, content];
+  @override
+  Map<String, dynamic> toJson() =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsTypeToJson(
+          this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType
+    extends JsonSerializable with EquatableMixin {
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType();
+
+  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType.fromJson(
+          Map<String, dynamic> json) =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoTypeFromJson(
+          json);
+
+  String? urlKey;
+
+  String? metaTitle;
+
+  String? metaDesription;
+
+  List<GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsType>?
+      metaKeywords;
+
+  @override
+  List<Object?> get props => [urlKey, metaTitle, metaDesription, metaKeywords];
+  @override
+  Map<String, dynamic> toJson() =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoTypeToJson(
+          this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureType
+    extends JsonSerializable with EquatableMixin {
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureType();
+
+  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureType.fromJson(
+          Map<String, dynamic> json) =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureTypeFromJson(
+          json);
+
+  String? baseUrl;
+
+  String? path;
+
+  int? width;
+
+  int? height;
+
+  int? x;
+
+  int? y;
+
+  @override
+  List<Object?> get props => [baseUrl, path, width, height, x, y];
+  @override
+  Map<String, dynamic> toJson() =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureTypeToJson(
+          this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleType
+    extends JsonSerializable with EquatableMixin {
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleType();
+
+  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleType.fromJson(
+          Map<String, dynamic> json) =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleTypeFromJson(
+          json);
+
+  late String id;
+
+  @override
+  List<Object?> get props => [id];
+  @override
+  Map<String, dynamic> toJson() =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleTypeToJson(
+          this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerType
+    extends JsonSerializable with EquatableMixin {
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerType();
+
+  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerType.fromJson(
+          Map<String, dynamic> json) =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerTypeFromJson(
+          json);
+
+  late String id;
+
+  @override
+  List<Object?> get props => [id];
+  @override
+  Map<String, dynamic> toJson() =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerTypeToJson(
+          this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerType
+    extends JsonSerializable with EquatableMixin {
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerType();
+
+  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerType.fromJson(
+          Map<String, dynamic> json) =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerTypeFromJson(
+          json);
+
+  late String id;
+
+  @override
+  List<Object?> get props => [id];
+  @override
+  Map<String, dynamic> toJson() =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerTypeToJson(
+          this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType
+    extends JsonSerializable with EquatableMixin {
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType();
+
+  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType.fromJson(
+          Map<String, dynamic> json) =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetTypeFromJson(
+          json);
+
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleType?
+      pos;
+
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerType?
+      wholesaler;
+
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerType?
+      manufacturer;
+
+  @override
+  List<Object?> get props => [pos, wholesaler, manufacturer];
+  @override
+  Map<String, dynamic> toJson() =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetTypeToJson(
+          this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType
+    extends JsonSerializable with EquatableMixin {
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType();
+
+  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType.fromJson(
+          Map<String, dynamic> json) =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryTypeFromJson(
+          json);
+
+  late String id;
+
+  String? name;
+
+  int? rank;
+
+  late int layer;
+
+  late DateTime createdAt;
+
+  late DateTime updatedAt;
+
+  @JsonKey(unknownEnumValue: ProductVarietyEnum.artemisUnknown)
+  ProductVarietyEnum? variety;
+
+  String? externalId;
+
+  late bool hasChildren;
+
+  String? description;
+
+  bool? portal;
+
+  bool? pickup;
+
+  bool? booking;
+
+  bool? delivery;
+
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType?
+      seo;
+
+  List<GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureType>?
+      pictures;
+
+  late GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType
+      target;
+
+  @override
+  List<Object?> get props => [
+        id,
+        name,
+        rank,
+        layer,
+        createdAt,
+        updatedAt,
+        variety,
+        externalId,
+        hasChildren,
+        description,
+        portal,
+        pickup,
+        booking,
+        delivery,
+        seo,
+        pictures,
+        target
+      ];
+  @override
+  Map<String, dynamic> toJson() =>
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryTypeToJson(
+          this);
+}
+
+@JsonSerializable(explicitToJson: true)
 class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType
     extends JsonSerializable with EquatableMixin {
   GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType();
@@ -3302,6 +3542,9 @@ class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType
   late GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$TargetType
       target;
 
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType?
+      parent;
+
   @override
   List<Object?> get props => [
         id,
@@ -3320,7 +3563,8 @@ class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType
         delivery,
         seo,
         pictures,
-        target
+        target,
+        parent
       ];
   @override
   Map<String, dynamic> toJson() =>
@@ -8940,6 +9184,266 @@ final GET_CATALOGUE_CATEGORIES_BY_LAYER_AND_PARENT_QUERY_DOCUMENT =
                     directives: [],
                     selectionSet: null,
                   )
+                ]),
+              ),
+            ]),
+          ),
+          FieldNode(
+            name: NameNode(value: 'parent'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: SelectionSetNode(selections: [
+              FieldNode(
+                name: NameNode(value: 'id'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'name'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'rank'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'layer'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'createdAt'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'updatedAt'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'variety'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'externalId'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'hasChildren'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'description'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'portal'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'pickup'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'booking'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'delivery'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
+              FieldNode(
+                name: NameNode(value: 'seo'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: SelectionSetNode(selections: [
+                  FieldNode(
+                    name: NameNode(value: 'urlKey'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'metaTitle'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'metaDesription'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'metaKeywords'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: SelectionSetNode(selections: [
+                      FieldNode(
+                        name: NameNode(value: 'name'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'content'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ]),
+                  ),
+                ]),
+              ),
+              FieldNode(
+                name: NameNode(value: 'pictures'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: SelectionSetNode(selections: [
+                  FieldNode(
+                    name: NameNode(value: 'baseUrl'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'path'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'width'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'height'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'x'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'y'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null,
+                  ),
+                ]),
+              ),
+              FieldNode(
+                name: NameNode(value: 'target'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: SelectionSetNode(selections: [
+                  FieldNode(
+                    name: NameNode(value: 'pos'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: SelectionSetNode(selections: [
+                      FieldNode(
+                        name: NameNode(value: 'id'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      )
+                    ]),
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'wholesaler'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: SelectionSetNode(selections: [
+                      FieldNode(
+                        name: NameNode(value: 'id'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      )
+                    ]),
+                  ),
+                  FieldNode(
+                    name: NameNode(value: 'manufacturer'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: SelectionSetNode(selections: [
+                      FieldNode(
+                        name: NameNode(value: 'id'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      )
+                    ]),
+                  ),
                 ]),
               ),
             ]),

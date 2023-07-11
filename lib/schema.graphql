@@ -1704,6 +1704,7 @@ type CatalogueCategoryType {
   booking: Boolean
   delivery: Boolean
   hasChildren: Boolean!
+  parent: CatalogueCategoryType
   rank: Int
   layer: Int!
   seo: CatalogueCategorySeoType
