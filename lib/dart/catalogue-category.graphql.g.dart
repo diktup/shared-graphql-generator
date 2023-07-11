@@ -3361,9 +3361,9 @@ GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType
                   GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList()
-          ..target =
+          ..target = json['target']==null?null:
               GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$TargetType
-                  .fromJson((json['target']??{}) as Map<String, dynamic>)
+                  .fromJson(json['target'] as Map<String, dynamic>)
           ..parent = json['parent'] == null
               ? null
               : GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType
@@ -3398,7 +3398,7 @@ Map<String, dynamic>
   writeNotNull('delivery', instance.delivery);
   writeNotNull('seo', instance.seo?.toJson());
   writeNotNull('pictures', instance.pictures?.map((e) => e.toJson()).toList());
-  val['target'] = instance.target.toJson();
+  val['target'] = instance.target!.toJson();
   writeNotNull('parent', instance.parent?.toJson());
   return val;
 }
