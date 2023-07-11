@@ -3363,11 +3363,11 @@ GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType
               .toList()
           ..target =
               GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$TargetType
-                  .fromJson(json['target'] as Map<String, dynamic>)
+                  .fromJson((json['target']??{}) as Map<String, dynamic>)
           ..parent = json['parent'] == null
               ? null
               : GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType
-                  .fromJson(json['parent'] as Map<String, dynamic>);
+                  .fromJson((json['parent']??{}) as Map<String, dynamic>);
 
 Map<String, dynamic>
     _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryTypeToJson(
