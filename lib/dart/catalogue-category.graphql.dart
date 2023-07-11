@@ -3255,13 +3255,13 @@ class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$TargetT
 }
 
 @JsonSerializable(explicitToJson: true)
-class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsType
+class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType$MetaKeywordsType
     extends JsonSerializable with EquatableMixin {
-  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsType();
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType$MetaKeywordsType();
 
-  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsType.fromJson(
+  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType$MetaKeywordsType.fromJson(
           Map<String, dynamic> json) =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsTypeFromJson(
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType$MetaKeywordsTypeFromJson(
           json);
 
   String? name;
@@ -3272,18 +3272,18 @@ class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$Catalog
   List<Object?> get props => [name, content];
   @override
   Map<String, dynamic> toJson() =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsTypeToJson(
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType$MetaKeywordsTypeToJson(
           this);
 }
 
 @JsonSerializable(explicitToJson: true)
-class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType
+class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType
     extends JsonSerializable with EquatableMixin {
-  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType();
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType();
 
-  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType.fromJson(
+  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType.fromJson(
           Map<String, dynamic> json) =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoTypeFromJson(
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoTypeFromJson(
           json);
 
   String? urlKey;
@@ -3292,25 +3292,25 @@ class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$Catalog
 
   String? metaDesription;
 
-  List<GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsType>?
+  List<GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType$MetaKeywordsType>?
       metaKeywords;
 
   @override
   List<Object?> get props => [urlKey, metaTitle, metaDesription, metaKeywords];
   @override
   Map<String, dynamic> toJson() =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoTypeToJson(
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoTypeToJson(
           this);
 }
 
 @JsonSerializable(explicitToJson: true)
-class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureType
+class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$PictureType
     extends JsonSerializable with EquatableMixin {
-  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureType();
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$PictureType();
 
-  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureType.fromJson(
+  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$PictureType.fromJson(
           Map<String, dynamic> json) =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureTypeFromJson(
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$PictureTypeFromJson(
           json);
 
   String? baseUrl;
@@ -3329,105 +3329,18 @@ class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$Catalog
   List<Object?> get props => [baseUrl, path, width, height, x, y];
   @override
   Map<String, dynamic> toJson() =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureTypeToJson(
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$PictureTypeToJson(
           this);
 }
 
 @JsonSerializable(explicitToJson: true)
-class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleType
+class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType
     extends JsonSerializable with EquatableMixin {
-  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleType();
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType();
 
-  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleType.fromJson(
+  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType.fromJson(
           Map<String, dynamic> json) =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleTypeFromJson(
-          json);
-
-  late String id;
-
-  @override
-  List<Object?> get props => [id];
-  @override
-  Map<String, dynamic> toJson() =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleTypeToJson(
-          this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerType
-    extends JsonSerializable with EquatableMixin {
-  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerType();
-
-  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerType.fromJson(
-          Map<String, dynamic> json) =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerTypeFromJson(
-          json);
-
-  late String id;
-
-  @override
-  List<Object?> get props => [id];
-  @override
-  Map<String, dynamic> toJson() =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerTypeToJson(
-          this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerType
-    extends JsonSerializable with EquatableMixin {
-  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerType();
-
-  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerType.fromJson(
-          Map<String, dynamic> json) =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerTypeFromJson(
-          json);
-
-  late String id;
-
-  @override
-  List<Object?> get props => [id];
-  @override
-  Map<String, dynamic> toJson() =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerTypeToJson(
-          this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType
-    extends JsonSerializable with EquatableMixin {
-  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType();
-
-  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType.fromJson(
-          Map<String, dynamic> json) =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetTypeFromJson(
-          json);
-
-  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleType?
-      pos;
-
-  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerType?
-      wholesaler;
-
-  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerType?
-      manufacturer;
-
-  @override
-  List<Object?> get props => [pos, wholesaler, manufacturer];
-  @override
-  Map<String, dynamic> toJson() =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetTypeToJson(
-          this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType
-    extends JsonSerializable with EquatableMixin {
-  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType();
-
-  factory GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType.fromJson(
-          Map<String, dynamic> json) =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryTypeFromJson(
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseTypeFromJson(
           json);
 
   late String id;
@@ -3459,14 +3372,11 @@ class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$Catalog
 
   bool? delivery;
 
-  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType?
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType?
       seo;
 
-  List<GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureType>?
+  List<GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$PictureType>?
       pictures;
-
-  late GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType
-      target;
 
   @override
   List<Object?> get props => [
@@ -3485,12 +3395,11 @@ class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$Catalog
         booking,
         delivery,
         seo,
-        pictures,
-        target
+        pictures
       ];
   @override
   Map<String, dynamic> toJson() =>
-      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryTypeToJson(
+      _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseTypeToJson(
           this);
 }
 
@@ -3542,7 +3451,7 @@ class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType
   late GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$TargetType
       target;
 
-  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType?
+  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType?
       parent;
 
   @override
@@ -4466,6 +4375,7 @@ class PictureInput extends JsonSerializable with EquatableMixin {
     this.height,
     this.x,
     this.y,
+    this.alt,
     required this.baseUrl,
     required this.path,
   });
@@ -4481,12 +4391,14 @@ class PictureInput extends JsonSerializable with EquatableMixin {
 
   int? y;
 
+  String? alt;
+
   late String baseUrl;
 
   late String path;
 
   @override
-  List<Object?> get props => [width, height, x, y, baseUrl, path];
+  List<Object?> get props => [width, height, x, y, alt, baseUrl, path];
   @override
   Map<String, dynamic> toJson() => _$PictureInputToJson(this);
 }
@@ -9390,59 +9302,6 @@ final GET_CATALOGUE_CATEGORIES_BY_LAYER_AND_PARENT_QUERY_DOCUMENT =
                     arguments: [],
                     directives: [],
                     selectionSet: null,
-                  ),
-                ]),
-              ),
-              FieldNode(
-                name: NameNode(value: 'target'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: SelectionSetNode(selections: [
-                  FieldNode(
-                    name: NameNode(value: 'pos'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: SelectionSetNode(selections: [
-                      FieldNode(
-                        name: NameNode(value: 'id'),
-                        alias: null,
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null,
-                      )
-                    ]),
-                  ),
-                  FieldNode(
-                    name: NameNode(value: 'wholesaler'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: SelectionSetNode(selections: [
-                      FieldNode(
-                        name: NameNode(value: 'id'),
-                        alias: null,
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null,
-                      )
-                    ]),
-                  ),
-                  FieldNode(
-                    name: NameNode(value: 'manufacturer'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: SelectionSetNode(selections: [
-                      FieldNode(
-                        name: NameNode(value: 'id'),
-                        alias: null,
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null,
-                      )
-                    ]),
                   ),
                 ]),
               ),

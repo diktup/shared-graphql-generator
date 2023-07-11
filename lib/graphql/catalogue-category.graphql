@@ -625,48 +625,37 @@ query getCatalogueCategoriesByLayerAndParent(
       }
     }
     parent {
-    id
-    name
-    rank
-    layer
-    createdAt
-    updatedAt
-    variety
-    externalId
-    hasChildren
-    description
-    portal
-    pickup
-    booking
-    delivery
-    seo {
-      urlKey
-      metaTitle
-      metaDesription
-      metaKeywords {
-        name
-        content
+      id
+      name
+      rank
+      layer
+      createdAt
+      updatedAt
+      variety
+      externalId
+      hasChildren
+      description
+      portal
+      pickup
+      booking
+      delivery
+      seo {
+        urlKey
+        metaTitle
+        metaDesription
+        metaKeywords {
+          name
+          content
+        }
       }
-    }
-    pictures {
-      baseUrl
-      path
-      width
-      height
-      x
-      y
-    }
-    target {
-      pos {
-        id
+      pictures {
+        baseUrl
+        path
+        width
+        height
+        x
+        y
       }
-      wholesaler {
-        id
-      }
-      manufacturer {
-        id
-      }
-    }
     }
   }
 }

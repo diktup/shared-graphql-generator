@@ -6335,6 +6335,7 @@ class ManufacturerCreateInput extends JsonSerializable with EquatableMixin {
     this.address,
     this.email,
     this.company,
+    this.contactEmails,
     this.website,
   });
 
@@ -6353,11 +6354,21 @@ class ManufacturerCreateInput extends JsonSerializable with EquatableMixin {
 
   String? company;
 
+  List<String>? contactEmails;
+
   String? website;
 
   @override
-  List<Object?> get props =>
-      [name, picture, externalId, address, email, company, website];
+  List<Object?> get props => [
+        name,
+        picture,
+        externalId,
+        address,
+        email,
+        company,
+        contactEmails,
+        website
+      ];
   @override
   Map<String, dynamic> toJson() => _$ManufacturerCreateInputToJson(this);
 }
@@ -6369,6 +6380,7 @@ class PictureInput extends JsonSerializable with EquatableMixin {
     this.height,
     this.x,
     this.y,
+    this.alt,
     required this.baseUrl,
     required this.path,
   });
@@ -6384,12 +6396,14 @@ class PictureInput extends JsonSerializable with EquatableMixin {
 
   int? y;
 
+  String? alt;
+
   late String baseUrl;
 
   late String path;
 
   @override
-  List<Object?> get props => [width, height, x, y, baseUrl, path];
+  List<Object?> get props => [width, height, x, y, alt, baseUrl, path];
   @override
   Map<String, dynamic> toJson() => _$PictureInputToJson(this);
 }
@@ -8061,6 +8075,7 @@ class ManufacturerUpdateInput extends JsonSerializable with EquatableMixin {
     this.address,
     this.email,
     this.company,
+    this.contactEmails,
     this.website,
     required this.id,
   });
@@ -8080,13 +8095,24 @@ class ManufacturerUpdateInput extends JsonSerializable with EquatableMixin {
 
   String? company;
 
+  List<String>? contactEmails;
+
   String? website;
 
   late String id;
 
   @override
-  List<Object?> get props =>
-      [name, picture, externalId, address, email, company, website, id];
+  List<Object?> get props => [
+        name,
+        picture,
+        externalId,
+        address,
+        email,
+        company,
+        contactEmails,
+        website,
+        id
+      ];
   @override
   Map<String, dynamic> toJson() => _$ManufacturerUpdateInputToJson(this);
 }

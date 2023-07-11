@@ -2327,7 +2327,7 @@ class SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType
       _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupTypeFromJson(
           json);
 
-  String? id;
+  late String id;
 
   String? name;
 
@@ -4769,7 +4769,7 @@ class SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType
       _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupTypeFromJson(
           json);
 
-  String? id;
+  late String id;
 
   String? name;
 
@@ -7181,7 +7181,7 @@ class CreateMessageGroup$Mutation$MessageGroupType extends JsonSerializable
           Map<String, dynamic> json) =>
       _$CreateMessageGroup$Mutation$MessageGroupTypeFromJson(json);
 
-  String? id;
+  late String id;
 
   String? name;
 
@@ -7259,6 +7259,7 @@ class MessageGroupInput extends JsonSerializable with EquatableMixin {
     this.wallpaper,
     this.sound,
     this.status,
+    this.target,
     this.type,
     this.members,
   });
@@ -7282,6 +7283,8 @@ class MessageGroupInput extends JsonSerializable with EquatableMixin {
   @JsonKey(unknownEnumValue: MessageGroupStatusEnum.artemisUnknown)
   MessageGroupStatusEnum? status;
 
+  TargetACIInput? target;
+
   @JsonKey(unknownEnumValue: MessageGroupTypeEnum.artemisUnknown)
   MessageGroupTypeEnum? type;
 
@@ -7296,6 +7299,7 @@ class MessageGroupInput extends JsonSerializable with EquatableMixin {
         wallpaper,
         sound,
         status,
+        target,
         type,
         members
       ];
@@ -7310,6 +7314,7 @@ class PictureInput extends JsonSerializable with EquatableMixin {
     this.height,
     this.x,
     this.y,
+    this.alt,
     required this.baseUrl,
     required this.path,
   });
@@ -7325,12 +7330,14 @@ class PictureInput extends JsonSerializable with EquatableMixin {
 
   int? y;
 
+  String? alt;
+
   late String baseUrl;
 
   late String path;
 
   @override
-  List<Object?> get props => [width, height, x, y, baseUrl, path];
+  List<Object?> get props => [width, height, x, y, alt, baseUrl, path];
   @override
   Map<String, dynamic> toJson() => _$PictureInputToJson(this);
 }
@@ -7356,6 +7363,32 @@ class MessageGroupWallpaperInput extends JsonSerializable with EquatableMixin {
   List<Object?> get props => [picture, gradientColors, assetImage];
   @override
   Map<String, dynamic> toJson() => _$MessageGroupWallpaperInputToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class TargetACIInput extends JsonSerializable with EquatableMixin {
+  TargetACIInput({
+    this.pos,
+    this.wholesaler,
+    this.manufacturer,
+    this.user,
+  });
+
+  factory TargetACIInput.fromJson(Map<String, dynamic> json) =>
+      _$TargetACIInputFromJson(json);
+
+  String? pos;
+
+  String? wholesaler;
+
+  String? manufacturer;
+
+  String? user;
+
+  @override
+  List<Object?> get props => [pos, wholesaler, manufacturer, user];
+  @override
+  Map<String, dynamic> toJson() => _$TargetACIInputToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
@@ -9670,7 +9703,7 @@ class ArchiveMessageGroup$Mutation$MessageGroupType extends JsonSerializable
           Map<String, dynamic> json) =>
       _$ArchiveMessageGroup$Mutation$MessageGroupTypeFromJson(json);
 
-  String? id;
+  late String id;
 
   String? name;
 
@@ -12048,7 +12081,7 @@ class MuteMessageGroup$Mutation$MessageGroupType extends JsonSerializable
           Map<String, dynamic> json) =>
       _$MuteMessageGroup$Mutation$MessageGroupTypeFromJson(json);
 
-  String? id;
+  late String id;
 
   String? name;
 
@@ -14428,7 +14461,7 @@ class UnmuteMessageGroup$Mutation$MessageGroupType extends JsonSerializable
           Map<String, dynamic> json) =>
       _$UnmuteMessageGroup$Mutation$MessageGroupTypeFromJson(json);
 
-  String? id;
+  late String id;
 
   String? name;
 

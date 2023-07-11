@@ -2916,6 +2916,7 @@ ProjectInput _$ProjectInputFromJson(Map<String, dynamic> json) => ProjectInput(
       status: $enumDecodeNullable(_$ProjectStatusEnumEnumMap, json['status'],
           unknownValue: ProjectStatusEnum.artemisUnknown),
       color: json['color'] as String?,
+      externalId: json['externalId'] as String?,
       picture: json['picture'] == null
           ? null
           : PictureInput.fromJson(json['picture'] as Map<String, dynamic>),
@@ -2951,6 +2952,7 @@ Map<String, dynamic> _$ProjectInputToJson(ProjectInput instance) {
   writeNotNull('priority', _$ProjectPriorityEnumEnumMap[instance.priority]);
   writeNotNull('status', _$ProjectStatusEnumEnumMap[instance.status]);
   writeNotNull('color', instance.color);
+  writeNotNull('externalId', instance.externalId);
   writeNotNull('picture', instance.picture?.toJson());
   writeNotNull('members', instance.members?.map((e) => e.toJson()).toList());
   writeNotNull('resources', instance.resources);
@@ -2990,6 +2992,7 @@ PictureInput _$PictureInputFromJson(Map<String, dynamic> json) => PictureInput(
       height: json['height'] as int?,
       x: json['x'] as int?,
       y: json['y'] as int?,
+      alt: json['alt'] as String?,
       baseUrl: json['baseUrl'] as String,
       path: json['path'] as String,
     );
@@ -3007,6 +3010,7 @@ Map<String, dynamic> _$PictureInputToJson(PictureInput instance) {
   writeNotNull('height', instance.height);
   writeNotNull('x', instance.x);
   writeNotNull('y', instance.y);
+  writeNotNull('alt', instance.alt);
   val['baseUrl'] = instance.baseUrl;
   val['path'] = instance.path;
   return val;
@@ -3598,6 +3602,7 @@ ProjectUpdateInput _$ProjectUpdateInputFromJson(Map<String, dynamic> json) =>
       status: $enumDecodeNullable(_$ProjectStatusEnumEnumMap, json['status'],
           unknownValue: ProjectStatusEnum.artemisUnknown),
       color: json['color'] as String?,
+      externalId: json['externalId'] as String?,
       picture: json['picture'] == null
           ? null
           : PictureInput.fromJson(json['picture'] as Map<String, dynamic>),
@@ -3634,6 +3639,7 @@ Map<String, dynamic> _$ProjectUpdateInputToJson(ProjectUpdateInput instance) {
   writeNotNull('priority', _$ProjectPriorityEnumEnumMap[instance.priority]);
   writeNotNull('status', _$ProjectStatusEnumEnumMap[instance.status]);
   writeNotNull('color', instance.color);
+  writeNotNull('externalId', instance.externalId);
   writeNotNull('picture', instance.picture?.toJson());
   writeNotNull('members', instance.members?.map((e) => e.toJson()).toList());
   writeNotNull('resources', instance.resources);

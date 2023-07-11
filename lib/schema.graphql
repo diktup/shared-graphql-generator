@@ -15,6 +15,7 @@ type PictureType {
   height: Int
   x: Int
   y: Int
+  alt: String
 }
 
 type NestedPicturesType {
@@ -643,6 +644,7 @@ type WholesalerType {
   email: String
   website: String
   phone: IPhoneType
+  contactEmails: [String!]
   fax: IPhoneType
   createdAt: DateTime!
   updatedAt: DateTime!
@@ -774,6 +776,7 @@ type ManufacturerType {
   address: FullAddressType
   email: String
   website: String
+  contactEmails: [String!]
   createdAt: DateTime!
   updatedAt: DateTime!
   company: CompanyType
@@ -972,6 +975,7 @@ type LinkItemType {
 
 type ContentJSONType {
   title: String
+  description: String
   metas: [MetaItemType!]
   links: [LinkItemType!]
 }
@@ -1406,6 +1410,7 @@ type ProjectType {
   status: ProjectStatusEnum
   color: String
   picture: PictureType
+  externalId: String
   members: [ProjectMemberType!]
   resources: [DocumentType!]
   attachments: [DocumentType!]
@@ -1475,6 +1480,88 @@ type StockPaginateType {
   count: Int
   isLast: Boolean
   objects: [StockType!]!
+}
+
+type MetaKeywordsType {
+  name: String
+  content: String
+}
+
+type CatalogueCategorySeoType {
+  urlKey: String
+  metaTitle: String
+  metaDesription: String
+  metaKeywords: [MetaKeywordsType!]
+}
+
+type CatalogueCategoryBaseType {
+  id: ID!
+  name: String
+  description: String
+  externalId: String
+  pictures: [PictureType!]
+  variety: ProductVarietyEnum
+  parent: CatalogueCategoryBaseType
+  portal: Boolean
+  pickup: Boolean
+  booking: Boolean
+  delivery: Boolean
+  hasChildren: Boolean!
+  rank: Int
+  layer: Int!
+  seo: CatalogueCategorySeoType
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+enum ProductVarietyEnum {
+  PRODUCT
+  EQUIPMENT
+  SERVICE
+  VEHICULE
+}
+
+type CatalogueCategoryType {
+  id: ID!
+  name: String
+  description: String
+  externalId: String
+  pictures: [PictureType!]
+  variety: ProductVarietyEnum
+  parent: CatalogueCategoryBaseType
+  portal: Boolean
+  pickup: Boolean
+  booking: Boolean
+  delivery: Boolean
+  hasChildren: Boolean!
+  rank: Int
+  layer: Int!
+  seo: CatalogueCategorySeoType
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  target: TargetType!
+}
+
+type CatalogueCategoryWithChildrenType {
+  id: ID!
+  name: String
+  description: String
+  externalId: String
+  pictures: [PictureType!]
+  variety: ProductVarietyEnum
+  parent: CatalogueCategoryBaseType
+  portal: Boolean
+  pickup: Boolean
+  booking: Boolean
+  delivery: Boolean
+  hasChildren: Boolean!
+  rank: Int
+  layer: Int!
+  seo: CatalogueCategorySeoType
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  target: TargetType!
+  children: [CatalogueCategoryWithChildrenType!]
 }
 
 type BrandType {
@@ -1562,13 +1649,6 @@ type AttributeBaseType {
   variety: ProductVarietyEnum
   createdAt: DateTime!
   updatedAt: DateTime!
-}
-
-enum ProductVarietyEnum {
-  PRODUCT
-  EQUIPMENT
-  SERVICE
-  VEHICULE
 }
 
 type AttributeWithValueFilterType {
@@ -1680,60 +1760,6 @@ enum ProductStructureEnum {
   SERVICE
 }
 
-type MetaKeywordsType {
-  name: String
-  content: String
-}
-
-type CatalogueCategorySeoType {
-  urlKey: String
-  metaTitle: String
-  metaDesription: String
-  metaKeywords: [MetaKeywordsType!]
-}
-
-type CatalogueCategoryType {
-  id: ID!
-  name: String
-  description: String
-  externalId: String
-  pictures: [PictureType!]
-  variety: ProductVarietyEnum
-  portal: Boolean
-  pickup: Boolean
-  booking: Boolean
-  delivery: Boolean
-  hasChildren: Boolean!
-  parent: CatalogueCategoryType
-  rank: Int
-  layer: Int!
-  seo: CatalogueCategorySeoType
-  createdAt: DateTime!
-  updatedAt: DateTime!
-  target: TargetType!
-}
-
-type CatalogueCategoryWithChildrenType {
-  id: ID!
-  name: String
-  description: String
-  externalId: String
-  pictures: [PictureType!]
-  variety: ProductVarietyEnum
-  portal: Boolean
-  pickup: Boolean
-  booking: Boolean
-  delivery: Boolean
-  hasChildren: Boolean!
-  rank: Int
-  layer: Int!
-  seo: CatalogueCategorySeoType
-  createdAt: DateTime!
-  updatedAt: DateTime!
-  target: TargetType!
-  children: [CatalogueCategoryWithChildrenType!]
-}
-
 type InternalProductAttributeInnerType {
   selectedValue: String
   price: String
@@ -1795,6 +1821,7 @@ type InternalProductType {
   catalogueCategory: [CatalogueCategoryType!]
   globalCategory: GlobalCategoryProductType
   tax: String
+  seo: CatalogueCategorySeoType
   brand: BrandType
   createdAt: DateTime!
   updatedAt: DateTime!
@@ -1838,6 +1865,7 @@ type InternalProductWithStockType {
   catalogueCategory: [CatalogueCategoryType!]
   globalCategory: GlobalCategoryProductType
   tax: String
+  seo: CatalogueCategorySeoType
   brand: BrandType
   createdAt: DateTime!
   updatedAt: DateTime!
@@ -1871,6 +1899,7 @@ type InternalProductWithFavoriteStatusType {
   catalogueCategory: [CatalogueCategoryType!]
   globalCategory: GlobalCategoryProductType
   tax: String
+  seo: CatalogueCategorySeoType
   brand: BrandType
   createdAt: DateTime!
   updatedAt: DateTime!
@@ -1904,6 +1933,7 @@ type InternalProductWithoutClassType {
   catalogueCategory: [CatalogueCategoryType!]
   globalCategory: GlobalCategoryProductType
   tax: String
+  seo: CatalogueCategorySeoType
   brand: BrandType
   createdAt: DateTime!
   updatedAt: DateTime!
@@ -1944,6 +1974,7 @@ type InternalProductWithoutClassWithFavoriteStatusType {
   catalogueCategory: [CatalogueCategoryType!]
   globalCategory: GlobalCategoryProductType
   tax: String
+  seo: CatalogueCategorySeoType
   brand: BrandType
   createdAt: DateTime!
   updatedAt: DateTime!
@@ -1983,11 +2014,12 @@ type InternalProductWithRatingsType {
   product: ProductType
   catalogueCategory: [CatalogueCategoryType!]
   tax: String
+  seo: CatalogueCategorySeoType
   brand: BrandType
   createdAt: DateTime!
   updatedAt: DateTime!
   class: [ProductClassEnum!]
-  barcodes: [BarcodeFilterType!]
+  barcodes: [BarcodeType!]
   target: TargetFilterType!
   ratings: String
 }
@@ -2015,11 +2047,12 @@ type InternalProductWithRatingsWithFavoriteStatusType {
   product: ProductType
   catalogueCategory: [CatalogueCategoryType!]
   tax: String
+  seo: CatalogueCategorySeoType
   brand: BrandType
   createdAt: DateTime!
   updatedAt: DateTime!
   class: [ProductClassEnum!]
-  barcodes: [BarcodeFilterType!]
+  barcodes: [BarcodeType!]
   target: TargetFilterType!
   ratings: String
   isFavorite: Boolean
@@ -2062,16 +2095,6 @@ type BarcodeBaseRawType {
   createdAt: DateTime!
   updatedAt: DateTime!
   productAttributesValues: InternalProductAttributesValuesBaseType
-}
-
-type BarcodeFilterType {
-  id: ID!
-  barcode: String!
-  name: String
-  media: MediaType
-  price: String
-  discount: DiscountDtoType
-  productAttributesValues: InternalProductAttributesValuesFilterType
 }
 
 type BarcodeType {
@@ -4004,7 +4027,7 @@ type MessageGroupWallpaperType {
 }
 
 type MessageGroupType {
-  id: ID
+  id: ID!
   name: String
   mute: Boolean
   creator: UserType
@@ -4017,6 +4040,7 @@ type MessageGroupType {
   lastMessage: LastMessageType
   unreadCount: Int
   isDirectMessage: Boolean
+  target: TargetType
   createdAt: DateTime!
   updatedAt: DateTime!
 }
@@ -4262,6 +4286,23 @@ type PaginatedSupplierType {
   objects: [SupplierType!]!
 }
 
+type CorporateTemplateType {
+  id: ID!
+  name: CorporateTemplateTypeEnum!
+  content: String!
+  target: TargetType!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+enum CorporateTemplateTypeEnum {
+  ROBOTS
+  BROWSER_CONFIG
+  WEB_MANIFEST
+  SITE_MAP
+  ADS
+}
+
 type ComplaintTargetType {
   user: UserType
   pos: PointOfSaleType
@@ -4433,6 +4474,7 @@ type ProductsByCatalogueCategoryCountType {
   externalId: String
   pictures: [PictureType!]
   variety: ProductVarietyEnum
+  parent: CatalogueCategoryBaseType
   portal: Boolean
   pickup: Boolean
   booking: Boolean
@@ -4482,6 +4524,7 @@ type InternalProductsByCatalogueCategoryCountType {
   externalId: String
   pictures: [PictureType!]
   variety: ProductVarietyEnum
+  parent: CatalogueCategoryBaseType
   portal: Boolean
   pickup: Boolean
   booking: Boolean
@@ -4548,6 +4591,7 @@ type InternalProductsByWholesalerCountType {
   email: String
   website: String
   phone: IPhoneType
+  contactEmails: [String!]
   fax: IPhoneType
   createdAt: DateTime!
   updatedAt: DateTime!
@@ -4563,6 +4607,7 @@ type InternalProductsByManufacturerCountType {
   address: FullAddressType
   email: String
   website: String
+  contactEmails: [String!]
   createdAt: DateTime!
   updatedAt: DateTime!
   numberOfManufacturerProducts: Int!
@@ -5048,7 +5093,7 @@ type CorporateRatingAssignmentPaginateType {
 }
 
 type PromotionProductsType {
-  barcode: BarcodeBaseRawType!
+  barcode: BarcodeType!
   discount: DiscountDtoType!
 }
 
@@ -5412,6 +5457,9 @@ enum LandingPageTypeEnum {
   COPYRIGHT
   FAQ
   PROJECT
+  CAREER
+  PROJECTS
+  BLOG
 }
 
 type LandingPagesDataType {
@@ -7881,6 +7929,28 @@ type AppTweakTopChartLeaderboardType {
   power: Float
 }
 
+type ErpIntegrationEventType {
+  event: ErpElementsEnum!
+  active: Boolean!
+}
+
+enum ErpElementsEnum {
+  PRODUCTS
+  SERVICES
+  EQUIPMENTS
+  CUSTOMERS
+  CONTACTS
+  SUPPLIERS
+  QUOTATIONS
+  SALE_ORDERS
+  SALE_INVOICES
+  SALE_DELIVERY_NOTES
+  SALE_ISSUE_NOTES
+  PURCHASE_INVOICES
+  PURCHASE_DELIVERY_NOTES
+  PURCHASE_ORDERS
+}
+
 type QuestsCountType {
   total: Int!
   DRAFT: Int!
@@ -8493,6 +8563,13 @@ type BoardCardPaginateType {
   objects: [BoardCardType!]!
 }
 
+type BoardCardsStatsResponseType {
+  LOW: CurrentPreviousType!
+  NORMAL: CurrentPreviousType!
+  HIGH: CurrentPreviousType!
+  CRITICAL: CurrentPreviousType!
+}
+
 type BoardListType {
   id: ID!
   name: String!
@@ -8869,6 +8946,17 @@ type Query {
     pagination: PaginationInput = { page: 0, limit: 20 }
     messageGroup: ID!
   ): MessagePaginateType!
+  getMessagesByMember(
+    target: TargetACIInput!
+    type: MessageGroupTypeEnum!
+    memberId: ID!
+  ): [MessageType!]!
+  getMessagesByMemberPaginated(
+    pagination: PaginationInput = { page: 0, limit: 20 }
+    target: TargetACIInput!
+    type: MessageGroupTypeEnum!
+    memberId: ID!
+  ): MessagePaginateType!
   countUnseenMessages: UnseenMessagesCountType!
   searchMessageByMessageGroupPagination(
     messageGroup: ID!
@@ -8878,23 +8966,30 @@ type Query {
   getMessageGroupsPagination(
     pagination: PaginationInput = { page: 0, limit: 20 }
   ): MessageGroupPaginateType!
-  getDirectMessageGroup(receiverId: ID!): MessageGroupType!
+  getDirectMessageGroup(
+    target: TargetACIInput!
+    receiverId: ID!
+  ): MessageGroupType!
   getArchivedMessageGroupsPagination(
     pagination: PaginationInput = { page: 0, limit: 20 }
   ): MessageGroupPaginateType!
   getMessageGroup(id: ID!): MessageGroupType!
   searchMessageGroup(
     status: MessageGroupStatusEnum
+    target: TargetACIInput
+    type: MessageGroupTypeEnum!
     pagination: PaginationInput = { page: 0, limit: 20 }
     searchString: String
   ): MessageGroupPaginateType!
   searchSupportMessageGroup(
     status: MessageGroupStatusEnum
+    target: TargetACIInput!
     pagination: PaginationInput = { page: 0, limit: 20 }
     searchString: String
   ): MessageGroupPaginateType!
   searchInternalMessageGroup(
     status: MessageGroupStatusEnum
+    target: TargetACIInput!
     pagination: PaginationInput = { page: 0, limit: 20 }
     searchString: String
   ): MessageGroupPaginateType!
@@ -8902,7 +8997,10 @@ type Query {
     pagination: PaginationInput = { page: 0, limit: 20 }
     id: ID!
   ): UserPaginateType!
-  getMessageGroupByMember(memberId: ID!): MessageGroupType!
+  getMessageGroupByMember(
+    target: TargetACIInput
+    memberId: ID!
+  ): MessageGroupType!
   getVersions: [VersionType!]!
   getVersion(id: String!): VersionType!
   getByVersion(version: String!): VersionType!
@@ -9271,6 +9369,24 @@ type Query {
     filter: BarcodeWithVarietyAndStructureFilterInput!
     target: TargetACIInput!
   ): BarcodePaginateType!
+  getSimpleProductWithFavoriteStatus(
+    # Internal product id
+    id: ID!
+  ): InternalProductWithFavoriteStatusType!
+  getSimpleProductWithFavoriteStatusByUrlKey(
+    # Internal product seo urlKey.
+    urlKey: String!
+    target: TargetACIInput!
+  ): InternalProductWithFavoriteStatusType!
+  getSimpleProductsByTargetAndCatalogueCategoryUrlKeyWithFavoriteStatus(
+    pagination: PaginationInput = { page: 0, limit: 20 }
+    target: TargetACIInput!
+    urlKey: String!
+  ): InternalProductWithFavoriteStatusPaginateType!
+  getSimpleProductsByCatalogueCategoryWithFavoriteStatus(
+    pagination: PaginationInput = { page: 0, limit: 20 }
+    catalogueCategoryIds: [ID!]!
+  ): InternalProductWithFavoriteStatusPaginateType!
   getSimpleBarcodeByBarcodeAndTarget(
     target: TargetACIInput!
     barcode: String!
@@ -9300,6 +9416,19 @@ type Query {
     sort: [ProductSortInput!]
     target: TargetACIInput!
   ): BarcodesPaginatedWithFilterType!
+  getSimpleProductsWithRatingsWithFavoriteStatusWithFilter(
+    searchString: String
+    pagination: PaginationInput = { page: 0, limit: 20 }
+    filter: InternalProductFilterInput
+    sort: [ProductSortInput!]
+  ): InternalProductWithRatingsPaginateWithFavoriteStatusWithFilterType!
+  getSimpleBarcodesByBarcodesAndTarget(
+    target: TargetACIInput!
+    barcodes: [String!]!
+  ): [BarcodeType!]!
+  getSimpleProductsByTargetGroupedByClassWithFavoriteStatus(
+    target: TargetACIInput!
+  ): InternalProductByClassTypeWithFavoriteStatus!
   getInternalProducts(
     pagination: PaginationInput = { page: 0, limit: 20 }
     target: TargetACIInput
@@ -9782,6 +9911,10 @@ type Query {
   getSubCategorySEOJSON(categoryId: ID!): ContentJSONType!
   getProductSEO(barcodeId: ID!, target: TargetACIInput!): ContentType!
   getProductSEOJSON(barcodeId: ID!, target: TargetACIInput!): ContentJSONType!
+  getSimpleProductSEOJSON(
+    barcodeId: ID!
+    target: TargetACIInput!
+  ): ContentJSONType!
   getPagesSEO(pageId: ID!): ContentType!
   getPagesSEOJSON(pageId: ID!): ContentJSONType!
   getSEOs: [SEOType!]!
@@ -9817,7 +9950,7 @@ type Query {
   ): PaginatedLandingPagesType!
   findLandingPagesByTargetAndTypePaginated(
     pagination: PaginationInput = { page: 0, limit: 20 }
-    pageType: LandingPageTypeEnum!
+    pageType: [LandingPageTypeEnum!]!
     target: TargetACIInput!
   ): PaginatedLandingPagesType!
   findLandingPagesByTargetAndTypeAndStatusPaginated(
@@ -10007,6 +10140,9 @@ type Query {
   findFavoriteInternalProductByCurrentUser(
     pagination: PaginationInput = { page: 0, limit: 20 }
   ): InternalProductPaginateType!
+  getFavoriteSimpleProductByCurrentUser(
+    pagination: PaginationInput = { page: 0, limit: 20 }
+  ): InternalProductPaginateType!
   searchFavoriteInternalProduct(
     searchString: String
     pagination: PaginationInput = { page: 0, limit: 20 }
@@ -10108,6 +10244,12 @@ type Query {
     searchString: String
     target: TargetACIInput!
   ): PromotionWithInternalProductPaginateType!
+  getSimpleOngoingPromotionsByTargetPaginate(
+    pagination: PaginationInput = { page: 0, limit: 20 }
+    filter: PromotionFilterInput
+    searchString: String
+    target: TargetACIInput!
+  ): PromotionPaginateType!
   findProductsToCompareByUserPaginate(
     user: ID
     pagination: PaginationInput = { page: 0, limit: 20 }
@@ -10293,6 +10435,10 @@ type Query {
   ): InstagramProfileAuditType!
   shoppingCart(id: ID!): ShoppingCartType!
   findShoppingCartByUser(id: ID): ShoppingCartType!
+  findShoppingCartByUserAndTarget(
+    target: TargetACIInput!
+    id: ID
+  ): ShoppingCartType!
   findTargetShoppingCarts(
     searchString: String
     pagination: PaginationInput = { page: 0, limit: 20 }
@@ -10430,6 +10576,10 @@ type Query {
     searchString: String
   ): BoardCardPaginateType!
   getBoardCard(id: ID!): BoardCardType!
+  getBoardCardsStatsWithFilter(
+    filter: BoardCardStatsFilterInput!
+    target: TargetACIInput!
+  ): BoardCardsStatsResponseType!
   getTaskSections(target: TargetACIInput!): [TaskSectionType!]!
   getTaskSectionsByTargetPaginated(
     pagination: PaginationInput = { page: 0, limit: 20 }
@@ -10464,6 +10614,11 @@ type Query {
     searchString: String
     filter: ProjectFilterInput
     target: TargetACIInput
+  ): MailResponseDto!
+  getProjectsTemplateByExcel(path: String): InvoicePDFType!
+  sendProjectsTemplateBymail(
+    emails: [String!]
+    subject: String!
   ): MailResponseDto!
   getTickets: [TicketType!]!
   ticket(id: ID!): TicketType!
@@ -10593,6 +10748,15 @@ type Query {
   findOperatingSystemsPagination(
     pagination: PaginationInput = { page: 0, limit: 20 }
   ): OperatingSystemPaginatedType!
+  getCorporateTemplate: [CorporateTemplateType!]!
+  template(id: ID!): CorporateTemplateType!
+  findCorporateTemplateByName(
+    name: CorporateTemplateTypeEnum!
+  ): CorporateTemplateType!
+  findCorporateTemplateByNameAndTarget(
+    target: TargetACIInput!
+    name: CorporateTemplateTypeEnum!
+  ): CorporateTemplateType!
   getPricesCalculations(
     input: CalculationsInput!
   ): InvoicingPricesCalculationType!
@@ -10621,6 +10785,11 @@ type Query {
     pagination: PaginationInput = { page: 0, limit: 20 }
     input: RentalFilterInput
   ): RentalPaginateType!
+  getInvoicingTemplateByExcel(path: String): InvoicePDFType!
+  sendInvoicingTemplateBymail(
+    emails: [String!]
+    subject: String!
+  ): MailResponseDto!
   getQuotations: [QuotationType!]!
   quotation(id: ID!): QuotationType!
   getQuotationsByTarget(
@@ -11102,8 +11271,8 @@ input RentalRefInput {
   location: String
   description: String
   status: RentalStatusEnum
-  start: DateTime!
-  end: DateTime!
+  start: DateTime
+  end: DateTime
   note: RentalNoteInput
 }
 
@@ -11182,7 +11351,7 @@ input MailAttachmentInput {
 }
 
 input CorporateEmailTempInput {
-  to: String!
+  to: [String!]!
   subject: String!
   template: EmailTemplateTypeEnum
   content: EmailContentInput
@@ -11395,6 +11564,7 @@ input PictureInput {
   height: Int
   x: Int
   y: Int
+  alt: String
   baseUrl: String!
   path: String!
 }
@@ -11588,6 +11758,19 @@ input BoardCardFilterInput {
   customer: [ID!]
   procedure: [BoardCardProcedureEnum!]
   priority: [BoardCardPriorityEnum!]
+}
+
+input BoardCardStatsFilterInput {
+  archived: Boolean
+  boardList: [ID!]
+  project: [ID!]
+  barcode: [ID!]
+  assignedTo: [ID!]
+  customer: [ID!]
+  procedure: [BoardCardProcedureEnum!]
+  priority: [BoardCardPriorityEnum!]
+  from: DateTime
+  to: DateTime
 }
 
 input ProjectFilterInput {
@@ -11820,6 +12003,7 @@ input CalculationsInput {
   products: [InvoicingProductsInput!]!
   taxes: [ProductTaxesInput!]!
   discount: DiscountDtoInput
+  isAvoir: Boolean = false
 }
 
 input InvoicingFilterInput {
@@ -11998,7 +12182,11 @@ type Mutation {
     token: String!
     target: TargetACIInput!
   ): CorporateUserType!
-  sendValidationEmailForTarget(target: TargetACIInput!): MailResponseDto!
+  sendValidationEmailForTarget(
+    subject: String!
+    target: TargetACIInput!
+    email: String!
+  ): MailResponseDto!
   validateEmailForTarget(token: String!): CorporateUserType!
   saveCurrentCorporateUserStatus(
     target: TargetACIInput!
@@ -12543,6 +12731,8 @@ type Mutation {
   ): CorporateNotificationFullType!
   markInternalProductAsFavorite(productId: String!): InternalProductType!
   removeInternalProductFromFavorites(productId: String!): InternalProductType!
+  markSimpleProductAsFavorite(productId: String!): InternalProductType!
+  removeSimpleProductFromFavorites(productId: String!): InternalProductType!
   createOrUpdateFavoriteInternalProducts(
     input: FavoriteInternalProductInput!
   ): FavoriteInternalProductType!
@@ -12651,7 +12841,10 @@ type Mutation {
     productToAdd: CartProductUpdateCreditInput!
     productToRemove: CartProductInput!
   ): ShoppingCartType!
-  removeFromCart(product: CartProductInput!): ShoppingCartType!
+  removeFromCart(
+    target: TargetACIInput
+    product: CartProductInput!
+  ): ShoppingCartType!
   emptyCart: ShoppingCartType!
   createMarketPlaceOrder(
     input: MarketPlaceOrderInput!
@@ -12663,6 +12856,7 @@ type Mutation {
     input: MarketPlaceOrderProductInput!
   ): MarketPlaceOrderDtoType!
   createTargetOrderByCart(
+    subject: String!
     input: MarketPlaceOrderInput!
     target: TargetACIInput!
   ): [MarketPlaceOrderDtoType!]!
@@ -12870,6 +13064,14 @@ type Mutation {
   createProject(input: ProjectInput!): ProjectType!
   updateProject(input: ProjectUpdateInput!): ProjectType!
   bulkUpdateProjectMedia(input: [UpdateMediaInput!]!): [ProjectType!]!
+  importProjectsByExcel(
+    # base64 string from excel file.
+    base64: String
+
+    # path to excel file in server.
+    path: String
+    target: TargetACIInput
+  ): SuccessResponseDtoType!
   deleteProject(id: ID!): DeleteResponseDtoType!
   createTicket(input: TicketInput!): TicketType!
   updateTicket(input: TicketUpdateInput!): TicketType!
@@ -12959,6 +13161,28 @@ type Mutation {
     id: ID!
   ): OperatingSystemType!
   deleteOperatingSystem(id: ID!): DeleteResponseDtoType!
+  createCorporateTemplate(
+    input: CorporateTemplateInput!
+  ): CorporateTemplateType!
+  updateCorporateTemplate(
+    input: CorporateTemplateInput!
+    id: ID!
+  ): CorporateTemplateType!
+  refreshSitemapXml(
+    target: TargetACIInput!
+    urls: [String!]!
+    hostname: String!
+  ): CorporateTemplateType!
+  deleteCorporateTemplate(id: ID!): DeleteResponseDtoType!
+  importInvoicingByExcel(
+    # base64 string from excel file.
+    base64: String
+
+    # path to excel file in server.
+    path: String
+    type: SequenceCategoryEnum
+    target: TargetACIInput
+  ): SuccessResponseDtoType!
   createQuotation(input: QuotationInput!): QuotationType!
   updateQuotation(input: QuotationUpdateInput!): QuotationType!
   deleteQuotation(id: ID!): DeleteResponseDtoType!
@@ -13386,6 +13610,8 @@ input DirectMessageInput {
   location: LonLatInput
   seenBy: [ID!]
   receiver: ID!
+  target: TargetACIInput
+  type: MessageGroupTypeEnum
 }
 
 input SendMessageToTargetInput {
@@ -13407,6 +13633,7 @@ input MessageGroupInput {
   wallpaper: MessageGroupWallpaperInput
   sound: MessageSoundEnum
   status: MessageGroupStatusEnum
+  target: TargetACIInput
   type: MessageGroupTypeEnum
   members: [String!]
 }
@@ -13597,6 +13824,7 @@ input ManufacturerCreateInput {
   address: FullAddressInput
   email: String
   company: String
+  contactEmails: [String!]
   website: String
 }
 
@@ -13607,6 +13835,7 @@ input ManufacturerUpdateInput {
   address: FullAddressInput
   email: String
   company: String
+  contactEmails: [String!]
   website: String
   id: String!
 }
@@ -13766,6 +13995,7 @@ input WholesalerCreateInput {
   email: String
   company: String
   website: String
+  contactEmails: [String!]
   phone: IPhoneInput
   fax: IPhoneInput
 }
@@ -13778,6 +14008,7 @@ input WholesalerUpdateInput {
   email: String
   company: String
   website: String
+  contactEmails: [String!]
   phone: IPhoneInput
   fax: IPhoneInput
   id: String!
@@ -13949,6 +14180,7 @@ input CreateSimpleProductInput {
   rent: Boolean
   discount: DiscountDtoInput
   sku: String
+  seo: CatalogueCategorySeoInput
   brand: String
   picture: PictureInput
   pictures: [PictureInput!]
@@ -13982,6 +14214,7 @@ input UpdateSimpleProductInput {
   rent: Boolean
   discount: DiscountDtoInput
   sku: String
+  seo: CatalogueCategorySeoInput
   brand: String
   picture: PictureInput
   pictures: [PictureInput!]
@@ -14010,6 +14243,7 @@ input CreateInternalProductInput {
   rent: Boolean
   discount: DiscountDtoInput
   sku: String
+  seo: CatalogueCategorySeoInput
   brand: String
   picture: PictureInput
   pictures: [PictureInput!]
@@ -14053,6 +14287,7 @@ input CreateCustomInternalProductInput {
   rent: Boolean
   discount: DiscountDtoInput
   sku: String
+  seo: CatalogueCategorySeoInput
   brand: String
   picture: PictureInput
   pictures: [PictureInput!]
@@ -14087,6 +14322,7 @@ input UpdateInternalProductInput {
   rent: Boolean
   discount: DiscountDtoInput
   sku: String
+  seo: CatalogueCategorySeoInput
   brand: String
   picture: PictureInput
   pictures: [PictureInput!]
@@ -14929,6 +15165,7 @@ input UpdatePictureInput {
   height: Int
   x: Int
   y: Int
+  alt: String
   baseUrl: String
   path: String
 }
@@ -15080,6 +15317,7 @@ input ProjectInput {
   priority: ProjectPriorityEnum
   status: ProjectStatusEnum
   color: String
+  externalId: String
   picture: PictureInput
   members: [ProjectMemberInput!]
   resources: [ID!]
@@ -15102,6 +15340,7 @@ input ProjectUpdateInput {
   priority: ProjectPriorityEnum
   status: ProjectStatusEnum
   color: String
+  externalId: String
   picture: PictureInput
   members: [ProjectMemberInput!]
   resources: [ID!]
@@ -15573,6 +15812,12 @@ input OSLogoPngInput {
   size48: PictureInput
   size64: PictureInput
   size128: PictureInput
+}
+
+input CorporateTemplateInput {
+  name: CorporateTemplateTypeEnum!
+  content: String!
+  target: TargetACIInput!
 }
 
 input QuotationInput {

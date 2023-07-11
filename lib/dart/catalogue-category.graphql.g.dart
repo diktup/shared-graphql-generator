@@ -3181,16 +3181,16 @@ Map<String, dynamic>
   return val;
 }
 
-GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsType
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsTypeFromJson(
+GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType$MetaKeywordsType
+    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType$MetaKeywordsTypeFromJson(
             Map<String, dynamic> json) =>
-        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsType()
+        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType$MetaKeywordsType()
           ..name = json['name'] as String?
           ..content = json['content'] as String?;
 
 Map<String, dynamic>
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsTypeToJson(
-        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsType
+    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType$MetaKeywordsTypeToJson(
+        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType$MetaKeywordsType
             instance) {
   final val = <String, dynamic>{};
 
@@ -3205,22 +3205,22 @@ Map<String, dynamic>
   return val;
 }
 
-GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoTypeFromJson(
+GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType
+    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoTypeFromJson(
             Map<String, dynamic> json) =>
-        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType()
+        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType()
           ..urlKey = json['urlKey'] as String?
           ..metaTitle = json['metaTitle'] as String?
           ..metaDesription = json['metaDesription'] as String?
           ..metaKeywords = (json['metaKeywords'] as List<dynamic>?)
               ?.map((e) =>
-                  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType$MetaKeywordsType
+                  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType$MetaKeywordsType
                       .fromJson(e as Map<String, dynamic>))
               .toList();
 
 Map<String, dynamic>
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoTypeToJson(
-        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType
+    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoTypeToJson(
+        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType
             instance) {
   final val = <String, dynamic>{};
 
@@ -3238,10 +3238,10 @@ Map<String, dynamic>
   return val;
 }
 
-GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureType
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureTypeFromJson(
+GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$PictureType
+    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$PictureTypeFromJson(
             Map<String, dynamic> json) =>
-        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureType()
+        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$PictureType()
           ..baseUrl = json['baseUrl'] as String?
           ..path = json['path'] as String?
           ..width = json['width'] as int?
@@ -3250,8 +3250,8 @@ GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCate
           ..y = json['y'] as int?;
 
 Map<String, dynamic>
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureTypeToJson(
-        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureType
+    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$PictureTypeToJson(
+        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$PictureType
             instance) {
   final val = <String, dynamic>{};
 
@@ -3270,87 +3270,10 @@ Map<String, dynamic>
   return val;
 }
 
-GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleType
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleTypeFromJson(
+GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType
+    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseTypeFromJson(
             Map<String, dynamic> json) =>
-        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleType()
-          ..id = json['id'] as String;
-
-Map<String, dynamic>
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleTypeToJson(
-            GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleType
-                instance) =>
-        <String, dynamic>{
-          'id': instance.id,
-        };
-
-GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerType
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerTypeFromJson(
-            Map<String, dynamic> json) =>
-        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerType()
-          ..id = json['id'] as String;
-
-Map<String, dynamic>
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerTypeToJson(
-            GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerType
-                instance) =>
-        <String, dynamic>{
-          'id': instance.id,
-        };
-
-GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerType
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerTypeFromJson(
-            Map<String, dynamic> json) =>
-        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerType()
-          ..id = json['id'] as String;
-
-Map<String, dynamic>
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerTypeToJson(
-            GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerType
-                instance) =>
-        <String, dynamic>{
-          'id': instance.id,
-        };
-
-GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetTypeFromJson(
-            Map<String, dynamic> json) =>
-        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType()
-          ..pos = json['pos'] == null
-              ? null
-              : GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$PointOfSaleType
-                  .fromJson(json['pos'] as Map<String, dynamic>)
-          ..wholesaler = json['wholesaler'] == null
-              ? null
-              : GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$WholesalerType
-                  .fromJson(json['wholesaler'] as Map<String, dynamic>)
-          ..manufacturer = json['manufacturer'] == null
-              ? null
-              : GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType$ManufacturerType
-                  .fromJson(json['manufacturer'] as Map<String, dynamic>);
-
-Map<String, dynamic>
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetTypeToJson(
-        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType
-            instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('pos', instance.pos?.toJson());
-  writeNotNull('wholesaler', instance.wholesaler?.toJson());
-  writeNotNull('manufacturer', instance.manufacturer?.toJson());
-  return val;
-}
-
-GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryTypeFromJson(
-            Map<String, dynamic> json) =>
-        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType()
+        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType()
           ..id = json['id'] as String
           ..name = json['name'] as String?
           ..rank = json['rank'] as int?
@@ -3369,20 +3292,17 @@ GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCate
           ..delivery = json['delivery'] as bool?
           ..seo = json['seo'] == null
               ? null
-              : GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$CatalogueCategorySeoType
+              : GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$CatalogueCategorySeoType
                   .fromJson(json['seo'] as Map<String, dynamic>)
           ..pictures = (json['pictures'] as List<dynamic>?)
               ?.map((e) =>
-                  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$PictureType
+                  GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType$PictureType
                       .fromJson(e as Map<String, dynamic>))
-              .toList()
-          ..target =
-              GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType$TargetType
-                  .fromJson(json['target'] as Map<String, dynamic>);
+              .toList();
 
 Map<String, dynamic>
-    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryTypeToJson(
-        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType
+    _$GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseTypeToJson(
+        GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType
             instance) {
   final val = <String, dynamic>{
     'id': instance.id,
@@ -3409,7 +3329,6 @@ Map<String, dynamic>
   writeNotNull('delivery', instance.delivery);
   writeNotNull('seo', instance.seo?.toJson());
   writeNotNull('pictures', instance.pictures?.map((e) => e.toJson()).toList());
-  val['target'] = instance.target.toJson();
   return val;
 }
 
@@ -3447,7 +3366,7 @@ GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType
                   .fromJson(json['target'] as Map<String, dynamic>)
           ..parent = json['parent'] == null
               ? null
-              : GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryType
+              : GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType
                   .fromJson(json['parent'] as Map<String, dynamic>);
 
 Map<String, dynamic>
@@ -4333,6 +4252,7 @@ PictureInput _$PictureInputFromJson(Map<String, dynamic> json) => PictureInput(
       height: json['height'] as int?,
       x: json['x'] as int?,
       y: json['y'] as int?,
+      alt: json['alt'] as String?,
       baseUrl: json['baseUrl'] as String,
       path: json['path'] as String,
     );
@@ -4350,6 +4270,7 @@ Map<String, dynamic> _$PictureInputToJson(PictureInput instance) {
   writeNotNull('height', instance.height);
   writeNotNull('x', instance.x);
   writeNotNull('y', instance.y);
+  writeNotNull('alt', instance.alt);
   val['baseUrl'] = instance.baseUrl;
   val['path'] = instance.path;
   return val;

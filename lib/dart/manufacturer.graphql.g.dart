@@ -6766,6 +6766,9 @@ ManufacturerCreateInput _$ManufacturerCreateInputFromJson(
           : FullAddressInput.fromJson(json['address'] as Map<String, dynamic>),
       email: json['email'] as String?,
       company: json['company'] as String?,
+      contactEmails: (json['contactEmails'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       website: json['website'] as String?,
     );
 
@@ -6785,6 +6788,7 @@ Map<String, dynamic> _$ManufacturerCreateInputToJson(
   writeNotNull('address', instance.address?.toJson());
   writeNotNull('email', instance.email);
   writeNotNull('company', instance.company);
+  writeNotNull('contactEmails', instance.contactEmails);
   writeNotNull('website', instance.website);
   return val;
 }
@@ -6794,6 +6798,7 @@ PictureInput _$PictureInputFromJson(Map<String, dynamic> json) => PictureInput(
       height: json['height'] as int?,
       x: json['x'] as int?,
       y: json['y'] as int?,
+      alt: json['alt'] as String?,
       baseUrl: json['baseUrl'] as String,
       path: json['path'] as String,
     );
@@ -6811,6 +6816,7 @@ Map<String, dynamic> _$PictureInputToJson(PictureInput instance) {
   writeNotNull('height', instance.height);
   writeNotNull('x', instance.x);
   writeNotNull('y', instance.y);
+  writeNotNull('alt', instance.alt);
   val['baseUrl'] = instance.baseUrl;
   val['path'] = instance.path;
   return val;
@@ -8591,6 +8597,9 @@ ManufacturerUpdateInput _$ManufacturerUpdateInputFromJson(
           : FullAddressInput.fromJson(json['address'] as Map<String, dynamic>),
       email: json['email'] as String?,
       company: json['company'] as String?,
+      contactEmails: (json['contactEmails'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       website: json['website'] as String?,
       id: json['id'] as String,
     );
@@ -8611,6 +8620,7 @@ Map<String, dynamic> _$ManufacturerUpdateInputToJson(
   writeNotNull('address', instance.address?.toJson());
   writeNotNull('email', instance.email);
   writeNotNull('company', instance.company);
+  writeNotNull('contactEmails', instance.contactEmails);
   writeNotNull('website', instance.website);
   val['id'] = instance.id;
   return val;

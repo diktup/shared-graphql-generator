@@ -113,18 +113,18 @@ const _$DiscountTypeEnumMap = {
   DiscountType.artemisUnknown: 'ARTEMIS_UNKNOWN',
 };
 
-GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
-    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeFromJson(
+GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
+    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeFromJson(
             Map<String, dynamic> json) =>
-        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType()
+        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType()
           ..amount = json['amount'] as String?
           ..discountType = $enumDecodeNullable(
               _$DiscountTypeEnumMap, json['discountType'],
               unknownValue: DiscountType.artemisUnknown);
 
 Map<String, dynamic>
-    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeToJson(
-        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeToJson(
+        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
             instance) {
   final val = <String, dynamic>{};
 
@@ -139,10 +139,10 @@ Map<String, dynamic>
   return val;
 }
 
-GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
-    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeFromJson(
+GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
+    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeFromJson(
             Map<String, dynamic> json) =>
-        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType()
+        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType()
           ..baseUrl = json['baseUrl'] as String?
           ..path = json['path'] as String?
           ..width = json['width'] as int?
@@ -151,8 +151,8 @@ GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$Media
           ..y = json['y'] as int?;
 
 Map<String, dynamic>
-    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeToJson(
-        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeToJson(
+        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
             instance) {
   final val = <String, dynamic>{};
 
@@ -171,27 +171,27 @@ Map<String, dynamic>
   return val;
 }
 
-GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
-    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeFromJson(
+GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType
+    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$MediaTypeFromJson(
             Map<String, dynamic> json) =>
-        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType()
+        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType()
           ..videos = (json['videos'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList()
           ..deg360 = (json['deg360'] as List<dynamic>?)
               ?.map((e) =>
-                  GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList()
           ..pictures = (json['pictures'] as List<dynamic>?)
               ?.map((e) =>
-                  GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList();
 
 Map<String, dynamic>
-    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeToJson(
-        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$MediaTypeToJson(
+        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType
             instance) {
   final val = <String, dynamic>{};
 
@@ -207,26 +207,26 @@ Map<String, dynamic>
   return val;
 }
 
-GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType
-    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawTypeFromJson(
+GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType
+    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeTypeFromJson(
             Map<String, dynamic> json) =>
-        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType()
+        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType()
           ..id = json['id'] as String
           ..name = json['name'] as String?
           ..barcode = json['barcode'] as String
           ..price = json['price'] as String?
           ..discount = json['discount'] == null
               ? null
-              : GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+              : GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..media = json['media'] == null
               ? null
-              : GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+              : GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType
                   .fromJson(json['media'] as Map<String, dynamic>);
 
 Map<String, dynamic>
-    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawTypeToJson(
-        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType
+    _$GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeTypeToJson(
+        GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType
             instance) {
   final val = <String, dynamic>{
     'id': instance.id,
@@ -254,7 +254,7 @@ GetPromotions$Query$PromotionType$PromotionProductsType
               GetPromotions$Query$PromotionType$PromotionProductsType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..barcode =
-              GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType
+              GetPromotions$Query$PromotionType$PromotionProductsType$BarcodeType
                   .fromJson(json['barcode'] as Map<String, dynamic>);
 
 Map<String, dynamic>
@@ -414,18 +414,18 @@ Map<String, dynamic>
   return val;
 }
 
-Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
-    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeFromJson(
+Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
+    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeFromJson(
             Map<String, dynamic> json) =>
-        Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType()
+        Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType()
           ..amount = json['amount'] as String?
           ..discountType = $enumDecodeNullable(
               _$DiscountTypeEnumMap, json['discountType'],
               unknownValue: DiscountType.artemisUnknown);
 
 Map<String, dynamic>
-    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeToJson(
-        Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeToJson(
+        Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
             instance) {
   final val = <String, dynamic>{};
 
@@ -440,10 +440,10 @@ Map<String, dynamic>
   return val;
 }
 
-Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
-    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeFromJson(
+Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
+    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeFromJson(
             Map<String, dynamic> json) =>
-        Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType()
+        Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType()
           ..baseUrl = json['baseUrl'] as String?
           ..path = json['path'] as String?
           ..width = json['width'] as int?
@@ -452,8 +452,8 @@ Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
           ..y = json['y'] as int?;
 
 Map<String, dynamic>
-    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeToJson(
-        Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeToJson(
+        Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
             instance) {
   final val = <String, dynamic>{};
 
@@ -472,27 +472,27 @@ Map<String, dynamic>
   return val;
 }
 
-Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
-    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeFromJson(
+Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType
+    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$MediaTypeFromJson(
             Map<String, dynamic> json) =>
-        Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType()
+        Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType()
           ..videos = (json['videos'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList()
           ..deg360 = (json['deg360'] as List<dynamic>?)
               ?.map((e) =>
-                  Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList()
           ..pictures = (json['pictures'] as List<dynamic>?)
               ?.map((e) =>
-                  Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList();
 
 Map<String, dynamic>
-    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeToJson(
-        Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$MediaTypeToJson(
+        Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType
             instance) {
   final val = <String, dynamic>{};
 
@@ -508,26 +508,26 @@ Map<String, dynamic>
   return val;
 }
 
-Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType
-    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawTypeFromJson(
+Promotion$Query$PromotionType$PromotionProductsType$BarcodeType
+    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeTypeFromJson(
             Map<String, dynamic> json) =>
-        Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType()
+        Promotion$Query$PromotionType$PromotionProductsType$BarcodeType()
           ..id = json['id'] as String
           ..name = json['name'] as String?
           ..barcode = json['barcode'] as String
           ..price = json['price'] as String?
           ..discount = json['discount'] == null
               ? null
-              : Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+              : Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..media = json['media'] == null
               ? null
-              : Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+              : Promotion$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType
                   .fromJson(json['media'] as Map<String, dynamic>);
 
 Map<String, dynamic>
-    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawTypeToJson(
-        Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType
+    _$Promotion$Query$PromotionType$PromotionProductsType$BarcodeTypeToJson(
+        Promotion$Query$PromotionType$PromotionProductsType$BarcodeType
             instance) {
   final val = <String, dynamic>{
     'id': instance.id,
@@ -555,7 +555,7 @@ Promotion$Query$PromotionType$PromotionProductsType
               Promotion$Query$PromotionType$PromotionProductsType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..barcode =
-              Promotion$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType
+              Promotion$Query$PromotionType$PromotionProductsType$BarcodeType
                   .fromJson(json['barcode'] as Map<String, dynamic>);
 
 Map<String, dynamic>
@@ -709,18 +709,18 @@ Map<String, dynamic>
   return val;
 }
 
-GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
-    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeFromJson(
+GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
+    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeFromJson(
             Map<String, dynamic> json) =>
-        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType()
+        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType()
           ..amount = json['amount'] as String?
           ..discountType = $enumDecodeNullable(
               _$DiscountTypeEnumMap, json['discountType'],
               unknownValue: DiscountType.artemisUnknown);
 
 Map<String, dynamic>
-    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeToJson(
-        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeToJson(
+        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
             instance) {
   final val = <String, dynamic>{};
 
@@ -735,10 +735,10 @@ Map<String, dynamic>
   return val;
 }
 
-GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
-    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeFromJson(
+GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
+    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeFromJson(
             Map<String, dynamic> json) =>
-        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType()
+        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType()
           ..baseUrl = json['baseUrl'] as String?
           ..path = json['path'] as String?
           ..width = json['width'] as int?
@@ -747,8 +747,8 @@ GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawTy
           ..y = json['y'] as int?;
 
 Map<String, dynamic>
-    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeToJson(
-        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeToJson(
+        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
             instance) {
   final val = <String, dynamic>{};
 
@@ -767,27 +767,27 @@ Map<String, dynamic>
   return val;
 }
 
-GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
-    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeFromJson(
+GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType
+    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$MediaTypeFromJson(
             Map<String, dynamic> json) =>
-        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType()
+        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType()
           ..videos = (json['videos'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList()
           ..deg360 = (json['deg360'] as List<dynamic>?)
               ?.map((e) =>
-                  GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList()
           ..pictures = (json['pictures'] as List<dynamic>?)
               ?.map((e) =>
-                  GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList();
 
 Map<String, dynamic>
-    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeToJson(
-        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$MediaTypeToJson(
+        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType
             instance) {
   final val = <String, dynamic>{};
 
@@ -803,26 +803,26 @@ Map<String, dynamic>
   return val;
 }
 
-GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType
-    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawTypeFromJson(
+GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType
+    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeTypeFromJson(
             Map<String, dynamic> json) =>
-        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType()
+        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType()
           ..id = json['id'] as String
           ..name = json['name'] as String?
           ..barcode = json['barcode'] as String
           ..price = json['price'] as String?
           ..discount = json['discount'] == null
               ? null
-              : GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+              : GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..media = json['media'] == null
               ? null
-              : GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+              : GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType$MediaType
                   .fromJson(json['media'] as Map<String, dynamic>);
 
 Map<String, dynamic>
-    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawTypeToJson(
-        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType
+    _$GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeTypeToJson(
+        GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType
             instance) {
   final val = <String, dynamic>{
     'id': instance.id,
@@ -850,7 +850,7 @@ GetPromotionsByTarget$Query$PromotionType$PromotionProductsType
               GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..barcode =
-              GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeBaseRawType
+              GetPromotionsByTarget$Query$PromotionType$PromotionProductsType$BarcodeType
                   .fromJson(json['barcode'] as Map<String, dynamic>);
 
 Map<String, dynamic>
@@ -1037,18 +1037,18 @@ Map<String, dynamic>
   return val;
 }
 
-GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
-    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeFromJson(
+GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
+    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeFromJson(
             Map<String, dynamic> json) =>
-        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType()
+        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType()
           ..amount = json['amount'] as String?
           ..discountType = $enumDecodeNullable(
               _$DiscountTypeEnumMap, json['discountType'],
               unknownValue: DiscountType.artemisUnknown);
 
 Map<String, dynamic>
-    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeToJson(
-        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeToJson(
+        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
             instance) {
   final val = <String, dynamic>{};
 
@@ -1063,10 +1063,10 @@ Map<String, dynamic>
   return val;
 }
 
-GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
-    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeFromJson(
+GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
+    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeFromJson(
             Map<String, dynamic> json) =>
-        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType()
+        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType()
           ..baseUrl = json['baseUrl'] as String?
           ..path = json['path'] as String?
           ..width = json['width'] as int?
@@ -1075,8 +1075,8 @@ GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$Promot
           ..y = json['y'] as int?;
 
 Map<String, dynamic>
-    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeToJson(
-        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeToJson(
+        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
             instance) {
   final val = <String, dynamic>{};
 
@@ -1095,27 +1095,27 @@ Map<String, dynamic>
   return val;
 }
 
-GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
-    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeFromJson(
+GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType
+    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaTypeFromJson(
             Map<String, dynamic> json) =>
-        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType()
+        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType()
           ..videos = (json['videos'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList()
           ..deg360 = (json['deg360'] as List<dynamic>?)
               ?.map((e) =>
-                  GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList()
           ..pictures = (json['pictures'] as List<dynamic>?)
               ?.map((e) =>
-                  GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList();
 
 Map<String, dynamic>
-    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeToJson(
-        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaTypeToJson(
+        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType
             instance) {
   final val = <String, dynamic>{};
 
@@ -1131,26 +1131,26 @@ Map<String, dynamic>
   return val;
 }
 
-GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType
-    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawTypeFromJson(
+GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType
+    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeTypeFromJson(
             Map<String, dynamic> json) =>
-        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType()
+        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType()
           ..id = json['id'] as String
           ..name = json['name'] as String?
           ..barcode = json['barcode'] as String
           ..price = json['price'] as String?
           ..discount = json['discount'] == null
               ? null
-              : GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+              : GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..media = json['media'] == null
               ? null
-              : GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+              : GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType
                   .fromJson(json['media'] as Map<String, dynamic>);
 
 Map<String, dynamic>
-    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawTypeToJson(
-        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType
+    _$GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeTypeToJson(
+        GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType
             instance) {
   final val = <String, dynamic>{
     'id': instance.id,
@@ -1178,7 +1178,7 @@ GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$Promot
               GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..barcode =
-              GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType
+              GetPromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType
                   .fromJson(json['barcode'] as Map<String, dynamic>);
 
 Map<String, dynamic>
@@ -1425,18 +1425,18 @@ Map<String, dynamic>
   return val;
 }
 
-GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
-    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeFromJson(
+GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
+    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeFromJson(
             Map<String, dynamic> json) =>
-        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType()
+        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType()
           ..amount = json['amount'] as String?
           ..discountType = $enumDecodeNullable(
               _$DiscountTypeEnumMap, json['discountType'],
               unknownValue: DiscountType.artemisUnknown);
 
 Map<String, dynamic>
-    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeToJson(
-        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeToJson(
+        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
             instance) {
   final val = <String, dynamic>{};
 
@@ -1451,10 +1451,10 @@ Map<String, dynamic>
   return val;
 }
 
-GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
-    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeFromJson(
+GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
+    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeFromJson(
             Map<String, dynamic> json) =>
-        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType()
+        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType()
           ..baseUrl = json['baseUrl'] as String?
           ..path = json['path'] as String?
           ..width = json['width'] as int?
@@ -1463,8 +1463,8 @@ GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$
           ..y = json['y'] as int?;
 
 Map<String, dynamic>
-    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeToJson(
-        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeToJson(
+        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
             instance) {
   final val = <String, dynamic>{};
 
@@ -1483,27 +1483,27 @@ Map<String, dynamic>
   return val;
 }
 
-GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
-    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeFromJson(
+GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType
+    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaTypeFromJson(
             Map<String, dynamic> json) =>
-        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType()
+        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType()
           ..videos = (json['videos'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList()
           ..deg360 = (json['deg360'] as List<dynamic>?)
               ?.map((e) =>
-                  GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList()
           ..pictures = (json['pictures'] as List<dynamic>?)
               ?.map((e) =>
-                  GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList();
 
 Map<String, dynamic>
-    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeToJson(
-        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaTypeToJson(
+        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType
             instance) {
   final val = <String, dynamic>{};
 
@@ -1519,26 +1519,26 @@ Map<String, dynamic>
   return val;
 }
 
-GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType
-    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawTypeFromJson(
+GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType
+    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeTypeFromJson(
             Map<String, dynamic> json) =>
-        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType()
+        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType()
           ..id = json['id'] as String
           ..name = json['name'] as String?
           ..barcode = json['barcode'] as String
           ..price = json['price'] as String?
           ..discount = json['discount'] == null
               ? null
-              : GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+              : GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..media = json['media'] == null
               ? null
-              : GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+              : GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType$MediaType
                   .fromJson(json['media'] as Map<String, dynamic>);
 
 Map<String, dynamic>
-    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawTypeToJson(
-        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType
+    _$GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeTypeToJson(
+        GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType
             instance) {
   final val = <String, dynamic>{
     'id': instance.id,
@@ -1566,7 +1566,7 @@ GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$
               GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..barcode =
-              GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeBaseRawType
+              GetFuturePromotionsByTargetPagination$Query$PromotionPaginateType$PromotionType$PromotionProductsType$BarcodeType
                   .fromJson(json['barcode'] as Map<String, dynamic>);
 
 Map<String, dynamic>
@@ -22559,18 +22559,18 @@ Map<String, dynamic>
   return val;
 }
 
-CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
-    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeFromJson(
+CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
+    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeFromJson(
             Map<String, dynamic> json) =>
-        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType()
+        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType()
           ..amount = json['amount'] as String?
           ..discountType = $enumDecodeNullable(
               _$DiscountTypeEnumMap, json['discountType'],
               unknownValue: DiscountType.artemisUnknown);
 
 Map<String, dynamic>
-    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeToJson(
-        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeToJson(
+        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
             instance) {
   final val = <String, dynamic>{};
 
@@ -22585,10 +22585,10 @@ Map<String, dynamic>
   return val;
 }
 
-CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
-    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeFromJson(
+CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
+    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeFromJson(
             Map<String, dynamic> json) =>
-        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType()
+        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType()
           ..baseUrl = json['baseUrl'] as String?
           ..path = json['path'] as String?
           ..width = json['width'] as int?
@@ -22597,8 +22597,8 @@ CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$
           ..y = json['y'] as int?;
 
 Map<String, dynamic>
-    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeToJson(
-        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeToJson(
+        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
             instance) {
   final val = <String, dynamic>{};
 
@@ -22617,27 +22617,27 @@ Map<String, dynamic>
   return val;
 }
 
-CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
-    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeFromJson(
+CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType
+    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaTypeFromJson(
             Map<String, dynamic> json) =>
-        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType()
+        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType()
           ..videos = (json['videos'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList()
           ..deg360 = (json['deg360'] as List<dynamic>?)
               ?.map((e) =>
-                  CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList()
           ..pictures = (json['pictures'] as List<dynamic>?)
               ?.map((e) =>
-                  CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList();
 
 Map<String, dynamic>
-    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeToJson(
-        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaTypeToJson(
+        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType
             instance) {
   final val = <String, dynamic>{};
 
@@ -22653,26 +22653,26 @@ Map<String, dynamic>
   return val;
 }
 
-CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType
-    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawTypeFromJson(
+CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType
+    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeTypeFromJson(
             Map<String, dynamic> json) =>
-        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType()
+        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType()
           ..id = json['id'] as String
           ..name = json['name'] as String?
           ..barcode = json['barcode'] as String
           ..price = json['price'] as String?
           ..discount = json['discount'] == null
               ? null
-              : CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+              : CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..media = json['media'] == null
               ? null
-              : CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+              : CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType
                   .fromJson(json['media'] as Map<String, dynamic>);
 
 Map<String, dynamic>
-    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawTypeToJson(
-        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType
+    _$CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeTypeToJson(
+        CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType
             instance) {
   final val = <String, dynamic>{
     'id': instance.id,
@@ -22700,7 +22700,7 @@ CreatePromotion$Mutation$PromotionType$PromotionProductsType
               CreatePromotion$Mutation$PromotionType$PromotionProductsType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..barcode =
-              CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType
+              CreatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType
                   .fromJson(json['barcode'] as Map<String, dynamic>);
 
 Map<String, dynamic>
@@ -22925,18 +22925,18 @@ Map<String, dynamic>
   return val;
 }
 
-UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
-    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeFromJson(
+UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
+    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeFromJson(
             Map<String, dynamic> json) =>
-        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType()
+        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType()
           ..amount = json['amount'] as String?
           ..discountType = $enumDecodeNullable(
               _$DiscountTypeEnumMap, json['discountType'],
               unknownValue: DiscountType.artemisUnknown);
 
 Map<String, dynamic>
-    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoTypeToJson(
-        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoTypeToJson(
+        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
             instance) {
   final val = <String, dynamic>{};
 
@@ -22951,10 +22951,10 @@ Map<String, dynamic>
   return val;
 }
 
-UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
-    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeFromJson(
+UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
+    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeFromJson(
             Map<String, dynamic> json) =>
-        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType()
+        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType()
           ..baseUrl = json['baseUrl'] as String?
           ..path = json['path'] as String?
           ..width = json['width'] as int?
@@ -22963,8 +22963,8 @@ UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$
           ..y = json['y'] as int?;
 
 Map<String, dynamic>
-    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureTypeToJson(
-        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureTypeToJson(
+        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
             instance) {
   final val = <String, dynamic>{};
 
@@ -22983,27 +22983,27 @@ Map<String, dynamic>
   return val;
 }
 
-UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
-    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeFromJson(
+UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType
+    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaTypeFromJson(
             Map<String, dynamic> json) =>
-        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType()
+        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType()
           ..videos = (json['videos'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList()
           ..deg360 = (json['deg360'] as List<dynamic>?)
               ?.map((e) =>
-                  UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList()
           ..pictures = (json['pictures'] as List<dynamic>?)
               ?.map((e) =>
-                  UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType$PictureType
+                  UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType$PictureType
                       .fromJson(e as Map<String, dynamic>))
               .toList();
 
 Map<String, dynamic>
-    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaTypeToJson(
-        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaTypeToJson(
+        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType
             instance) {
   final val = <String, dynamic>{};
 
@@ -23019,26 +23019,26 @@ Map<String, dynamic>
   return val;
 }
 
-UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType
-    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawTypeFromJson(
+UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType
+    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeTypeFromJson(
             Map<String, dynamic> json) =>
-        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType()
+        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType()
           ..id = json['id'] as String
           ..name = json['name'] as String?
           ..barcode = json['barcode'] as String
           ..price = json['price'] as String?
           ..discount = json['discount'] == null
               ? null
-              : UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$DiscountDtoType
+              : UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..media = json['media'] == null
               ? null
-              : UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType$MediaType
+              : UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType$MediaType
                   .fromJson(json['media'] as Map<String, dynamic>);
 
 Map<String, dynamic>
-    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawTypeToJson(
-        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType
+    _$UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeTypeToJson(
+        UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType
             instance) {
   final val = <String, dynamic>{
     'id': instance.id,
@@ -23066,7 +23066,7 @@ UpdatePromotion$Mutation$PromotionType$PromotionProductsType
               UpdatePromotion$Mutation$PromotionType$PromotionProductsType$DiscountDtoType
                   .fromJson(json['discount'] as Map<String, dynamic>)
           ..barcode =
-              UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeBaseRawType
+              UpdatePromotion$Mutation$PromotionType$PromotionProductsType$BarcodeType
                   .fromJson(json['barcode'] as Map<String, dynamic>);
 
 Map<String, dynamic>

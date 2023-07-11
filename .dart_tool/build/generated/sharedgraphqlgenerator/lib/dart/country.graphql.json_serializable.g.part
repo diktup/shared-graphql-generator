@@ -429,6 +429,7 @@ PictureInput _$PictureInputFromJson(Map<String, dynamic> json) => PictureInput(
       height: json['height'] as int?,
       x: json['x'] as int?,
       y: json['y'] as int?,
+      alt: json['alt'] as String?,
       baseUrl: json['baseUrl'] as String,
       path: json['path'] as String,
     );
@@ -446,6 +447,7 @@ Map<String, dynamic> _$PictureInputToJson(PictureInput instance) {
   writeNotNull('height', instance.height);
   writeNotNull('x', instance.x);
   writeNotNull('y', instance.y);
+  writeNotNull('alt', instance.alt);
   val['baseUrl'] = instance.baseUrl;
   val['path'] = instance.path;
   return val;

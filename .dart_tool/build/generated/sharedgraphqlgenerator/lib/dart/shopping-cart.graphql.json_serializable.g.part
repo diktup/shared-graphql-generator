@@ -1910,8 +1910,10 @@ RentalRefInput _$RentalRefInputFromJson(Map<String, dynamic> json) =>
       description: json['description'] as String?,
       status: $enumDecodeNullable(_$RentalStatusEnumEnumMap, json['status'],
           unknownValue: RentalStatusEnum.artemisUnknown),
-      start: DateTime.parse(json['start'] as String),
-      end: DateTime.parse(json['end'] as String),
+      start: json['start'] == null
+          ? null
+          : DateTime.parse(json['start'] as String),
+      end: json['end'] == null ? null : DateTime.parse(json['end'] as String),
       note: json['note'] == null
           ? null
           : RentalNoteInput.fromJson(json['note'] as Map<String, dynamic>),
@@ -1929,8 +1931,8 @@ Map<String, dynamic> _$RentalRefInputToJson(RentalRefInput instance) {
   writeNotNull('location', instance.location);
   writeNotNull('description', instance.description);
   writeNotNull('status', _$RentalStatusEnumEnumMap[instance.status]);
-  val['start'] = instance.start.toIso8601String();
-  val['end'] = instance.end.toIso8601String();
+  writeNotNull('start', instance.start?.toIso8601String());
+  writeNotNull('end', instance.end?.toIso8601String());
   writeNotNull('note', instance.note?.toJson());
   return val;
 }

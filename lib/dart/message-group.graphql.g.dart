@@ -2592,7 +2592,7 @@ SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType
     _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupTypeFromJson(
             Map<String, dynamic> json) =>
         SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType()
-          ..id = json['id'] as String?
+          ..id = json['id'] as String
           ..name = json['name'] as String?
           ..mute = json['mute'] as bool?
           ..creator = json['creator'] == null
@@ -2630,7 +2630,9 @@ Map<String, dynamic>
     _$SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupTypeToJson(
         SearchInternalMessageGroup$Query$MessageGroupPaginateType$MessageGroupType
             instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -2638,7 +2640,6 @@ Map<String, dynamic>
     }
   }
 
-  writeNotNull('id', instance.id);
   writeNotNull('name', instance.name);
   writeNotNull('mute', instance.mute);
   writeNotNull('creator', instance.creator?.toJson());
@@ -5215,7 +5216,7 @@ SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType
     _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupTypeFromJson(
             Map<String, dynamic> json) =>
         SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType()
-          ..id = json['id'] as String?
+          ..id = json['id'] as String
           ..name = json['name'] as String?
           ..mute = json['mute'] as bool?
           ..creator = json['creator'] == null
@@ -5253,7 +5254,9 @@ Map<String, dynamic>
     _$SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupTypeToJson(
         SearchSupportMessageGroup$Query$MessageGroupPaginateType$MessageGroupType
             instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -5261,7 +5264,6 @@ Map<String, dynamic>
     }
   }
 
-  writeNotNull('id', instance.id);
   writeNotNull('name', instance.name);
   writeNotNull('mute', instance.mute);
   writeNotNull('creator', instance.creator?.toJson());
@@ -7800,7 +7802,7 @@ CreateMessageGroup$Mutation$MessageGroupType
     _$CreateMessageGroup$Mutation$MessageGroupTypeFromJson(
             Map<String, dynamic> json) =>
         CreateMessageGroup$Mutation$MessageGroupType()
-          ..id = json['id'] as String?
+          ..id = json['id'] as String
           ..name = json['name'] as String?
           ..mute = json['mute'] as bool?
           ..creator = json['creator'] == null
@@ -7836,7 +7838,9 @@ CreateMessageGroup$Mutation$MessageGroupType
 
 Map<String, dynamic> _$CreateMessageGroup$Mutation$MessageGroupTypeToJson(
     CreateMessageGroup$Mutation$MessageGroupType instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -7844,7 +7848,6 @@ Map<String, dynamic> _$CreateMessageGroup$Mutation$MessageGroupTypeToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
   writeNotNull('name', instance.name);
   writeNotNull('mute', instance.mute);
   writeNotNull('creator', instance.creator?.toJson());
@@ -7892,6 +7895,9 @@ MessageGroupInput _$MessageGroupInputFromJson(Map<String, dynamic> json) =>
       status: $enumDecodeNullable(
           _$MessageGroupStatusEnumEnumMap, json['status'],
           unknownValue: MessageGroupStatusEnum.artemisUnknown),
+      target: json['target'] == null
+          ? null
+          : TargetACIInput.fromJson(json['target'] as Map<String, dynamic>),
       type: $enumDecodeNullable(_$MessageGroupTypeEnumEnumMap, json['type'],
           unknownValue: MessageGroupTypeEnum.artemisUnknown),
       members:
@@ -7914,6 +7920,7 @@ Map<String, dynamic> _$MessageGroupInputToJson(MessageGroupInput instance) {
   writeNotNull('wallpaper', instance.wallpaper?.toJson());
   writeNotNull('sound', _$MessageSoundEnumEnumMap[instance.sound]);
   writeNotNull('status', _$MessageGroupStatusEnumEnumMap[instance.status]);
+  writeNotNull('target', instance.target?.toJson());
   writeNotNull('type', _$MessageGroupTypeEnumEnumMap[instance.type]);
   writeNotNull('members', instance.members);
   return val;
@@ -7930,6 +7937,7 @@ PictureInput _$PictureInputFromJson(Map<String, dynamic> json) => PictureInput(
       height: json['height'] as int?,
       x: json['x'] as int?,
       y: json['y'] as int?,
+      alt: json['alt'] as String?,
       baseUrl: json['baseUrl'] as String,
       path: json['path'] as String,
     );
@@ -7947,6 +7955,7 @@ Map<String, dynamic> _$PictureInputToJson(PictureInput instance) {
   writeNotNull('height', instance.height);
   writeNotNull('x', instance.x);
   writeNotNull('y', instance.y);
+  writeNotNull('alt', instance.alt);
   val['baseUrl'] = instance.baseUrl;
   val['path'] = instance.path;
   return val;
@@ -7977,6 +7986,30 @@ Map<String, dynamic> _$MessageGroupWallpaperInputToJson(
   writeNotNull('picture', instance.picture?.toJson());
   writeNotNull('gradientColors', instance.gradientColors);
   writeNotNull('assetImage', instance.assetImage);
+  return val;
+}
+
+TargetACIInput _$TargetACIInputFromJson(Map<String, dynamic> json) =>
+    TargetACIInput(
+      pos: json['pos'] as String?,
+      wholesaler: json['wholesaler'] as String?,
+      manufacturer: json['manufacturer'] as String?,
+      user: json['user'] as String?,
+    );
+
+Map<String, dynamic> _$TargetACIInputToJson(TargetACIInput instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('pos', instance.pos);
+  writeNotNull('wholesaler', instance.wholesaler);
+  writeNotNull('manufacturer', instance.manufacturer);
+  writeNotNull('user', instance.user);
   return val;
 }
 
@@ -10461,7 +10494,7 @@ ArchiveMessageGroup$Mutation$MessageGroupType
     _$ArchiveMessageGroup$Mutation$MessageGroupTypeFromJson(
             Map<String, dynamic> json) =>
         ArchiveMessageGroup$Mutation$MessageGroupType()
-          ..id = json['id'] as String?
+          ..id = json['id'] as String
           ..name = json['name'] as String?
           ..mute = json['mute'] as bool?
           ..creator = json['creator'] == null
@@ -10497,7 +10530,9 @@ ArchiveMessageGroup$Mutation$MessageGroupType
 
 Map<String, dynamic> _$ArchiveMessageGroup$Mutation$MessageGroupTypeToJson(
     ArchiveMessageGroup$Mutation$MessageGroupType instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -10505,7 +10540,6 @@ Map<String, dynamic> _$ArchiveMessageGroup$Mutation$MessageGroupTypeToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
   writeNotNull('name', instance.name);
   writeNotNull('mute', instance.mute);
   writeNotNull('creator', instance.creator?.toJson());
@@ -13015,7 +13049,7 @@ MuteMessageGroup$Mutation$MessageGroupType
     _$MuteMessageGroup$Mutation$MessageGroupTypeFromJson(
             Map<String, dynamic> json) =>
         MuteMessageGroup$Mutation$MessageGroupType()
-          ..id = json['id'] as String?
+          ..id = json['id'] as String
           ..name = json['name'] as String?
           ..mute = json['mute'] as bool?
           ..creator = json['creator'] == null
@@ -13051,7 +13085,9 @@ MuteMessageGroup$Mutation$MessageGroupType
 
 Map<String, dynamic> _$MuteMessageGroup$Mutation$MessageGroupTypeToJson(
     MuteMessageGroup$Mutation$MessageGroupType instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -13059,7 +13095,6 @@ Map<String, dynamic> _$MuteMessageGroup$Mutation$MessageGroupTypeToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
   writeNotNull('name', instance.name);
   writeNotNull('mute', instance.mute);
   writeNotNull('creator', instance.creator?.toJson());
@@ -15568,7 +15603,7 @@ UnmuteMessageGroup$Mutation$MessageGroupType
     _$UnmuteMessageGroup$Mutation$MessageGroupTypeFromJson(
             Map<String, dynamic> json) =>
         UnmuteMessageGroup$Mutation$MessageGroupType()
-          ..id = json['id'] as String?
+          ..id = json['id'] as String
           ..name = json['name'] as String?
           ..mute = json['mute'] as bool?
           ..creator = json['creator'] == null
@@ -15604,7 +15639,9 @@ UnmuteMessageGroup$Mutation$MessageGroupType
 
 Map<String, dynamic> _$UnmuteMessageGroup$Mutation$MessageGroupTypeToJson(
     UnmuteMessageGroup$Mutation$MessageGroupType instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -15612,7 +15649,6 @@ Map<String, dynamic> _$UnmuteMessageGroup$Mutation$MessageGroupTypeToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
   writeNotNull('name', instance.name);
   writeNotNull('mute', instance.mute);
   writeNotNull('creator', instance.creator?.toJson());

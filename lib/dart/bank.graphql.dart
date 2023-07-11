@@ -927,6 +927,7 @@ class PictureInput extends JsonSerializable with EquatableMixin {
     this.height,
     this.x,
     this.y,
+    this.alt,
     required this.baseUrl,
     required this.path,
   });
@@ -942,12 +943,14 @@ class PictureInput extends JsonSerializable with EquatableMixin {
 
   int? y;
 
+  String? alt;
+
   late String baseUrl;
 
   late String path;
 
   @override
-  List<Object?> get props => [width, height, x, y, baseUrl, path];
+  List<Object?> get props => [width, height, x, y, alt, baseUrl, path];
   @override
   Map<String, dynamic> toJson() => _$PictureInputToJson(this);
 }

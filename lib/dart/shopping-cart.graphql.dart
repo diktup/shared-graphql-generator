@@ -1722,8 +1722,8 @@ class RentalRefInput extends JsonSerializable with EquatableMixin {
     this.location,
     this.description,
     this.status,
-    required this.start,
-    required this.end,
+    this.start,
+    this.end,
     this.note,
   });
 
@@ -1737,9 +1737,9 @@ class RentalRefInput extends JsonSerializable with EquatableMixin {
   @JsonKey(unknownEnumValue: RentalStatusEnum.artemisUnknown)
   RentalStatusEnum? status;
 
-  late DateTime start;
+  DateTime? start;
 
-  late DateTime end;
+  DateTime? end;
 
   RentalNoteInput? note;
 
