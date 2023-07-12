@@ -3448,7 +3448,7 @@ class GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType
   List<GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$PictureType>?
       pictures;
 
-  late GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$TargetType?
+  late GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$TargetType
       target;
 
   GetCatalogueCategoriesByLayerAndParent$Query$CatalogueCategoryType$CatalogueCategoryBaseType?
